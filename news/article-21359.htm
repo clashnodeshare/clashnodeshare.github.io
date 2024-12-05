@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-21359.htm" />
+    <meta charset="utf-8">
+    <title>Java的接口详解</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="__ADDON__/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="1.什么是接口？ 一、咱们看什么是接口之前，咱们比较一下普通类、抽象类、接口三者之间的区别  普通类：只有具体实现（普通方法） 抽象类：具体实现（普通方法）和规范（抽象方法）都有！ 接口：只有规范（抽" />
+        <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">Java的接口详解</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <h2><a id="1_2" rel="nofollow"></a>1.什么是接口？</h2> <p>一、咱们看什么是接口之前，咱们比较一下普通类、抽象类、接口三者之间的区别</p> <ul> <li>普通类：只有具体实现（普通方法）</li> <li>抽象类：具体实现（普通方法）和规范（抽象方法）都有！</li> <li>接口：只有规范（抽象方法）</li> </ul> <p>二、咱们简单解释一下接口</p> <ol> <li>接口就是规范，定义的是一组规则，体现了显示世界中“如果你是…则必须能…”的思想。如果你是天使，则必须能飞；如果你是汽车，则必须能跑；如果你是好人，则必须干掉坏人；如果你是坏人，则必须欺负好人。</li> <li>接口的本质是契约，就像我们人间的法律一样，制定好后大家都去遵守。</li> <li>接口的精髓，是对对象的抽象，最能体现这一点的就是接口</li> </ol> <p>注：声明类的关键字是class,声明接口的关键字是interface</p> <h2><a id="2_18" rel="nofollow"></a>2.怎么用接口？</h2> <ul> <li>咱们创建一个接口，接口的关键字是interface，代码如下：</li> </ul> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span> userservice<span class="token punctuation">{<!-- --></span><span class="token comment">//接口中的所有定义其实都是抽象的,都是public abstract的。</span><span class="token keyword">public</span><span class="token keyword">abstract</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//public abstract是可以不用写的</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">void</span><span class="token function">jump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">void</span><span class="token function">smile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">void</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>public abstract是可以不用写的，接口中的所有定义都是抽象的，普通方法是无法写的。</p> <ul> <li>咱们再创建一个类，来实现这个接口，不能再用extents了，因为extents是单继承，而implements是多继承，可以继承多个接口，所以要用implements。</li> </ul> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">class</span> userserviceIMPl<span class="token keyword">implements</span> userservice<span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@Override</span><span class="token comment">//重写</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token comment">//重写</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token comment">//重写</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">jump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token comment">//重写</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">smile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token comment">//重写</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>他所继承的接口中，接口中的每一个抽象方法，都必须被子类重写，否则子类报错。</p> <ul> <li> <p>它可以继承多个接口，代码如下：</p> <p>咱们编写一个新的接口</p> </li> </ul> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span> test<span class="token punctuation">{<!-- --></span><span class="token keyword">void</span><span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">void</span><span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">void</span><span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>咱们用子类继承上面两个接口</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">class</span> userserviceIMPl<span class="token keyword">implements</span> userservice<span class="token punctuation">,</span>test<span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">jump</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">smile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token annotation punctuation">@Override</span><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>少重写两个接口中的一个抽象方法都不行，都会爆红。</p> <p>看到这里，要记住一个东西，java是单继承的，但是可以通过 接口 实现多继承！</p> <ul> <li>在接口里面定义的属性都是常量。</li> </ul> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">interface</span> test<span class="token punctuation">{<!-- --></span><span class="token comment">//常量，由public static final 来修饰</span><span class="token keyword">public</span><span class="token keyword">static</span><span class="token keyword">final</span><span class="token keyword">int</span> age<span class="token operator">=</span><span class="token number">23</span><span class="token punctuation">;</span><span class="token keyword">int</span> year<span class="token operator">=</span><span class="token number">233</span><span class="token punctuation">;</span><span class="token comment">//同样public static final 可以省略不写。</span><span class="token punctuation">}</span></code></pre> <h2><a id="_140" rel="nofollow"></a>接口的作用</h2> <ol> <li>约束</li> <li>定义一些方法，让不同的人实现。</li> <li>接口中的方法都是public abstract的。</li> <li>接口中的常量都是public static final的。</li> <li>接口不能被实例化 因为接口中没有构造方法。</li> <li>可以实现继承多个接口，通过implement 实现。</li> </ol> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-20895.htm">北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）</a></p>
+                                        <p>下一个：<a href="/news/article-21360.htm">vue的ESLint-使用及各种设置的配置</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-19984.htm" title="宠物诊所申请动物诊疗许可证流程及费用（宠物诊所申请动物诊疗许可证流程及费用多少）">宠物诊所申请动物诊疗许可证流程及费用（宠物诊所申请动物诊疗许可证流程及费用多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-26-free-node-subscribe.htm" title="「9月26日」2024年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接">「9月26日」2024年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-22-clash-v2ray-ss-ssr.htm" title="「7月22日」2024年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接">「7月22日」2024年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-2-node-share-links.htm" title="「5月2日」2024年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接">「5月2日」2024年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-3-free-v2ray-subscribe.htm" title="「4月3日」2024年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接">「4月3日」2024年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-3-16-free-ssr-node.htm" title="3月16日18.4M/S|V2ray/Shadowrocket/Clash/SSR免费节点每天更新订阅链接">3月16日18.4M/S|V2ray/Shadowrocket/Clash/SSR免费节点每天更新订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-23-free-ssr-node.htm" title="「4月23日」2024年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接">「4月23日」2024年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-19-free-subscribe-node.htm" title="「5月19日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「5月19日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-9-free-node-subscribe.htm" title="「6月9日」2024年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接">「6月9日」2024年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-25-free-v2ray-subscribe.htm" title="「7月25日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「7月25日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">15</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">27</span>
+                <h4><a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">29</span>
+                <h4><a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-03/" title="2024-03 归档">2024-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
