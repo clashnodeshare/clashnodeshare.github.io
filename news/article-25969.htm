@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-25969.htm" />
+    <meta charset="utf-8">
+    <title>C语言实现基于控制台的电子时钟_C 语言</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="使用c语言制作一个控制台的电子时钟，供大家参考，具体内容如下 学习了c语言基本语法后，在学习了time.h的库文件，让我产生了想制作一款电子时钟的念头，那好就开始动手操作吧。 使用到下面这些技术: 首" />
+        <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">C语言实现基于控制台的电子时钟_C 语言</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                  				  				  				<p><strong>使用c语言制作一个控制台的电子时钟</strong>，供大家参考，具体内容如下</p> <p>学习了c语言基本语法后，在学习了time.h的库文件，让我产生了想制作一款电子时钟的念头，那好就开始动手操作吧。</p> <p><strong>使用到下面这些技术:</strong></p> <p>首先必须先导入库</p> <div class="ay1code"> <pre class="brush:cpp;">/***************** 实时数字时钟(和计算机系统时间关联) **************  #include &lt;time.h&gt;  -- 必须的时间函数头文件  time_t -- 时间类型（time.h 定义）  struct tm -- 时间结构，time.h 定义如下：（依需求选用）  int tm_sec;  int tm_min;  int tm_hour;  int tm_mday;  int tm_mon;  int tm_year;  int tm_wday;  int tm_yday;  int tm_isdst;  time(&amp;rawtime); -- 获取时间，以秒计，从1970年1月一日起算，存于rawtime                  -- 获取到当前的秒数,参数为0则函数返回值即为结果  localtime(&amp;rawtime); -- 转为当地时间，tm 时间结构  system("cls");--命令行清屏</pre> </div> <p>获取坐标的代码如下</p> <div class="ay1code"> <pre class="brush:cpp;">#include &lt;windows.h&gt;  void gotoxy(int x,int y)    //光标定位函数，需要包含windos.h头文件  {      COORD coord;      coord.X=x;      coord.Y=y;      SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);  }</pre> </div> <p>源代码:</p> <div class="ay1code"> <pre class="brush:cpp;">#include &lt;stdio.h&gt;  #include &lt;time.h&gt;  #include &lt;stdlib.h&gt;  #include &lt;conio.h&gt;  #include &lt;windows.h&gt;  void gotoxy(int x,int y)   //光标定位函数，需要包含windos.h头文件  {      COORD coord;      coord.X=x;      coord.Y=y;      SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);  }  void dians(){      int x=8;      gotoxy(x*3,8);      printf(" **");      gotoxy(x*3,9);      printf(" **");      gotoxy(x*3,11);      printf(" **");      gotoxy(x*3,12);      printf(" **");            gotoxy(x*6,8);      printf(" **");      gotoxy(x*6,9);      printf(" **");      gotoxy(x*6,11);      printf(" **");      gotoxy(x*6,12);      printf(" **");  }  void draw_numb(int x,int shu){ //判断0-9的数据,通过gotoxy显示出来       if(shu==0){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("*   *");              gotoxy(x,8);              printf("*   *");              gotoxy(x,9);              printf("*   *");              gotoxy(x,10);              printf("*   *");              gotoxy(x,11);              printf("*   *");              gotoxy(x,12);              printf("*   *");              gotoxy(x,13);              printf("*   *");              gotoxy(x,14);              printf("*****");      }      if(shu==1){              gotoxy(x,6);              printf("  *  ");              gotoxy(x,7);              printf("  *  ");              gotoxy(x,8);              printf("  *  ");              gotoxy(x,9);              printf("  *  ");              gotoxy(x,10);              printf("  *  ");              gotoxy(x,11);              printf("  *  ");              gotoxy(x,12);              printf("  *  ");              gotoxy(x,13);              printf("  *  ");              gotoxy(x,14);              printf("  *  ");      }      if(shu==2){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("    *");              gotoxy(x,8);              printf("    *");              gotoxy(x,9);              printf("    *");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("*    ");              gotoxy(x,12);              printf("*    ");              gotoxy(x,13);              printf("*    ");              gotoxy(x,14);              printf("*****");      }      if(shu==3){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("    *");              gotoxy(x,8);              printf("    *");              gotoxy(x,9);              printf("    *");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("    *");              gotoxy(x,12);              printf("    *");              gotoxy(x,13);              printf("    *");              gotoxy(x,14);              printf("*****");      }      if(shu==4){              gotoxy(x,6);              printf("*   *");              gotoxy(x,7);              printf("*   *");              gotoxy(x,8);              printf("*   *");              gotoxy(x,9);              printf("*   *");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("    *");              gotoxy(x,12);              printf("    *");              gotoxy(x,13);              printf("    *");              gotoxy(x,14);              printf("    *");      }      if(shu==5){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("*    ");              gotoxy(x,8);              printf("*    ");              gotoxy(x,9);              printf("*    ");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("    *");              gotoxy(x,12);              printf("    *");              gotoxy(x,13);              printf("    *");              gotoxy(x,14);              printf("*****");      }      if(shu==6){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("*    ");              gotoxy(x,8);              printf("*    ");              gotoxy(x,9);              printf("*    ");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("*   *");              gotoxy(x,12);              printf("*   *");              gotoxy(x,13);              printf("*   *");              gotoxy(x,14);              printf("*****");      }      if(shu==7){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("    *");              gotoxy(x,8);              printf("    *");              gotoxy(x,9);              printf("    *");              gotoxy(x,10);              printf("    *");              gotoxy(x,11);              printf("    *");              gotoxy(x,12);              printf("    *");              gotoxy(x,13);              printf("    *");              gotoxy(x,14);              printf("    *");      }      if(shu==8){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("*   *");              gotoxy(x,8);              printf("*   *");              gotoxy(x,9);              printf("*   *");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("*   *");              gotoxy(x,12);              printf("*   *");              gotoxy(x,13);              printf("*   *");              gotoxy(x,14);              printf("*****");      }      if(shu==9){              gotoxy(x,6);              printf("*****");              gotoxy(x,7);              printf("*   *");              gotoxy(x,8);              printf("*   *");              gotoxy(x,9);              printf("*   *");              gotoxy(x,10);              printf("*****");              gotoxy(x,11);              printf("    *");              gotoxy(x,12);              printf("    *");              gotoxy(x,13);              printf("    *");              gotoxy(x,14);              printf("*****");      }      }  void draws(char wei,int shu){//这里定义了6个位置 分别是小时的个位十位，分钟的个位十位和秒钟的个位十位   int x=8;          if(wei=='1'){              draw_numb(x*1,shu);    //这里调用了 draw_numb函数吧x*1是横坐标(也表示第几个位置数)，shu是要显示的数据调过去           }    //x*1表示第一个位置           if(wei=='2'){              draw_numb(x*2,shu);          }          if(wei=='3'){              draw_numb(x*4,shu);          }          if(wei=='4'){              draw_numb(x*5,shu);          }          if(wei=='5'){              draw_numb(x*7,shu);          }          if(wei=='6'){              draw_numb(x*8,shu);          }          }  int main()  {    system("color 1b");       struct tm *curtime;     //结构tm，结构指针curtime，time.h中定义      time_t t;     //时间类型变量t，time.h中定义      clock_t start;    //结构clock_t，结构变量start，time.h中定义            double th_hour,th_min,th_sec;      do      {    dians();          t=time(0);    //获取到当前的秒数,参数为0则函数返回值即为结果          curtime=localtime(&amp;t);    //得到当前系统时间/          if((double)curtime-&gt;tm_hour&lt;=12)  //午前的处理/          {    gotoxy(5,3);                            printf("AM ");              //if((double)curtime-&gt;tm_hour&lt;10) draws('1',0);   //十点之前在小时数前加零              draws('1',((int)curtime-&gt;tm_hour)/10);              draws('2',((int)((double)curtime-&gt;tm_hour))%10);          }          else    //午后的处理          {    gotoxy(5,3);              printf("PM ");              //if((double)curtime-&gt;tm_hour-12&lt;10) draws('1',0);//输入0               draws('1',(int)curtime-&gt;tm_hour/10);              draws('2',((int)((double)curtime-&gt;tm_hour))%10);          }          if((double)curtime-&gt;tm_min&lt;10) draws('3',0);          draws('3',(int)curtime-&gt;tm_min/10);          draws('4',(int)curtime-&gt;tm_min%10);          if((double)curtime-&gt;tm_sec&lt;10) draws('5',0);          draws('5',(int)curtime-&gt;tm_sec/10);          draws('6',(int)curtime-&gt;tm_sec%10);          start=clock();          while(clock()-start&lt;500);  //等待延时1000ms          system("cls");      }while(!kbhit());    //按任一键退出         return 0;}</pre> </div> <p>最后运行截图(完美运行)</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220504/1cc79d8c5c3db9d2b9deac676962bf29.jpg"></p> <p>是不是满满的成就感！ 好了今天就分享到这了。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-25501.htm">动物防疫站打针免费吗多少钱 动物防疫站打针免费吗多少钱一针</a></p>
+                                        <p>下一个：<a href="/news/article-25970.htm">新疆养狗基地（新疆大型犬基地）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-5-24-node-share-links.htm" title="「5月24日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接">「5月24日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-12-free-node-subscribe.htm" title="「4月12日」2024年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接">「4月12日」2024年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-17-free-v2ray-subscribe.htm" title="「9月17日」2024年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接">「9月17日」2024年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-23653.htm" title="宠物用品批发网（宠物用品批发网站）">宠物用品批发网（宠物用品批发网站）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-24-node-share-links.htm" title="「7月24日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接">「7月24日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-28-free-subscribe-node.htm" title="「9月28日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「9月28日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-subscribe-node.htm" title="「11月4日」2024年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接">「11月4日」2024年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-3-26-clash-windows.htm" title="「3月26日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「3月26日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-29-free-subscribe-node.htm" title="「11月29日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接">「11月29日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-3-15-free-v2ray-subscribe.htm" title="3月15日20.3M/S|SSR/Shadowrocket/Clash/V2ray免费节点每天更新订阅链接">3月15日20.3M/S|SSR/Shadowrocket/Clash/V2ray免费节点每天更新订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">45</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">27</span>
+                <h4><a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">29</span>
+                <h4><a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-03/" title="2024-03 归档">2024-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
