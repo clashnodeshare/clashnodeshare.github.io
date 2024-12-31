@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-33500.htm" />
+    <meta charset="utf-8">
+    <title>ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="1.  启动并下载一个clickhouse-server, By default, starting above server instance will be run as default user" />
+        <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>1.  启动并下载一个clickhouse-server, By default, starting above server instance will be run as default user without password.</p> <div class="cnblogs_code"> <pre>docker run -d --name ch-server --ulimit nofile=<span style="color: rgba(128, 0, 128, 1)">262144</span>:<span style="color: rgba(128, 0, 128, 1)">262144</span> -p <span style="color: rgba(128, 0, 128, 1)">8123</span>:<span style="color: rgba(128, 0, 128, 1)">8123</span> -p <span style="color: rgba(128, 0, 128, 1)">9000</span>:<span style="color: rgba(128, 0, 128, 1)">9000</span> -p <span style="color: rgba(128, 0, 128, 1)">9009</span>:<span style="color: rgba(128, 0, 128, 1)">9009</span> yandex/clickhouse-server<br>或者加一个Mount<br>docker run -d --name ch-server --ulimit nofile=262144:262144 -p 8123:8123 -p 9000:9000 -p 9009:9009  -v e:\\taobao:/usr/src/app/  yandex/clickhouse-server</pre> </div> <p>2. 打开浏览器, 输入, 查询结果就下载下来</p> <div class="cnblogs_code"> <pre>http:<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">localhost:8123/?query=SELECT%20%27Hello,%20ClickHouse!%27</span></pre> </div> <p>3. 进入docker 的CLI, server端安装在/etc/clickhouse-server 目录      用clickhouse-client来执行客户端命令</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/81f6a635f57417c4d9d82c9eee6009e9.jpg" alt="ClickHouse 对付单表上亿条记录分组查询秒出, OLAP应用秒杀其他数据库_在线工具"></p> <p> 4. 通过csv导入数据, 把本地目录Mount 到/usr/src/app目录</p> <div class="cnblogs_code"> <pre>clickhouse-client --query=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">INSERT INTO tblSale FORMAT CSV</span><span style="color: rgba(128, 0, 0, 1)">'</span> &lt; /usr/src/app/tblsale_in.csv</pre> </div> <p>csv必须是逗号分隔,而且DateTime格式必须是不带毫秒的, 不然会有下面的错误</p> <div class="cnblogs_code"> <pre>clickhouse-client --query=<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">INSERT INTO tblSale FORMAT CSV</span><span style="color: rgba(128, 0, 0, 1)">'</span> &lt; /usr/src/app/<span style="color: rgba(0, 0, 0, 1)">tblsale_in.csv# Code: </span><span style="color: rgba(128, 0, 128, 1)">117</span>. DB::Exception: Expected end of line: (at row <span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">)  Row </span><span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">: Column </span><span style="color: rgba(128, 0, 128, 1)">0</span>,   name: id,          type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">1</span>,   name: prod_id,     type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">2</span>,   name: user_id,     type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">3</span>,   name: cnt,         type: UInt32,   parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">4</span>,   name: total_price, type: Float32,  parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">1.00</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> Column </span><span style="color: rgba(128, 0, 128, 1)">5</span>,   name: date,        type: DateTime, parsed text: <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">2022-04-22 17:56:00</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> ERROR: garbage after DateTime: </span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">.783&lt;CARRIAGE RETURN&gt;&lt;LINE FEED&gt;2,2,</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)"> ERROR: <span style="color: rgba(255, 0, 0, 1)"><strong>DateTime must be </strong></span></span><span style="color: rgba(255, 0, 0, 1)"><strong>in YYYY-MM-DD hh:mm:ss or NNNNNNNNNN (unix timestamp, exactly 10</strong></span><span style="color: rgba(0, 0, 0, 1)"><span style="color: rgba(255, 0, 0, 1)"><strong> digits) format.</strong></span>  : While executing CSVRowInputFormat: data </span><span style="color: rgba(0, 0, 255, 1)">for</span> INSERT was parsed <span style="color: rgba(0, 0, 255, 1)">from</span> stdin: (<span style="color: rgba(0, 0, 255, 1)">in</span> query: INSERT INTO tblSale FORMAT CSV). (INCORRECT_DATA)</pre> </div> <p>我的数据是从SQLServer导出的, 可以用BCP导出指定逗号分隔</p> <div class="cnblogs_code"> <pre>bcp <span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">SELECT  [id],[prod_id],[user_id] ,[cnt],[total_price],Convert(varchar(20) , date, 120) as date FROM [taobao].[dbo].[tblSale_in]</span><span style="color: rgba(128, 0, 0, 1)">"</span> queryout tblSale_in.csv -c -t , -T -S .\SQLExpress</pre> </div> <p> </p> <p>当我导入的csv数据量很少时, 很快就成功了, 我再用有200w条数据时的csv, 执行这条命令是感觉就没有反应了.新打开一个CLI,进入 clickhouse-client 也没有反应了,不知道是否死掉了</p> <p>等待5分种后,出现这个错误, </p> <div class="cnblogs_code"> <pre>Code: <span style="color: rgba(128, 0, 128, 1)">209</span>. DB::NetException: Timeout exceeded <span style="color: rgba(0, 0, 255, 1)">while</span> reading <span style="color: rgba(0, 0, 255, 1)">from</span> socket (<span style="color: rgba(128, 0, 128, 1)">127.0</span>.<span style="color: rgba(128, 0, 128, 1)">0.1</span>:<span style="color: rgba(128, 0, 128, 1)">9000</span>, <span style="color: rgba(128, 0, 128, 1)">300000</span> ms). (SOCKET_TIMEOUT)</pre> </div> <p> 但是第2天再导入的时候就算导入2000w数据也很快, 在1分钟以内, 不知道什么原因</p> <p> </p> <p>=========================以下是ClickHouse和SQLServer 2012的性能对比=====================================</p> <p>硬件: THINKPAD470, I5CPU,8G内存,机械硬盘</p> <div class="cnblogs_code"> <pre>--<span style="color: rgba(0, 0, 0, 1)">统计每日销量，2000w数据 SQLServer 17秒   SELECT Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span>) <span style="color: rgba(0, 0, 255, 1)">as</span> date,count(*) <span style="color: rgba(0, 0, 255, 1)">as</span><span style="color: rgba(0, 0, 0, 1)"> dayCnt   FROM [taobao].[dbo].[tblSale] group by Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span><span style="color: rgba(0, 0, 0, 1)">)    order by  Convert(varchar(</span><span style="color: rgba(128, 0, 128, 1)">8</span>) , date, <span style="color: rgba(128, 0, 128, 1)">112</span>) </pre> </div> <div class="cnblogs_code"> <pre>--<span style="color: rgba(0, 0, 0, 1)">按日统计数量, ClickHouse 2500w数据第一次用时8.35秒,第二次用时0.3秒 SELECT toYYYYMMDD(date), count(</span>*) <span style="color: rgba(0, 0, 255, 1)">as</span><span style="color: rgba(0, 0, 0, 1)"> dayCnt  FROM tblSale  group by toYYYYMMDD(date) order by toYYYYMMDD(date)</span></pre> </div> <p>继续导入2000w数据, 再用上面的SQL, clickhouse 4500w数据用时0.58秒, 6000w数据用时0.5秒 (第一次查询用1.24秒), 8000w数据用时0.68秒,1亿数据用时0.95秒</p> <p>=================== 结论==================================</p> <p>对于一般OLAP应用, 比如查用户的历史记录, 不要去搞分库分表, 那是条歪路,还是转到列数据库, 搞个大宽表, 尽量不要用Join, 单机都能达到这么高的性能.</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-33499.htm">为什么HTTP/3要基于UDP？可靠吗？</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-8-28-free-node-subscribe.htm" title="「8月28日」2024年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接">「8月28日」2024年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-26-free-high-speed-nodes.htm" title="「10月26日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接">「10月26日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-29-free-clash.htm" title="「5月29日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接">「5月29日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-28-clash-node.htm" title="「12月28日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享">「12月28日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-2-clash-v2ray-ss-ssr.htm" title="「6月2日」2024年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接">「6月2日」2024年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-21816.htm" title="自从养了猫运气就一直不好（养猫最忌讳的一个生肖）">自从养了猫运气就一直不好（养猫最忌讳的一个生肖）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-23-node-share-links.htm" title="「9月23日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「9月23日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-27-free-shadowrocket-node.htm" title="「7月27日」2024年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接">「7月27日」2024年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-31-free-high-speed-nodes.htm" title="「7月31日」2024年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接">「7月31日」2024年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-clash-windows.htm" title="「11月20日」2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接">「11月20日」2024年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">27</span>
+                <h4><a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">29</span>
+                <h4><a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">31</span>
+                <h4><a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-03/" title="2024-03 归档">2024-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
