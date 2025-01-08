@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-37340.htm" />
+    <meta charset="utf-8">
+    <title>看完这篇文章你就可以告诉领导你精通Zookeeper了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="一、Zookeeper概述 1、概述 Zookeeper 是一个开源的为分布式框架提供协调服务的 Apache 项目。在分布式系统中，扮演注册中心的角色。 Zookeeper数据模型的结构与Linux" />
+        <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">看完这篇文章你就可以告诉领导你精通Zookeeper了</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h3 id="一zookeeper概述">一、Zookeeper概述</h3> <h4 id="1概述">1、概述</h4> <p>Zookeeper 是一个开源的为分布式框架提供协调服务的 Apache 项目。在分布式系统中，扮演<strong>注册中心</strong>的角色。</p> <p>Zookeeper数据模型的结构与Linux文件系统很像，整体上可以看做一棵树，从根节点往下，每个节点称为ZNode。每一个ZNode默认能够存储1MB的数据，每个ZNode都对应一个唯一的路径，类似于Linux中的文件路径。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/21e7296399682798859daa12207f4ca8.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <p>Zookeeper从设计模式角度来理解：是一个基于<strong>观察者模式</strong>设计的分布式服务管理框架，它负责存储和管理大家都关心的数据，然后接受观察者的注册，一旦这些数据的状态发生变化，Zookeeper就 将负责通知已经在Zookeeper上注册的那些观察者，做出相应的反应。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/fef080148b25da00466009b07ad5dc68.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <h4 id="2特点">2、特点</h4> <p>（1）Zookeeper：一个领导者（Leader），多个跟随者（Follower）组成的集群。</p> <p>（2）集群中只要有<strong>半数以上</strong>节点存活，Zookeeper集群就能正常提供服务。所以Zookeeper集群适合安装<strong>奇数台</strong>服务器。</p> <p>（3）全局数据一致：每个Server保存一份相同的数据副本，Client无论连接到哪个Server，数据都是一样的。</p> <p>（4）更新请求顺序执行，来自同一个Client的更新请求按其发送顺序依次执行。</p> <p>（5）数据更新具有原子性，一次更新要么成功要么失败。</p> <p>（6）实时性，在一定时间范围内，Client能读到最新数据。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/914788adba0579c610749229cecd9be3.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <h4 id="3应用场景">3、应用场景</h4> <p>Zookeeper能提供的服务包括：<strong>统一命名服务、统一配置管理、统一集群管理、服务器节点动态上下线、软负载均衡</strong>等。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/88a5f4984c4a883b95c4b4f5239b1efa.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <p>（1）<strong>统一命名服务</strong></p> <p>在分布式环境下，经常需要对应用或者服务进行统一命名，便于识别。例如IP和域名的对应关系，一般我们都是输入域名即可访问对应网站，但其实内部使用DNS把域名解析成了对应的IP地址。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/580c0a036dcc0a3da9516eac7dcfd6a8.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （2）<strong>统一配置管理</strong></p> <p>在分布式系统中，一个集群里各个服务器的配置文件在修改后经常需要进行同步，手动同步容易出错并且耗时耗力，利用Zookeeper监听的功能，可以很好的实现这个功能。</p> <p>可以将共同的配置文件写入Zookeeper的一个节点中，然后各个Client监听这个节点，一旦节点中的内容发生变化时，Zookeeper就通知各个Client。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/38001d0809a8c752d9977ba2659feb2b.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （3）<strong>统一集群管理</strong></p> <p>分布式环境中，实时监控节点的状态是很有必要的，这样可以依据节点的状态动态的做出一些调整。可以将节点信息写入Zookeeper的ZNode中，然后监听这个ZNode就可以获取它的实时状态变化了。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/458629816b7182ac6bcc42c57c5b2ca9.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （4）<strong>服务器动态上下线通知</strong></p> <p>这个第一小节就讲了。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/295eb3356abba74e88d590b25f7799e4.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （5）<strong>软负载均衡</strong></p> <p>在Zookeeper中记录每台服务器的访问数，这样有新的客户端请求到来时，可以让访问数最少的服务器处理请求。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/abeb33fefa0d8b9843dd06128b3bdcb6.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <h3 id="二zookeeper安装配置启动">二、Zookeeper安装配置启动</h3> <h4 id="1安装">1、安装</h4> <p>进入<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://archive.apache.org/dist/zookeeper/"  target="_blank" rel="nofollow">下载地址</a>，选择对应的版本下载<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/69b4d4f0de68855c2fd161c5d0c7c961.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 下载后放到Linux某个目录下解压即可。</p> <h4 id="2配置">2、配置</h4> <p>解压完毕后，来到zookeeper文件夹conf目录下拷贝一份配置文件，命名为<code>zoo.cfg</code><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/e5692869fdc89173cf696a1c6a42eb59.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 将dataDir的目录修改成自定义的目录，因为/tmp目录下的文件容易被清理掉。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/4041f33892a0334fe339fa50317f863c.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 除了dataDir，上面还有几个配置项如下：</p> <p>（1）tickTime，默认2000ms。通信心跳时间，即客户端和服务器或者服务器和服务器之间2s会发送一次心跳，检测机器的工作状态是否正常。</p> <p>（2）initLimit，默认10次。LF初始通信时限，即集群中的FL（Follow和Leader）服务器之间<strong>初始连接</strong>时能容忍的最多心跳数（tickTime的数量）。</p> <p>（3）syncLimit，默认5次。LF同步通信时限，即集群中的FL（Follow和Leader）服务器之间一次请求和响应能容忍的最大心跳数。LF之间如果通信时间超过syncLimit * tickTime，Leader则会认为Follow出故障了，将会从服务器列表中删除Follow。</p> <p>（4）dataDir，Zookeeper数据存放路径。</p> <p>（5）clientPort，客户端连接端口，默认2181。</p> <h4 id="3启动">3、启动</h4> <pre><code class="language-shell"># 可选参数 ./zkServer.sh [--config &lt;conf-dir&gt;] {start|start-foreground|stop|restart|status|print-cmd} # 启动 ./zkServer.sh start # 查看状态 ./zkServer.sh status # 重启 ./zkServer.sh restart # 停止 ./zkServer.sh stop  # 启动客户端 ./zkCli.sh # 退出客户端 [zk: localhost:2181(CONNECTED) 3] quit</code></pre> <h3 id="三zookeeper集群配置">三、Zookeeper集群配置</h3> <p>因为Zookeeper集群的规则是半数以上的服务器可用则这个集群可用，所以集群中<strong>最少需要3台以上的服务器并且服务器的数量最好是奇数</strong>。</p> <p>为什么是奇数，因为在相同容错能力的情况下，奇数台服务器更节省资源。比如3台服务器的集群，至少要2台以上服务器正常工作这个集群才可用，也就是最多允许1台服务器宕机；4台服务器的集群，至少需要3台以上服务器正常工作这个集群才可用，也就是最多允许1台服务器宕机。3台或者4台服务器的集群，都至多允许一台服务器宕机，容错能力相同的情况下，4台服务器就浪费了一台的数量。</p> <p>另外一个原因是因为follow在选举leader的时候，要求可用节点数量 &gt; 总节点数量 / 2。如果集群的节点数量为偶数台，那么就可能出现无法选举出Leader的情况。具体参考<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/u010476994/article/details/79806041"  target="_blank" rel="nofollow">这篇文章</a></p> <p>简单点，这里我们的集群中有3个节点，即3个Zookeeper服务器。</p> <h4 id="1解压安装">1、解压安装</h4> <p>跟上面单机一样，分别下载解压到3台服务器的指定目录。</p> <h4 id="2配置服务器编号">2、配置服务器编号</h4> <p>在服务器的zookeeper文件夹的根目录下创建zkDatas文件夹，并在zkDatas文件夹下创建一个myid的文件，在文件中添加server对应的编号，集群中唯一。</p> <pre><code class="language-shell">cd /usr/local/apache-zookeeper-3.5.7 mkdir zkDatas cd zkDatas vi myid  ## 服务器1的myid文件内容如下，对应的，服务器2的myid内容为2，服务器3的myid内容为3 1</code></pre> <h4 id="3配置zoocfg文件">3、配置zoo.cfg文件</h4> <p>配置三个服务器的zoo.cfg文件内容如下</p> <pre><code class="language-shell"># 拷贝zoo_sample.cfg文件 cp -r zoo_sample.cfg zoo.cfg vi zoo.cfg  ## zoo.cfg文件内容如下 dataDir=/usr/local/apache-zookeeper-3.5.7/zkDatas #######################cluster########################## server.1=192.168.1.128:2888:3888 server.2=192.168.1.129:2888:3888 server.3=192.168.1.130:2888:3888</code></pre> <p>关于上面集群的配置<code>server.A=B:C:D</code>解释如下</p> <ul> <li>A是一个数字，表示第几号服务器。之前我们配置了myid文件，A的值就是myid文件中的值。zookeeper在启动的时候会读取此文件，拿到里面的文件内容后再和zoo.cfg文件里的配置进行比较，判断是哪个服务器。</li> <li>B代表服务器的地址。</li> <li>C是Leader和Follow交换信息的端口。</li> <li>D是当集群中的Leader服务器歇逼的时候，重新选举时的通信端口。</li> </ul> <h4 id="4启动各个服务器">4、启动各个服务器</h4> <p>启动完后，就会告诉你谁是leader谁是follow。</p> <pre><code class="language-shell">[root@localhost apache-zookeeper-3.5.7]# bin/zkServer.sh status JMX enabled by default Using config: /usr/local/apache-zookeeper-3.5.7/bin/../conf/zoo.cfg Mode: follower  [root@localhost apache-zookeeper-3.5.7]# bin/zkServer.sh status JMX enabled by default Using config: /usr/local/apache-zookeeper-3.5.7/bin/../conf/zoo.cfg Mode: leader  [root@localhost apache-zookeeper-3.5.7]# bin/zkServer.sh status JMX enabled by default Using config: /usr/local/apache-zookeeper-3.5.7/bin/../conf/zoo.cfg Mode: follower</code></pre> <h3 id="四zookeeper的选举机制">四、Zookeeper的选举机制</h3> <p>单机模式下不涉及选举，只有在集群模式下才会进行选举。Leader选举一般发生在下面两种情况：第一次启动集群的时候和集群运行过程中Leader挂了。这两种情况下Leader的选举机制时不同的，需要分开讨论。</p> <p>在学习选举机制之前，需要先学习几个概念。</p> <ul> <li>SID：服务器ID，即myid文件中的值，用来唯一标识一台Zookeeper集群中的机器，不能重复。</li> <li>ZXID：zookeeper transaction id，即zookeeper事务id，用来标识一次服务器状态的变更。在某一时刻，集群中每台机器的zxid大概率是不同的。</li> <li>Epoch：逻辑时钟，也叫投票的次数，每投完一次票这个值就会增加，同一轮投票过程中逻辑时钟的值是相同的。</li> </ul> <h4 id="1第一次启动时的选举机制">1、第一次启动时的选举机制</h4> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/69653175be6a00f2a679a6cb3155e0dc.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （1）server1启动后，发起一次选举。server1投自己一票，此时server1共有1票，不够半数以上（3票），无法产生Leader，server1状态保持LOOKING。</p> <p>（2）server2启动，发起一次选举。server1和server2各投自己一票并交换选票信息，此时server1发现server2的SID比自己目前投票的（也就是它自身）更大，于是更改投票为server2。此时server1共有0票，server2共有2票，不够半数以上，无法产生leader，server1和server2状态保持LOOKING。</p> <p>（3）server3启动，发起一次选举。和（2）一样，server1和server2最终都会把票投给server3，那么此时server1和server2的票数就为0，而server3的票数为3，超过了半数，server3变成leader。server1和server2更改状态为FOLLOWING，server3更改状态为LEADING。</p> <p>（4）server4启动，发起一次选举。此时server1和server2都不是LOOKING状态，所以不会更改选票信息，所以最终server4少数服从多数，把选票投给server3，此时server3总票数为4，其他三台服务器总票数都为0。</p> <p>（5）server4启动，发起一次选举。和（4）一样的流程。</p> <h4 id="2非第一次启动时的选举机制">2、非第一次启动时的选举机制</h4> <p>当集群中出现下面的情况时，会触发leader选举机制</p> <p>（1）集群运行过程中，有新的服务器节点加入。</p> <p>（2）follow服务器无法和leader服务器通信时，follow会认为leader挂了。</p> <p>当触发选举机制时，集群可能存在两种情况</p> <p>（1）集群中此时已经存在leader。那么在这种情况下，只需要告诉发起选举的服务器有关leader的相关信息，让该服务器和leader建立连接并进行状态同步即可。</p> <p>（2）集群中此时不存在leader。</p> <p>还是用上一小节的图来说，集群中5台server，SID分别是1,2,3,4,5，ZXID分别是8,8,8,7,7，server3是leader。此时server3和server5挂了，follow服务器都会把自己的状态变成LOOKING，开始进行leader选举。</p> <p>这里就需要用到上面说过的三个概念：Epoch、SID和ZXID。选举Leader规则：</p> <ul> <li>Epoch大的直接胜出</li> <li>Epoch相同，ZXID大的胜出</li> <li>ZXID相同，SID大的胜出</li> </ul> <p>对于剩下的server1、server2和server4，它们的(Epoch, ZXID, SID)的值分别是(1, 8, 1)、(1, 8, 2)、(1, 7, 4)。所以最后的leader就是server2。</p> <h3 id="五客户端相关的命令">五、客户端相关的命令</h3> <pre><code class="language-shell"># 启动客户端 ./zkCli.sh # help命令，可以显式所有的操作命令 [zk: localhost:2181(CONNECTED) 0] help</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/25c44283766bbda25f16639b8fbf97bb.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 一些比较常见的如下</p> <p>（1）<code>ls [-s] [-w] [-R] path</code>，查看对应path下的子节点，<code>-w</code>表示监听子节点变化，<code>-s</code>附加次级信息。</p> <p>（2）<code>create path</code>，在对应path下创建一个节点，<code>-s</code>表示节点带序号，<code>-e</code>表示创建临时节点，重启后或者超时就会被删除。</p> <p>（3）<code>get path</code>，获得节点的值（可监听）。<code>-w</code>表示监听节点内容变化，<code>-s</code>表示附加次级信息。</p> <p>（4）<code>set path data</code>，设置节点的具体值。</p> <p>（5）<code>stat path</code>，查看节点状态。</p> <p>（6）<code>delete path</code>，删除节点。</p> <p>（7）<code>deleteall path</code>，递归删除节点。</p> <h4 id="1查看znode节点信息">1、查看ZNode节点信息</h4> <pre><code class="language-shell">[zk: localhost:2181(CONNECTED) 4] ls / [zookeeper]  [zk: localhost:2181(CONNECTED) 5] ls -s / [zookeeper]cZxid = 0x0 ctime = Thu Jan 01 08:00:00 CST 1970 mZxid = 0x0 mtime = Thu Jan 01 08:00:00 CST 1970 pZxid = 0x0 cversion = -1 dataVersion = 0 aclVersion = 0 ephemeralOwner = 0x0 dataLength = 0 numChildren = 1</code></pre> <p><code>ls -s path</code>可以查看节点的详细数据。</p> <p>（1）cZxid：创建节点的事务id</p> <p>每次修改 ZooKeeper 状态都会产生一个 ZooKeeper 事务 ID。事务 ID 是 ZooKeeper 中所有修改总的次序。每次修改都有唯一的 zxid，如果 zxid1 小于 zxid2，那么 zxid1 在 zxid2 之前发生。</p> <p>（2）ctime：znode 被创建的毫秒数（从 1970 年开始）</p> <p>（3）mZxid：znode 最后更新的事务 zxid</p> <p>（4）mtime：znode 最后修改的毫秒数（从 1970 年开始）</p> <p>（5）pZxid：znode 最后更新的子节点 zxid</p> <p>（6）cversion：znode 子节点变化号，znode 子节点修改次数</p> <p>（7）dataVersion：znode 数据变化号</p> <p>（8）aclVersion：znode 访问控制列表的变化号</p> <p>（9）ephemeralOwner：如果是临时节点，这个是 znode 拥有者的 session id。如果不是临时节点则是 0</p> <p>（10）dataLength：znode 的数据长度</p> <p>（11）numChildren：znode 子节点数量</p> <h4 id="2创建znode节点">2、创建ZNode节点</h4> <p>Zookeeper中节点类型可以大致分为两类<strong>持久化（Persistent）节点</strong>和<strong>临时（Ephemeral）节点</strong>，又可以细分为四类：</p> <p>（1）<strong>持久化目录节点</strong></p> <p>客户端与Zookeeper断开连接后，该节点依旧存在。</p> <p>（2）<strong>持久化顺序编号目录节点</strong></p> <p>客户端与Zookeeper断开连接后，该节点依旧存在，只是Zookeeper给该节点名称进行顺序编号。</p> <p>（3）<strong>临时目录节点</strong></p> <p>客户端与Zookeeper断开连接后，该节点被删除。</p> <p>（4）<strong>临时顺序编号目录节点</strong></p> <p>客户端与 Zookeeper 断开连接后，该节点被删除，只是Zookeeper给该节点名称进行顺序编号。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/04516ed774192c234d7f9b78ca8825a2.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 创建znode时设置顺序标识，znode名称后会附加一个值，顺序号是一个单调递增的计数器，由<strong>父节点</strong>维护。</p> <p>注意：<strong>在分布式系统中，顺序号可以被用于为所有的事件进行全局排序，这样客户端可以通过顺序号推断事件的顺序</strong>。</p> <h5 id="21-创建不带序号的永久节点">2.1 创建不带序号的永久节点</h5> <pre><code class="language-shell">[zk: localhost:2181(CONNECTED) 14] create /znode1 "value1" Created /znode1  [zk: localhost:2181(CONNECTED) 15] create /znode2 "value2" Created /znode2  # 获得节点的值 [zk: localhost:2181(CONNECTED) 16] get -s /znode1 value1 cZxid = 0x6 ctime = Sat Dec 04 18:43:50 CST 2021 mZxid = 0x6 mtime = Sat Dec 04 18:43:50 CST 2021 pZxid = 0x6 cversion = 0 dataVersion = 0 aclVersion = 0 ephemeralOwner = 0x0 dataLength = 6 numChildren = 0</code></pre> <h5 id="22-创建带序号的永久节点">2.2 创建带序号的永久节点</h5> <pre><code class="language-shell">[zk: localhost:2181(CONNECTED) 17] create -s /znode1/znode3 "value3" Created /znode1/znode30000000000  [zk: localhost:2181(CONNECTED) 18] create -s /znode1/znode4 "value4" Created /znode1/znode40000000001  [zk: localhost:2181(CONNECTED) 19] create -s /znode5 "value5" Created /znode50000000003  [zk: localhost:2181(CONNECTED) 20] create -s /znode1/znode6 "value6" Created /znode1/znode60000000002</code></pre> <p>可以发现如果原来没有序号节点，序号从 0 开始依次递增。如果原节点下已有 2 个节点，则再排序时从 2 开始，以此类推。</p> <h5 id="23-创建临时节点">2.3 创建临时节点</h5> <pre><code class="language-shell">[zk: localhost:2181(CONNECTED) 21] create -e /znode2/znode7 "value7" Created /znode2/znode7  [zk: localhost:2181(CONNECTED) 22] create -e -s /znode2/znode8 "value8" Created /znode2/znode80000000001  [zk: localhost:2181(CONNECTED) 23] ls /znode2 [znode7, znode80000000001]  # 重启客户端数据消失</code></pre> <h5 id="24-修改节点的值">2.4 修改节点的值</h5> <pre><code class="language-shell">[zk: localhost:2181(CONNECTED) 24] set /znode2/znode7 "val"  [zk: localhost:2181(CONNECTED) 25] get /znode2/znode7 val</code></pre> <h4 id="3监听节点">3、监听节点</h4> <h5 id="31-监听器原理">3.1 监听器原理</h5> <p>客户端注册监听它关心的目录节点，当目录节点发生变化时（数据改变、节点删除、子目录节点增加删除），Zookeeper会通知客户端。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/6140c4562cee7f4e8632af2615f48fa0.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> （1）首先要有一个main()线程。</p> <p>（2）在main线程中创建zookeeper客户端，这时就会创建两个线程，一个负责网络连接通信（connect），一个负责监听（listener）。</p> <p>（3）通过connect线程将注册的监听事件发送给zookeeper。</p> <p>（4）将监听事件添加到zookeeper的注册监听列表中。</p> <p>（5）zookeeper监听到有数据或路径变化时，就会通知listener线程。</p> <p>（6）listener线程内部调用process方法。</p> <h5 id="32-常见的监听">3.2 常见的监听</h5> <p>（1）监听节点数据的变化：<code>get -w path</code></p> <p>（2）监听子节点增减的变化：<code>ls -w path</code></p> <p>注意：上面两种监听都是<strong>注册一次生效一次</strong>。如果想要多次生效，那么就要注册多次。</p> <h4 id="4删除和查看节点">4、删除和查看节点</h4> <pre><code class="language-shell"># 查看/znode2下的子节点 [zk: localhost:2181(CONNECTED) 1] ls /znode2 [znode7, znode80000000001]  # 删除/znode2节点，因为下面存在子节点，所以不能删除 [zk: localhost:2181(CONNECTED) 2] delete /znode2 Node not empty: /znode2  # 删除/znode2/znode80000000001节点 [zk: localhost:2181(CONNECTED) 3] delete /znode2/znode80000000001  [zk: localhost:2181(CONNECTED) 4] ls /znode2 [znode7]  [zk: localhost:2181(CONNECTED) 5] delete /znode2 Node not empty: /znode2  # 删除/znode2及其下面所有子节点 [zk: localhost:2181(CONNECTED) 6] deleteall /znode2  [zk: localhost:2181(CONNECTED) 7] ls /znode2 Node does not exist: /znode2  # 查看节点状态 [zk: localhost:2181(CONNECTED) 9] stat /znode1 cZxid = 0x6 ctime = Sat Dec 04 18:43:50 CST 2021 mZxid = 0x6 mtime = Sat Dec 04 18:43:50 CST 2021 pZxid = 0xb cversion = 3 dataVersion = 0 aclVersion = 0 ephemeralOwner = 0x0 dataLength = 6 numChildren = 3</code></pre> <h3 id="六客户端相关的api">六、客户端相关的API</h3> <p>除了在启动zkCli.sh在命令行中使用相关的命令，也可以使用编程语言操作zookeeper相关的api。</p> <p>首先创建一个Java的maven项目，在pom.xml文件中引入zookeeper相关的依赖</p> <pre><code class="language-xml">&lt;dependency&gt;     &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;     &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;     &lt;version&gt;3.4.5&lt;/version&gt;     &lt;exclusions&gt;         &lt;exclusion&gt;             &lt;groupId&gt;org.slf4j&lt;/groupId&gt;             &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;         &lt;/exclusion&gt;     &lt;/exclusions&gt; &lt;/dependency&gt;</code></pre> <p>zookeeper相关的api可以参考官方文档：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://zookeeper.apache.org/doc/r3.7.0/apidocs/zookeeper-server/index.html"  target="_blank" rel="nofollow">点击链接</a></p> <p>为了便于测试，可以引入junit的依赖</p> <pre><code class="language-xml">&lt;dependency&gt;     &lt;groupId&gt;junit&lt;/groupId&gt;     &lt;artifactId&gt;junit&lt;/artifactId&gt;     &lt;version&gt;RELEASE&lt;/version&gt; &lt;/dependency&gt;</code></pre> <p>client写数据的时候，写请求可能是发送给Leader也可能是Follow。假设集群中有3台服务器，1台Leader，2台Follow</p> <p>（1）发送给Leader节点时<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/a0ac7661436739ace2ce8709fb630b40.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"><br /> 当集群中半数以上节点完成write请求后，就开始开放给客户端请求了。</p> <p>（2）发送给Follow节点时<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/985befc0e324b23ff8efa08888d07c50.jpg" alt="看完这篇文章你就可以告诉领导你精通Zookeeper了"></p> <p>当集群中半数以上节点完成write请求后，就开始开放给客户端请求了。</p> <h3 id="七zookeeper实现分布式锁">七、Zookeeper实现分布式锁</h3> <p>可以参考之前的文章：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/a_helloword/article/details/121757857?spm=1001.2014.3001.5501"  target="_blank" rel="nofollow">Zookeeper + Curator实现分布式锁</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-36852.htm">宠物粮在哪里批发的便宜又好吃（宠物粮批发进货渠道）</a></p>
+                                        <p>下一个：<a href="/news/article-37341.htm">重庆正规免费领养宠物猫的地方（重庆哪里有免费领养猫）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-27368.htm" title="动物医院申请条件是什么样的（动物医院手续）">动物医院申请条件是什么样的（动物医院手续）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-free-shadowrocket-node.htm" title="「11月15日」2024年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接">「11月15日」2024年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20895.htm" title="北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）">北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-26-free-high-speed-nodes.htm" title="「10月26日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接">「10月26日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-33499.htm" title="为什么HTTP/3要基于UDP？可靠吗？">为什么HTTP/3要基于UDP？可靠吗？</a></li>
+                        <li class="py-2"><a href="/news/article-20440.htm" title="聊城宠物食品公司工作怎么样（山东聊城宠物产业基地）">聊城宠物食品公司工作怎么样（山东聊城宠物产业基地）</a></li>
+                        <li class="py-2"><a href="/news/article-27826.htm" title="宠物粮销量排名榜前十（宠物粮品牌大全）">宠物粮销量排名榜前十（宠物粮品牌大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-23-free-clash.htm" title="「12月23日」2024年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享">「12月23日」2024年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-27-free-node-subscribe.htm" title="「10月27日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接">「10月27日」2024年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-free-v2ray.htm" title="「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享">「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">23</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">25</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
