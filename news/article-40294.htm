@@ -2,11 +2,12 @@
 <html lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-39300.htm" />
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-40294.htm" />
     <meta charset="utf-8">
-    <title>rancher k8s修改ingress默认80端口</title>
+    <title>GO语言学习——基本数据类型字符串</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="字符串 Go语言中的字符串以原生数据类型出现。 Go 语言里的字符串的内部实现使用UTF-8编码。 字符串的值为双引号(")中的内容，可以在Go语言的源码中直接添加非ASCII码字符 GO语言中字符串" />
         <!-- css -->
     <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -61,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="pageTitle" style="word-break: break-all;">rancher k8s修改ingress默认80端口</h1>
+                        <h1 class="pageTitle" style="word-break: break-all;">GO语言学习——基本数据类型字符串</h1>
                     </div>
                 </div>
             </div>
@@ -78,10 +79,10 @@
                         <div class="col-md-9">
                             <div class="about-logo">
                                                 <input type="hidden" id="share-website-info" data-name="" data-url="">
-                  				  				  				<div id="content_views" class="htmledit_views"> <p style="text-align:center;"><img fetchpriority="high" decoding="async" alt="" height="565" src="http://img.555519.xyz/uploads3/20220604/53cfd06193038723b7faf80ee79af1dc.jpg"></p> <p style="text-align:center;"><img decoding="async" alt="" height="695" src="http://img.555519.xyz/uploads3/20220604/fc6a00dc921cecce0adc2d9925587be9.jpg"></p> <p style="text-align:center;"><img decoding="async" alt="" height="834" src="http://img.555519.xyz/uploads3/20220604/c1a2d9da2067dded2038db710b756f17.jpg"></p> </div> 			                <div class="clearfix"></div>
+                  				  				  				<p>字符串</p> <p>Go语言中的字符串以原生数据类型出现。 Go 语言里的字符串的内部实现使用UTF-8编码。 字符串的值为双引号(")中的内容，可以在Go语言的源码中直接添加非ASCII码字符</p> <p>GO语言中字符串是用双引号包裹的</p> <p>GO语言中单引号包裹的是字符</p> <pre><code>// 字符串 s := "Hello 中国" // 单独的字母、汉字、符合表示一个字符 c1 := 'h' c2 := '1' c3 := '中' // 字节：1字节=8Bit(8个二进制位) // 1个字符'A'=1个字节 // 1个utf8编码的汉字'中'= 一般占3个字节</code></pre> <p>字符串转义符</p> <p>转义符 	       含义<br /> \r 	    回车符（返回行首）<br /> \n 	换行符（直接跳到下一行的同列位置）<br /> \t 	       制表符<br /> ' 	       单引号<br /> " 	       双引号<br /> \ 	       反斜杠</p> <p>字符串的常用操作</p> <pre><code>              方法                 	  介绍               len(str)              	  求长度            +或fmt.Sprintf           	 拼接字符串           strings.Split           	  分割           strings.contains          	判断是否包含</code></pre> <p>strings.HasPrefix,strings.HasSuffix	前缀/后缀判断<br /> strings.Index(),strings.LastIndex()	子串出现的位置<br /> strings.Join(a[]string, sep string)	join操作</p> <pre><code>package main  import ( 	"fmt" 	"strings" )  // 字符串  func main(){ 	// \ 本来是具有特殊含义的，告诉程序\就是一个单纯的\ 	path := "\"E:\\36期Python全栈开发资料\\Administrator(8E5370323193)\\预习(2)\"" 	path1 := "'E:\\36期Python全栈开发资料\\Administrator(8E5370323193)\\预习(2)'" 	fmt.Println(path) 	fmt.Println(path1)  	s := "I'm ok" 	fmt.Println(s)  	// 多行的字符串 	s2 := ` 	世情薄 	人情恶 	雨送黄昏花易落 	` 	fmt.Println(s2) 	s3 := `E:\36期Python全栈开发资料\Administrator(8E5370323193)\预习(2)` 	fmt.Println(s3)  	// 字符串相关操作 	fmt.Println(len(s3))  	// 字符串拼接 	name := "理想" 	world := "远大" 	ss := name + world 	fmt.Println(ss) 	ss1 := fmt.Sprintf("%s%s", name, world) 	// fmt.Printf("%s%s", name, world) 	fmt.Println(ss1) 	// 分割 	ret := strings.Split(s3, "\\") 	fmt.Println(ret)  	// 包含 	fmt.Println(strings.Contains(ss, "理想")) 	// 前缀 	fmt.Println(strings.HasPrefix(ss, "理想")) 	// 后缀 	fmt.Println(strings.HasSuffix(ss, "理想"))  	s4 := "abcded" 	fmt.Println(strings.Index(s4, "c")) 	fmt.Println(strings.LastIndex(s4, "c")) 	fmt.Println(strings.Index(s4, "d")) 	fmt.Println(strings.LastIndex(s4, "d")) 	// 拼接 	fmt.Println(strings.Join(ret, "+"))  }</code></pre> <p>byte和rune类型</p> <p>字符用单引号（’）包裹起来</p> <p>Go 语言的字符有以下两种：</p> <ol> <li>uint8类型，或者叫 byte 型，代表了ASCII码的一个字符。</li> <li>rune类型，代表一个 UTF-8字符。rune类型实际是一个int32</li> </ol> <p>字符串底层是一个byte数组，可以和[]byte类型相互转换。字符串是不能修改的 字符串是由byte字节组成，所以字符串的长度是byte字节的长度。 rune类型用来表示utf8字符，一个rune字符由一个或多个byte组成。</p> <p>修改字符串</p> <p>要修改字符串，需要先将其转换成[]rune或[]byte，完成后再转换为string。无论哪种转换，都会重新分配内存，并复制字节数组。</p> <p>类型转换</p> <p>强制类型转换的基本语法如下：</p> <pre><code>T(表达式)</code></pre> <p>其中，T表示要转换的类型。表达式包括变量、复杂算子和函数返回值等.</p> <pre><code>package main  import ( 	"fmt" )  func main() { 	s := "Hello 中国" 	// len()求的是byte字节的数量 	n := len(s) 	fmt.Println(n)  	// for i := 0; i &lt; len(s); i++ { 	// 	fmt.Println(s[i]) 	// 	fmt.Printf("%c\n", s[i]) // %c：字符 	// }  	// 字符串修改 	s2 := "白萝卜" // [白 萝 卜] 	s3 := []rune(s2) // 把字符串强制转换成了一个rune切片 	s3[0] = '红' // 单引号表示字符 	fmt.Println(string(s3)) // 把rune切片强制转换成字符串  	c1 := "红" 	c2 := '红' // rune(int32) 	fmt.Printf("c1:%T c2:%T\n", c1, c2) // c1:string c2:int32 	c3 := "H" 	c4 := 'H' 	c5 := byte('H') 	fmt.Printf("c3:%T c4:%T\n", c3, c4) // c3:string c4:int32 	fmt.Printf("c4:%d\n", c4) // c4:72 	fmt.Printf("c5:%T\n", c5) // c5:uint8  	// 类型转换 	n1 := 10 // int 	var f float64 	f = float64(n1) 	fmt.Println(f) 	fmt.Printf("%T\n", f) // float64   }</code></pre> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-38807.htm">上海宠物领养站电话号码（上海宠物领养地址）</a></p>
-                                        <p>下一个：<a href="/news/article-39301.htm">人和动物打的狂犬疫苗一样吗 人和动物打的狂犬疫苗一样吗多少钱</a></p>
+                                        <p>上一个：<a href="/news/article-39796.htm">日本韩国品牌服装排行榜(韩国本土少女衣服品牌)</a></p>
+                                        <p>下一个：<a href="/news/article-40295.htm">动物医院用英文怎么说怎么写 动物医院用英文怎么说怎么写的</a></p>
                                     </div>
                                             </div>
                         </div>
@@ -92,16 +93,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-23185.htm" title="合肥宠物领养中心地址在哪里 合肥宠物领养中心地址在哪里啊">合肥宠物领养中心地址在哪里 合肥宠物领养中心地址在哪里啊</a></li>
-                        <li class="py-2"><a href="/news/article-19069.htm" title="上海宠物医院在线咨询电话（上海宠物医院在线咨询电话号码）">上海宠物医院在线咨询电话（上海宠物医院在线咨询电话号码）</a></li>
-                        <li class="py-2"><a href="/news/article-22735.htm" title="动物门诊的程序和方法技术（动物门诊图片）">动物门诊的程序和方法技术（动物门诊图片）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-7-node-share-links.htm" title="「12月7日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「12月7日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-33499.htm" title="为什么HTTP/3要基于UDP？可靠吗？">为什么HTTP/3要基于UDP？可靠吗？</a></li>
-                        <li class="py-2"><a href="/news/article-30076.htm" title="兽用疫苗查询网站（兽用疫苗真伪查询）">兽用疫苗查询网站（兽用疫苗真伪查询）</a></li>
-                        <li class="py-2"><a href="/news/article-22736.htm" title="最便宜的宠物猫多少钱?（最便宜的一只猫多少钱）">最便宜的宠物猫多少钱?（最便宜的一只猫多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-20895.htm" title="北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）">北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）</a></li>
+                        <li class="py-2"><a href="/news/article-26901.htm" title="吉泰生物怎么样 吉泰生物怎么样知乎">吉泰生物怎么样 吉泰生物怎么样知乎</a></li>
                         <li class="py-2"><a href="/news/article-38806.htm" title="宠物粮食上市（宠物粮食上市公司名单）">宠物粮食上市（宠物粮食上市公司名单）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-ssr-subscribe.htm" title="「11月9日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「11月9日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-36362.htm" title="通过实例程序验证与优化谈谈网上很多对于Java DCL的一些误解以及为何要理解Java内存模型">通过实例程序验证与优化谈谈网上很多对于Java DCL的一些误解以及为何要理解Java内存模型</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-9-free-ssr-subscribe.htm" title="「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享">「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-22271.htm" title="动物医院的英文短语是什么（动物医院用英文怎么说）">动物医院的英文短语是什么（动物医院用英文怎么说）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-free-node-subscribe-links.htm" title="「12月6日」2024年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接">「12月6日」2024年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18601.htm" title="预制菜包装袋有毒吗">预制菜包装袋有毒吗</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-20-free-v2ray.htm" title="「10月20日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接">「10月20日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-31603.htm" title="CSS阴影进阶，实现更加的立体的阴影效果">CSS阴影进阶，实现更加的立体的阴影效果</a></li>
+                        <li class="py-2"><a href="/news/article-31604.htm" title="上海免费领养猫上海宠物领（上海有没有免费领养宠物的）">上海免费领养猫上海宠物领（上海有没有免费领养宠物的）</a></li>
                     </ul>
     </div>
 </div>
