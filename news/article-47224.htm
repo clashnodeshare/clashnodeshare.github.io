@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-47224.htm" />
+    <meta charset="utf-8">
+    <title>springboot的依赖管理和自动配置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="依赖管理 根据springboot官方文档建立一个springboot项目 我们导入父工程 &lt;parent&gt;&lt;groupId&gt;org.springframework.boot&" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-47224.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="springboot的依赖管理和自动配置" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/e558172730b58f7ef416b113284e42bc.webp" />
+        <meta property="og:release_date" content="2025-01-28T09:30:51" />
+    <meta property="og:updated_time" content="2025-01-28T09:30:51" />
+        <meta property="og:description" content="依赖管理 根据springboot官方文档建立一个springboot项目 我们导入父工程 &lt;parent&gt;&lt;groupId&gt;org.springframework.boot&" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot的依赖管理和自动配置">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">springboot的依赖管理和自动配置</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-tomorrow-night"> <h2><a id="_0" rel="nofollow"></a>依赖管理</h2> <p>根据springboot官方文档建立一个springboot项目<br /> 我们导入父工程</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.5.4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span></code></pre> <p>然后再导入对应的web场景的starter</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span></code></pre> <p>我们就可以使用web场景的一些常见的依赖。<br /> 我们进入当前项目的父工程里发现里面还继承了<strong>spring-boot-dependencies</strong>。里面定义了所有场景对应的依赖及其版本号。<br /> 我们如果在导入依赖的时候，若是springboot的父项目里已经定义了我们需要导入的依赖，我们可以不需要定义version，springboot会自动帮我们导入默认的版本号，这称为<strong>版本仲裁</strong>。<br /> 那么如果我们需要自定义版本号又该如何定义呢？<br /> 例如导入mysql.connector</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span></code></pre> <p>springboot会自动仲裁版本为8.0.26<br /> 如需要自定义版本，则再自己的maven工程里加入</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mysql.version</span><span class="token punctuation">&gt;</span></span>5.1.47<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mysql.version</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span></code></pre> <p>这样就会将版本改为5.1.47。<br /> 首先，我们需要查看spring-boot-dependencies里规定的依赖版本，找到其用的key，在当前项目里重写配置就行。在maven里遵循就近优先原则。<br /><strong>关于场景启动器</strong>，springboot的start命名规范spring-boot-starter-*， * 代表了各种对应的开发场景。<br /> springboot所有支持的场景<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using.build-systems.starters"  rel="nofollow">点击此处进行查看</a> 。<br /> 也有许多第三方会去做springboot的场景启动器 *-spring-boot-starter。<br /> 如果你需要的依赖不在springboot的场景启动器提供的依赖里，则需要手动添加依赖并声明version。</p> <h2><a id="_48" rel="nofollow"></a>自动配置</h2> <p>在我们导入场景启动器后，会有大量的依赖导入到工程里。例如，我们导入web场景的启动器。写一个简单的Controller，启动springboot项目</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@RestController</span><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">HelloController</span><span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/hello"</span><span class="token punctuation">)</span><span class="token keyword">public</span><span class="token class-name">String</span><span class="token function">handle01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span><span class="token string">"Hello SpringBoot"</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>我们可以看见，可以的访问我们的请求路径。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/39bf92638d01bd056e36f0bd95f74ecb.jpg" alt="springboot的依赖管理和自动配置"></p> <p>就例如spring-boot-starter-web里有webmvc，在以往学习mvc时会需要有一堆的配置，例如dispatcherServlet，乱码的配置，文件上传，视图解析器等等。那么虽然依赖导入了，<strong>但是配置我们却还没有配置</strong>，应用程序也能正常工作。<br /> 我们可以在springboot的主程序入口查看对应的IOC容器。</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@SpringBootApplication</span><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">MainApplication</span><span class="token punctuation">{<!-- --></span><span class="token keyword">public</span><span class="token keyword">static</span><span class="token keyword">void</span><span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token comment">// 1.返回IOC容器</span><span class="token class-name">ConfigurableApplicationContext</span> run<span class="token operator">=</span><span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">MainApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 2.查看容器里的组件</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> names<span class="token operator">=</span> run<span class="token punctuation">.</span><span class="token function">getBeanDefinitionNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token operator">:</span> names<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>在启动项目的时候，会罗列出IOC容器里的组件名称 （组件过多，就不一一罗列）<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/96d1fe091da17cfd9e858cbc782d0891.jpg" alt="springboot的依赖管理和自动配置"><br /> 在学习Spring时，会有包扫描的配置，可是我们在springboot里并没有配置，让springboot去扫描哪些包下的组件，那又是如何进容器的？<br /> springboot会自动扫描主程序所在的包及其子包，都会被扫描进容器。<br /> 若是你的组件不按照springboot的默认规则来进行存放，但也想进行容器里有以下两种方式</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>scanBasePackages<span class="token operator">=</span><span class="token string">"com"</span><span class="token punctuation">)</span></code></pre> <p>或者</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@ComponentScan</span><span class="token punctuation">(</span>basePackages<span class="token operator">=</span><span class="token string">"com"</span><span class="token punctuation">)</span></code></pre> <p>在springboot项目里我们可以通过properties或者yaml文件来配置项目的一些属性，那么这些属性值又是如何生效的呢？<br /> 其实在配置文件里的值，他都是绑定到对应容器里的组件，就例如server.port</p> <pre><code class="prism language-java">server<span class="token punctuation">.</span>port<span class="token operator">=</span><span class="token number">8080</span></code></pre> <p>ctrl+左，我们进入可以发现它对应的绑定了ServerProperties这个类</p> <pre><code class="prism language-java"><span class="token keyword">public</span><span class="token keyword">void</span><span class="token function">setPort</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> port<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">this</span><span class="token punctuation">.</span>port<span class="token operator">=</span> port<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>而这个类在springboot启动的时候会被扫描进容器里<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/c010df8377c953dcd27fc82c03dd1b63.jpg" alt="springboot的依赖管理和自动配置"><br /> 这样我们的配置文件就会生效。<br /><strong>按需加载所有自动配置项</strong><br /> spring-boot-dependencies，里有非常多的依赖版本，我们不可能是全部导入到项目中来，按需加载就是按照你导入的场景，会自动导入对应场景的依赖，例如你导入web场景，他就不会给你导入数据场景的依赖。<br /> 关于自动配置，Springboot的自动配置都在spring-boot-autoConfigure里，你导入哪些场景，对应的配置就会生效。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/07f7a5e3662081e10660bc85dc94fde6.jpg" alt="springboot的依赖管理和自动配置"><br /> 例如我们进入batch下查看对应的类，会发现，它有许多类是爆红的<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/a98a62af068bf31a5f1dd929df47c1e4.jpg" alt="springboot的依赖管理和自动配置"><br /> 这是因为我们没有导入对应的batch的starter，我们尝试去导入对应的batch的starter</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-batch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span></code></pre> <p>再来查看刚刚的类<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221201/8255f192b256966f83b3b34a369d9208.jpg" alt="springboot的依赖管理和自动配置"><br /> 对应的类就不再爆红。<br /> 关于自动配置，Springboot的自动配置都在spring-boot-autoConfigure里，你导入哪些场景，对应的配置就会生效。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-46740.htm">宠物生病咨询平台（宠物生病去哪里治疗）</a></p>
+                                        <p>下一个：<a href="/news/article-47225.htm">动物疫苗的作用有哪些呢视频 动物疫苗的作用有哪些呢视频讲解</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-24584.htm" title="宠物食品一手货源网（宠物一手货源厂家）">宠物食品一手货源网（宠物一手货源厂家）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-free-v2ray.htm" title="「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享">「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-free-node-subscribe.htm" title="「12月25日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「12月25日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-33039.htm" title="在Java中从控制台读取输入的方法">在Java中从控制台读取输入的方法</a></li>
+                        <li class="py-2"><a href="/news/article-18601.htm" title="预制菜包装袋有毒吗">预制菜包装袋有毒吗</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-13-free-node-subscribe.htm" title="「10月13日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接">「10月13日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-14-free-high-speed-nodes.htm" title="「1月14日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享">「1月14日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-free-clash.htm" title="「12月2日」2024年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接">「12月2日」2024年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-21-free-v2ray.htm" title="「1月21日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享">「1月21日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-clash-windows.htm" title="「1月19日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享">「1月19日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">86</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">25</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
