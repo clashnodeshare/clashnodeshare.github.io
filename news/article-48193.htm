@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-48193.htm" />
+    <meta charset="utf-8">
+    <title>层次聚类分析及代码实现</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="层次聚类分析及代码实现  层次聚类 作图代码及结果   距离矩阵和聚类算法小结   参考链接    层次聚类将个体间的关系进行分层次展示，可以人为设定分为几类。  ###生成层次聚类，dist距离矩阵" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-48193.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="层次聚类分析及代码实现" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/90108fd242055d5c641d66930e9882b9.webp" />
+        <meta property="og:release_date" content="2025-01-30T06:44:38" />
+    <meta property="og:updated_time" content="2025-01-30T06:44:38" />
+        <meta property="og:description" content="层次聚类分析及代码实现  层次聚类 作图代码及结果   距离矩阵和聚类算法小结   参考链接    层次聚类将个体间的关系进行分层次展示，可以人为设定分为几类。  ###生成层次聚类，dist距离矩阵" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="层次聚类分析及代码实现">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">层次聚类分析及代码实现</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <div class="toc"> <h3>层次聚类分析及代码实现</h3> <ul> <li><a href="#_2" rel="nofollow">层次聚类</a></li> <li><a href="#_4" rel="nofollow">作图代码及结果</a></li> <li> <ul> <li><a href="#_44" rel="nofollow">距离矩阵和聚类算法小结</a></li> </ul> </li> <li><a href="#_84" rel="nofollow">参考链接</a></li> </ul> </div> </h1> <p>层次聚类将个体间的关系进行分层次展示，可以人为设定分为几类。</p> </h1> <pre><code>###生成层次聚类，dist距离矩阵默认计算方式为欧氏距离method = "euclidean"，聚类方法默认为complete hc = hclust(dist(mtcars)) plot(hc) </code></pre> <p>作图结果如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/b39222482c86d425592837cd281fb5b7.jpg" alt="层次聚类分析及代码实现"><br /> 根据上述图，我们可以初步确定聚为几类更为合适：</p> <pre><code>#要是没有这个包的话，首先需要安装一下 #install.packages("factoextra") #载入包 library(factoextra) fviz_dend(hc, k = 4,            cex = 0.7,            k_colors = c("#2E9FDF", "#00AFBB", "#E7B800", "#FC4E07"),           color_labels_by_k = TRUE,            rect = TRUE           ) </code></pre> <p>结果如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/cc77c256f2bfd8eb7e6e1d292df2f7c6.jpg" alt="层次聚类分析及代码实现"><br /> 如果想放平，可以这样画：</p> <pre><code>fviz_dend(hc, k = 4,            cex = 0.7,            k_colors = c("#2E9FDF", "#00AFBB", "#E7B800", "#FC4E07"),           color_labels_by_k = TRUE,            rect = TRUE,           horiz = T) </code></pre> <p>这样就放平了：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/5312063a4e31cee375e58f24e81804a1.jpg" alt="层次聚类分析及代码实现"><br /> 当然还有更多美化方式，具体可以参考<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/u010157382/article/details/45562435"  rel="nofollow">最全的R语言聚类树形图画法</a>。</p> <h2> <a id="_44" rel="nofollow"></a>距离矩阵和聚类算法小结</h2> <p>如果对计算距离矩阵和聚类的算法有特定要求，可以参考下面的参数介绍。</p> <p><strong>在聚类中求两点的距离有：</strong></p> <p>1，绝对距离：manhattan</p> <p>2，欧氏距离：euclidean <strong>默认</strong></p> <p>3，闵科夫斯基距离：minkowski</p> <p>4，切比雪夫距离：chebyshev</p> <p>5，马氏距离：mahalanobis</p> <p>6，蓝氏距离：canberra</p> <p>用默认的算法求出距离如下</p> <p>算出距离后就可以进行聚类啦！</p> <p>out.hclust=hclust(out.dist,method=“complete”) #根据距离聚类</p> <p><strong>聚类也有多种方法：</strong></p> <p>1，类平均法：average</p> <p>2，重心法：centroid</p> <p>3，中间距离法:median</p> <p>4，最长距离法：complete <strong>默认</strong></p> <p>5，最短距离法：single</p> <p>6，离差平方和法：ward</p> <p>7，密度估计法：density</p> </h1> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/hfutxiaoguozhi/article/details/78828047"  rel="nofollow">基于R语言的聚类分析（k-means,层次聚类）</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/u010157382/article/details/45562435"  rel="nofollow">最全的R语言聚类树形图画法</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://www.bio-info-trainee.com/903.html"  rel="nofollow">R语言用hclust进行聚类分析</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jianshu.com/p/e2fceb95dfa1"  rel="nofollow">R语言可视化（二十九）：聚类树图绘制</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/HHTNAN/article/details/79281721"  rel="nofollow">R语言之系统聚类（层次）分析之图谱形式完整版</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.jianshu.com/p/4922e7dc750a"  rel="nofollow">99-非监督学习之hclust分层聚类</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/eat-drink-breathe-hard/p/12782522.html"  rel="nofollow">R语言绘图——给树状图的标签赋予不同颜色</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/weixin_45452300/article/details/122149830"  rel="nofollow">R语言聚类分析</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-47704.htm">合肥在哪里领养狗狗的（合肥领养狗狗的网站）</a></p>
+                                        <p>下一个：<a href="/news/article-48194.htm">TypeScript与JavaScript的区别</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-31604.htm" title="上海免费领养猫上海宠物领（上海有没有免费领养宠物的）">上海免费领养猫上海宠物领（上海有没有免费领养宠物的）</a></li>
+                        <li class="py-2"><a href="/news/article-22271.htm" title="动物医院的英文短语是什么（动物医院用英文怎么说）">动物医院的英文短语是什么（动物医院用英文怎么说）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-ssr-subscribe.htm" title="「11月9日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「11月9日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-25969.htm" title="C语言实现基于控制台的电子时钟_C 语言">C语言实现基于控制台的电子时钟_C 语言</a></li>
+                        <li class="py-2"><a href="/news/article-43265.htm" title="SpringCloud 之Hystrix Dashboard 服务监控">SpringCloud 之Hystrix Dashboard 服务监控</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-node-share-links.htm" title="「12月7日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接">「12月7日」2024年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-9-free-ssr-subscribe.htm" title="「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享">「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-11-free-ssr-subscribe.htm" title="「1月11日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享">「1月11日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-32545.htm" title="幼猫首次驱虫对身体有什么要求吗（幼猫第一次驱虫是体内还是体外）">幼猫首次驱虫对身体有什么要求吗（幼猫第一次驱虫是体内还是体外）</a></li>
+                        <li class="py-2"><a href="/news/article-47224.htm" title="springboot的依赖管理和自动配置">springboot的依赖管理和自动配置</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">34</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">25</span>
+                <h4><a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
