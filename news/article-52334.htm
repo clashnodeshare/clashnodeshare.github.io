@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-52334.htm" />
+    <meta charset="utf-8">
+    <title>「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="目录  Spring Boot Profiles   profile配置方式 profile激活方式      Profile的是配置文件的意思，我们在开发Spring Boot应用时，通常同一个项目" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-52334.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/8a30d2d0f73c5f3d5e1829d07da746ee.webp" />
+        <meta property="og:release_date" content="2025-02-07T07:17:45" />
+    <meta property="og:updated_time" content="2025-02-07T07:17:45" />
+        <meta property="og:description" content="目录  Spring Boot Profiles   profile配置方式 profile激活方式      Profile的是配置文件的意思，我们在开发Spring Boot应用时，通常同一个项目" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                        <li><a class="nav-link" href="#">关于</a></li>
+                            <li><a class="nav-link" href="#">联系</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atelier-sulphurpool-light"> <div class="toc"> <h3>目录</h3> <ul> <li><a href="#Spring_Boot_Profiles_1" rel="nofollow">Spring Boot Profiles</a></li> <li> <ul> <li><a href="#profile_14" rel="nofollow">profile配置方式</a></li> <li><a href="#profile_70" rel="nofollow">profile激活方式</a></li> </ul> </li> </ul> </div> </h1> <p>Profile的是配置文件的意思，我们在开发Spring Boot应用时，通常同一个项目会被安装到不同的环境,而不同的环境又需要不同的配置。比如：</p> <ul> <li>开发环境，应用需要连接一个可供调试的数据库单机进程</li> <li>生产环境，应用需要使用正式发布的数据库，通常是高可用的集群</li> <li>测试环境，应用只需要使用内存式的模拟数据库</li> </ul> <p>其中数据库地址、服务器端口等等配置都不同，如果每次打包时，都要修改配置文件，那么就会非常麻烦。</p> <p>Spring框架提供了profile的管理功能，我们可以使用profile功能来区分不同环境的配置。然后可以通过激活、指定参数等方式快速动态的切换环境。</p> <h2> <a id="profile_14" rel="nofollow"></a>profile配置方式</h2> <p><strong>1) 多文件方式</strong><br /> 新建多个配置文件，命名格式：<code>application-环境名.yml</code><br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/fbf0889221022061abce5b91387627c3.jpg" alt="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）"></p> <p><code>application-dev.yml</code> 开发环境</p> <pre><code class="prism language-yml"><span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span> <span class="token comment"># 给配置文件起名字，方便主配置文件引用</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">config</span><span class="token punctuation">:</span>     <span class="token key atrule">activate</span><span class="token punctuation">:</span>       <span class="token key atrule">on-profile</span><span class="token punctuation">:</span> dev </code></pre> <p><code> application-pro.yml</code> 生产环境</p> <pre><code class="prism language-yml"><span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8082</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">config</span><span class="token punctuation">:</span>     <span class="token key atrule">activate</span><span class="token punctuation">:</span>       <span class="token key atrule">on-profile</span><span class="token punctuation">:</span> pro </code></pre> <p> <code>application-test.yml </code>测试环境</p> <pre><code class="prism language-yml"><span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8083</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">config</span><span class="token punctuation">:</span>     <span class="token key atrule">activate</span><span class="token punctuation">:</span>       <span class="token key atrule">on-profile</span><span class="token punctuation">:</span> test </code></pre> <p><strong>2) yml多文档方式</strong><br /> 该方式只需要一个<code>application.yml</code>配置文件即可，在配置文件中使用 — （三个横杠）来分隔不同的环境配置</p> <pre><code class="prism language-yml"><span class="token punctuation">---</span> <span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">profiles</span><span class="token punctuation">:</span> dev <span class="token punctuation">---</span> <span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8082</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">profiles</span><span class="token punctuation">:</span> pro <span class="token punctuation">---</span> <span class="token key atrule">server</span><span class="token punctuation">:</span>   <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8083</span> <span class="token key atrule">spring</span><span class="token punctuation">:</span>   <span class="token key atrule">profiles</span><span class="token punctuation">:</span> test <span class="token punctuation">---</span> </code></pre> <h2> <a id="profile_70" rel="nofollow"></a>profile激活方式</h2> <p><strong>1) 配置文件</strong><br /> 在yml配置文件中配置：</p> <pre><code class="prism language-java">spring<span class="token operator">:</span>   profiles<span class="token operator">:</span>     active<span class="token operator">:</span> test </code></pre> <p><strong>2) 虚拟机参数</strong><br /> 在VM options指定：<code>-Dspring.profiles.active -dev</code><img decoding="async" src="http://img.555519.xyz/uploads/20221230/4289e115429b6da47aa0cd3373187749.jpg" alt="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）"><br /> 紧接着启动该项目，你会在控制台看到此时的环境就是你刚才设置的开发环境，覆盖了我们在配置文件中的激活配置<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/32737d77a34077a0211fde91c62614ca.jpg" alt="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）"></p> <p><strong>3) 命令行参数</strong><br /> 第一种：<code>--spring.profiles.active=pro</code><br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/cc6f4466eab070ce31910223e9cd22c8.jpg" alt="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）"><br /> 第二种：<code>java -jar xxx.jar --spring.profiles.active =test</code><br /> 使用maven打包项目，打开该jar包所在目录，接着启动该项目，不会可以参考这个&gt;&gt;&gt;<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/weixin_52986315/article/details/125542132?spm=1001.2014.3001.5501"  rel="nofollow">Spring Boot的启动方式</a><br /><img decoding="async" src="http://img.555519.xyz/uploads/20221230/16362db542ee13fa60990548003a8481.jpg" alt="「Spring Boot 系列」05. Spring Boot Profiles（多环境配置）"></p> <p><strong>最后</strong><br /><strong>祝大家学的愉快，学的神速。<br /> 有帮助的话，各位小伙伴可以点个赞收藏支持下啦！❤️<br /> 也欢迎关煮博主，一个正在努力变强的程序员~</strong></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-51804.htm">畜牧站卖疫苗吗（畜牧站可以打狂犬疫苗吗）</a></p>
+                                        <p>下一个：<a href="/news/article-52335.htm">广州宠物领养中心具体地址电话号码（广州市宠物领养中心）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-32067.htm" title="使用pyspark读取hive数据">使用pyspark读取hive数据</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-24-free-high-speed-nodes.htm" title="「1月24日」2025年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接地址分享">「1月24日」2025年最新高速Clash/Shadowrocket/SSR/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-33040.htm" title="猫3针疫苗一共多少元（猫三针疫苗每针间隔时间）">猫3针疫苗一共多少元（猫三针疫苗每针间隔时间）</a></li>
+                        <li class="py-2"><a href="/news/article-27369.htm" title="空气能十大排名有哪些品牌(空气能十大名牌排名有哪些)">空气能十大排名有哪些品牌(空气能十大名牌排名有哪些)</a></li>
+                        <li class="py-2"><a href="/news/article-45254.htm" title="动物疫苗的种类有哪些图片及名称大全（动物疫苗注射部位）">动物疫苗的种类有哪些图片及名称大全（动物疫苗注射部位）</a></li>
+                        <li class="py-2"><a href="/news/article-52864.htm" title="动物疫苗接种方法视频（动物 疫苗）">动物疫苗接种方法视频（动物 疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-ssr-subscribe.htm" title="「1月15日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享">「1月15日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-free-shadowrocket-node.htm" title="「12月14日」2024年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接">「12月14日」2024年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-51804.htm" title="畜牧站卖疫苗吗（畜牧站可以打狂犬疫苗吗）">畜牧站卖疫苗吗（畜牧站可以打狂犬疫苗吗）</a></li>
+                        <li class="py-2"><a href="/news/article-31604.htm" title="上海免费领养猫上海宠物领（上海有没有免费领养宠物的）">上海免费领养猫上海宠物领（上海有没有免费领养宠物的）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">24</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
