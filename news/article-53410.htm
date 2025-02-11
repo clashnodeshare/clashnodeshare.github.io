@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-53410.htm" />
+    <meta charset="utf-8">
+    <title>如何在IDEA 中配置 Maven</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-53410.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="如何在IDEA 中配置 Maven" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/e558172730b58f7ef416b113284e42bc.webp" />
+        <meta property="og:release_date" content="2025-02-09T10:02:58" />
+    <meta property="og:updated_time" content="2025-02-09T10:02:58" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如何在IDEA 中配置 Maven">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">如何在IDEA 中配置 Maven</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。在我们开发过程中导入的第三方jar包可能需要其他jar包的支持才能使用，而我们要去弄明白这些依赖的jar包，然后导入，这一过程可能需要耗费我们大量的精力和时间。有时候如果需要的jar数量过于panda，无疑会给我们的开发添堵。&nbsp;而使用 Maven 后，<span style="color:#fe2c24;"><strong>Maven 就可以替我们自动的将当前 jar 包所依赖的其他所有 jar 包全部导入进来，</strong></span>&nbsp;不需要我们自己再去导入相关jar包，能够节省大量的时间和精力，我们也可以不用去了解哪个jar包依赖了哪个jar包，直接配置Maven仓库就行。但相对地会对它产生极大的依赖。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下是在IDEA中配置Maven的两种方式：</p> <p><strong><span style="color:#fe2c24;">第一种是配置IDEA中自带的Maven插件。</span></strong></p> <p><strong><span style="color:#fe2c24;"></span></strong><span style="color:#0d0016;">&nbsp; 我们在新建模块或者项目时，可以直接新建一个Maven项目，如图所示。要使这个Maven项目能够正常的运行，需要做一些相关配置</span></p> <p><img fetchpriority="high" decoding="async" alt="" height="616" src="http://img.555519.xyz/uploads3/20220603/4176fa35dc64956e8812d7b7e316265e.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步：在IDEA的安装目录下找到maven的配置文件：IntelliJ IDEA 2018.3.6\plugins\maven\lib\maven3\conf/settings.xml，然后在里面配置本地仓库的位置</p> <pre><code>&lt;localRepository&gt;E:\LocalRepository（本地仓库的位置）&lt;/localRepository&gt;</code></pre> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;第二步：为了使maven能够自动从中央仓库下载需要的jar包，我们需要给它配置阿里云镜像仓库：在&nbsp; settings.xml 文件的标&lt;mirrors&gt;&lt;/mirrors&gt;标签里面配置以下标签：</p> <pre><code>&lt;mirror&gt;  &lt;id&gt;nexus-aliyun&lt;/id&gt;  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;  &lt;name&gt;Nexus aliyun&lt;/name&gt;  &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt;</code></pre> <p><img decoding="async" alt="" height="1161" src="http://img.555519.xyz/uploads3/20220603/30def03d90ec42ed16259e842195ca8d.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 第三步：配置完第二步后，我们打开IDEA的Settings/Build,Execution,Deployment/Maven目录，可以发现Maven的主目录为IDEA自带的maven目录，配置文件为自带maven目录下的config/settings.xml文件，本地仓库为我们在配置文件中配置的本地仓库地址。</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 最后设置Maven自动导包功能：勾上Settings/Build,Execution,Deployment/Maven/Importing下的Import Maven projects automatically选项，给maven设置自动导jar包的功能。</p> <p><img decoding="async" alt="" height="1150" src="http://img.555519.xyz/uploads3/20220603/cdf8f96f97b932ea13b1840191466d16.jpg"></p> <p><strong><span style="color:#fe2c24;">第二种是配置我们自己安装的maven核心程序。</span></strong></p> <p><strong><span style="color:#fe2c24;"></span></strong><span style="color:#0d0016;">&nbsp; 我们在新建模块或者项目时，可以直接新建一个Maven项目，如图所示。要使这个Maven项目能够正常的运行，需要做一些相关配置</span></p> <p><img loading="lazy" decoding="async" alt="" height="1163" src="http://img.555519.xyz/uploads3/20220603/3f7b74d2784e5562850a7117532a4add.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;然后保存就可以了。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-53409.htm">vue-cli4.5.13按需引入vant，解决vant样式失效问题</a></p>
+                                        <p>下一个：<a href="/news/article-53946.htm">@PathVariable接收两个参数</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-32067.htm" title="使用pyspark读取hive数据">使用pyspark读取hive数据</a></li>
+                        <li class="py-2"><a href="/news/article-40294.htm" title="GO语言学习——基本数据类型字符串">GO语言学习——基本数据类型字符串</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-free-subscribe-node.htm" title="「2月2日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「2月2日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-28752.htm" title="合肥宠物救助站哪里有 合肥宠物救助中心地址">合肥宠物救助站哪里有 合肥宠物救助中心地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-11-free-ssr-subscribe.htm" title="「1月11日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享">「1月11日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-ssr-subscribe.htm" title="「12月31日」2025年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接地址分享">「12月31日」2025年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-45754.htm" title="动物医院诊疗许可证办理条件有哪些规定（动物诊疗许可证办理动物医院）">动物医院诊疗许可证办理条件有哪些规定（动物诊疗许可证办理动物医院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-21-clash-windows.htm" title="「11月21日」2024年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接">「11月21日」2024年最新高速V2ray/Clash/SSR/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-47224.htm" title="springboot的依赖管理和自动配置">springboot的依赖管理和自动配置</a></li>
+                        <li class="py-2"><a href="/news/article-32068.htm" title="python2.7 之无解的yaml版本问题">python2.7 之无解的yaml版本问题</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">33</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

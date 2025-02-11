@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-53947.htm" />
+    <meta charset="utf-8">
+    <title>springboot整合XXL-JOB实行动态定时任务</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="春才刚到，忽而夏至——南方   前言  定时任务，相信很多人都用过吧？方法无非就是那几种而已，也有很多人写出了各式各样的框架，比如XXL-JOB XXL-JOB出自大众点评，是一个分布式任务调度平台，" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-53947.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="springboot整合XXL-JOB实行动态定时任务" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/8ce9212ad798d1bd124411b04fda9ba0.webp" />
+        <meta property="og:release_date" content="2025-02-10T07:36:21" />
+    <meta property="og:updated_time" content="2025-02-10T07:36:21" />
+        <meta property="og:description" content="春才刚到，忽而夏至——南方   前言  定时任务，相信很多人都用过吧？方法无非就是那几种而已，也有很多人写出了各式各样的框架，比如XXL-JOB XXL-JOB出自大众点评，是一个分布式任务调度平台，" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="springboot整合XXL-JOB实行动态定时任务">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">springboot整合XXL-JOB实行动态定时任务</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>春才刚到，忽而夏至——南方</p> <hr/> <h2> <a id="_4" rel="nofollow"></a>前言</h2> <blockquote> <p>定时任务，相信很多人都用过吧？方法无非就是那几种而已，也有很多人写出了各式各样的框架，比如XXL-JOB</p> <p>XXL-JOB出自大众点评，是一个分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展、开箱即用</p> <p>官方文档地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.xuxueli.com/xxl-job/"  rel="nofollow">点击此处访问官方文档</a></p> </blockquote> <h2> <a id="xxlJob_14" rel="nofollow"></a>下载xxlJob</h2> <blockquote> <ul> <li> <strong>源码仓库地址</strong>：</li> </ul> <ol> <li> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/xuxueli/xxl-job"  rel="nofollow">github地址</a> ，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/xuxueli/xxl-job/releases"  rel="nofollow">下载地址</a> </li> <li> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://gitee.com/xuxueli0323/xxl-job"  rel="nofollow">gitee地址</a>，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://gitee.com/xuxueli0323/xxl-job/releases"  rel="nofollow">下载地址</a> </li> </ol> <ul> <li> <strong>中央仓库地址</strong>：</li> </ul> <pre><code class="prism language-xml"><span class="token comment">&lt;!-- http://repo1.maven.org/maven2/com/xuxueli/xxl-job-core/ --&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.xuxueli<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>xxl-job-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>${最新稳定版本}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span> </code></pre> <ul> <li>运行环境：</li> </ul> <ul> <li>Maven3+</li> <li>Jdk1.8+</li> <li>Mysql5.7+</li> </ul> </blockquote> <h2> <a id="_38" rel="nofollow"></a>部署</h2> <ul> <li> <p>下载项目源码并解压至自己电脑的项目文件夹下</p> </li> <li> <p>初始化数据库，数据库文件位于项目目录的doc/db下，如图所示：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/95a1f567ba65cce33b6e8854e2101f55.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> </li> <li> <p>修改配置文件，文件位置：<code>/xxl-job/xxl-job-admin/src/main/resources/application.properties</code><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/50ecffb9c2d5f6c771462f62e1cd76fc.jpg" alt="springboot整合XXL-JOB实行动态定时任务"><br /> 需要修改配置文件中的数据库账号密码，填写报警邮箱等信息（如果你需要的话…）</p> </li> <li> <p>此时就可以点击xxl-job-admin模块的main方法进行运行，亦或者打包成jar使用cmd运行</p> </li> </ul> <p>访问地址：http://localhost:8080/xxl-job-admin，默认登录账号 “admin/123456”, 登录后运行界面如下图所示：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/afeb3491ef804df4e7f97b9030b8a2d6.jpg" alt="springboot整合XXL-JOB实行动态定时任务"><br /> 至此“调度中心”项目已经部署成功</p> <h2> <a id="_54" rel="nofollow"></a>使用</h2> <ul> <li> <p>新建springboot项目，步骤至此省略…如有不会请移步<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/wzp12321/article/details/86007848?spm=1001.2014.3001.5502"  rel="nofollow">创建第一个SpringBoot项目</a></p> </li> <li> <p>引入 “xxl-job-core” 的maven依赖</p> </li> <li> <p>编写相关配置文件，文件参考地址：<code>/xxl-job/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/resources/application.properties</code><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/276a68820f9caabec923f82b20eca133.jpg" alt="springboot整合XXL-JOB实行动态定时任务"><br /> 在自己的项目中根据自己的需要，写好相关配置，我就直接使用官方自带的示例代码了…</p> </li> <li> <p>配置配置文件，文件地址：<code>/xxl-job/xxl-job-executor-samples/xxl-job-executor-sample-springboot/src/main/java/com/xxl/job/executor/core/config/XxlJobConfig.java</code><br /> 即如下图所示：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230108/944649957eb8022d4c3df615b444f249.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> </li> <li> <p>编写定时任务，如下所示是一个简单的定时任务，嗯…也是扒拉的官方源代码，代码就在controller下</p> </li> </ul> <pre><code class="prism language-java"><span class="token annotation punctuation">@Component</span> <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SampleXxlJob</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">LoggerFactory</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token class-name">SampleXxlJob</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">/**      * 1、简单任务示例（Bean模式）      */</span>     <span class="token annotation punctuation">@XxlJob</span><span class="token punctuation">(</span><span class="token string">"demoJobHandler"</span><span class="token punctuation">)</span>     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">demoJobHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{<!-- --></span>         <span class="token class-name">XxlJobHelper</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"XXL-JOB, Hello World."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>             <span class="token class-name">XxlJobHelper</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"beat at:"</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span>SECONDS<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token punctuation">}</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <ul> <li>启动项目</li> <li>在上面的调度中心配置我们的定时任务</li> </ul> <blockquote> <ol> <li>新增执行器，即如下图所示，填入相关信息即可</li> </ol> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/1c177d5a165182b54ea59105cf206cec.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> <blockquote> <ol start="2"> <li>新增任务，填入定时任务相关信息</li> </ol> <p><code>注意：</code><strong>JobHandler</strong>参数与定时任务上@XxlJob(“demoJobHandler”)注解的名字要一致，不然找不到定时任务…</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/e13a2499dac4ddadd4a7970751eb73ca.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> <blockquote> <ol start="3"> <li>执行任务</li> </ol> <p>如图所示，执行一次我们刚刚编写好的定时任务</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/1a1dc2a099a31e6806150e30af8eb602.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> <blockquote> <p>控制台会出现如此打印即表示调用成功</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230108/e86fbf5779db98949853c04ae416664e.jpg" alt="springboot整合XXL-JOB实行动态定时任务"></p> <ul> <li>注意事项</li> </ul> <blockquote> <p>关于传参的问题，在定时任务的创建和执行一次调用的时候都会有任务参数的填写，这就是我们需要传递到代码中的参数。</p> <p>关于接收参数的问题，在2.3.0版本及其以上的参数接收发生了改变，用以下方式进行接收参数，且只能传递String类型，如果是其它类型参数，需要自己在代码中进行对应的转换</p> </blockquote> <pre><code class="prism language-java"><span class="token class-name">String</span> param <span class="token operator">=</span> <span class="token class-name">XxlJobHelper</span><span class="token punctuation">.</span><span class="token function">getJobParam</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </code></pre> <h2> <a id="_114" rel="nofollow"></a>结语</h2> <blockquote> <p>如今各种定时任务管理框架应运而生，我们管理定时任务也越来越简单，只需要简单的配置，简单的点击即可运行，甚至还有各种监控报警，邮件通知功能，再也不需要我们时刻关注了…</p> </blockquote></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-53946.htm">@PathVariable接收两个参数</a></p>
+                                        <p>下一个：<a href="/news/article-54492.htm">Python：数组添加数据和删除数据</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-34908.htm" title="宠物粮食市场前景如何发展 宠物粮食市场前景如何发展起来">宠物粮食市场前景如何发展 宠物粮食市场前景如何发展起来</a></li>
+                        <li class="py-2"><a href="/news/article-19527.htm" title="加盟狗粮加工厂多少钱合适（狗粮加工厂加盟销售）">加盟狗粮加工厂多少钱合适（狗粮加工厂加盟销售）</a></li>
+                        <li class="py-2"><a href="/news/article-44758.htm" title="如何从JavaScript对象中删除属性">如何从JavaScript对象中删除属性</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-9-free-ssr-subscribe.htm" title="「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享">「1月9日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-1-clash-node-daily-updates.htm" title="「1月1日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「1月1日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-31604.htm" title="上海免费领养猫上海宠物领（上海有没有免费领养宠物的）">上海免费领养猫上海宠物领（上海有没有免费领养宠物的）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-free-node-subscribe.htm" title="「12月25日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「12月25日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-3-free-subscribe-node.htm" title="「2月3日」2025年最新高速Shadowrocket/SSR/V2ray/Clash免费节点订阅链接地址分享">「2月3日」2025年最新高速Shadowrocket/SSR/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-free-clash.htm" title="「12月22日」2024年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「12月22日」2024年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-clash-node-daily-updates.htm" title="「2月4日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享">「2月4日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">33</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

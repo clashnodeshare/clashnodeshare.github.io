@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-53409.htm" />
+    <meta charset="utf-8">
+    <title>vue-cli4.5.13按需引入vant，解决vant样式失效问题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="1.使用vue-cli4.5.13新建vue项目 ①先全局安装最新版本的vue-cli,如果安装了旧版本的，最好先卸载 npm install-g @vue/cli #OR yarn global a" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-53409.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="vue-cli4.5.13按需引入vant，解决vant样式失效问题" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/8ce9212ad798d1bd124411b04fda9ba0.webp" />
+        <meta property="og:release_date" content="2025-02-09T10:02:58" />
+    <meta property="og:updated_time" content="2025-02-09T10:02:58" />
+        <meta property="og:description" content="1.使用vue-cli4.5.13新建vue项目 ①先全局安装最新版本的vue-cli,如果安装了旧版本的，最好先卸载 npm install-g @vue/cli #OR yarn global a" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue-cli4.5.13按需引入vant，解决vant样式失效问题">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">vue-cli4.5.13按需引入vant，解决vant样式失效问题</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>1.使用vue-cli4.5.13新建vue项目<br /> ①先全局安装最新版本的vue-cli,如果安装了旧版本的，最好先卸载</p> <pre><code class="prism language-javascript">npm install<span class="token operator">-</span>g @vue<span class="token operator">/</span>cli #<span class="token constant">OR</span> yarn global add @vue<span class="token operator">/</span>cli</code></pre> <p>@创建项目</p> <pre><code class="prism language-javascript">vue create 自己项目的名称</code></pre> <p>2，下载vant</p> <pre><code class="prism language-javascript">npm i vant<span class="token operator">-</span><span class="token constant">S</span></code></pre> <p>3.下载babel-plugin-import并在babel.config.js中修改配置如下（babel-plugin-import文档上有详细说明如何配置）</p> <pre><code class="prism language-javascript">module<span class="token punctuation">.</span>exports<span class="token operator">=</span><span class="token punctuation">{<!-- --></span>   presets<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'@vue/cli-plugin-babel/preset'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>   plugins<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'import'</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span>       libraryName<span class="token punctuation">:</span><span class="token string">'vant'</span><span class="token punctuation">,</span>       libraryDirectory<span class="token punctuation">:</span><span class="token string">'es'</span><span class="token punctuation">,</span>       style<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token string">'vant'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">}</span></code></pre> <p>4;使用</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> Button<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">'vant'</span><span class="token punctuation">;</span> Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span></code></pre> <p>注：可在当前页面引入，也可新建一个文件，把需要的组件引入后再在main.js中引入即可</p> <p><strong>问题：按需引入后，vant样式不生效，改为全局引入也不生效</strong><br /><strong>发现问题如下：</strong></p> <pre><code class="prism language-javascript">发现vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js中的css配置如下   css<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>     extract<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token comment">// 是否使用css分离插件 ExtractTextPlugin</span>     sourceMap<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token comment">// 开启 CSS source maps?</span>     loaderOptions<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>       less<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>         lessOptions<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>           javascriptEnabled<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>           modifyVars<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span><span class="token comment">/* less 变量覆盖，用于自定义主题 */</span><span class="token string">'primary-color'</span><span class="token punctuation">:</span><span class="token string">'#1890FF'</span><span class="token punctuation">,</span><span class="token string">'link-color'</span><span class="token punctuation">:</span><span class="token string">'#1890FF'</span><span class="token punctuation">,</span><span class="token string">'border-radius-base'</span><span class="token punctuation">:</span><span class="token string">'4px'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>     requireModuleExtension<span class="token punctuation">:</span><span class="token boolean">false</span><span class="token operator">**</span><span class="token comment">//这一项被设置成了false，导致组件库样式不生效，改为true         	就好了**</span><span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre> <p><strong>最终配置改为：</strong></p> <pre><code class="Bash"><xmp>css: { extract: true, // 是否使用css分离插件 ExtractTextPlugin sourceMap: false, // 开启 CSS source maps? loaderOptions: { less: { lessOptions: { javascriptEnabled: true, modifyVars: { /* less 变量覆盖，用于自定义主题 */ ‘primary-color’: ‘#1890FF’, ‘link-color’: ‘#1890FF’, ‘border-radius-base’: ‘4px’ } } } }, requireModuleExtension: true }</xmp></code></pre> <p> 重新编译启动项目后，发现样式生效了，特意记录一下！</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-52864.htm">动物疫苗接种方法视频（动物 疫苗）</a></p>
+                                        <p>下一个：<a href="/news/article-53410.htm">如何在IDEA 中配置 Maven</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-43762.htm" title="Serverless时代的微服务开发指南：华为云提出七大实践新标准">Serverless时代的微服务开发指南：华为云提出七大实践新标准</a></li>
+                        <li class="py-2"><a href="/news/article-21360.htm" title="vue的ESLint-使用及各种设置的配置">vue的ESLint-使用及各种设置的配置</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-clash-v2ray-ss-ssr.htm" title="「12月17日」2024年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接">「12月17日」2024年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-37823.htm" title="动物疫苗接种方法及注意事项视频教学（动物疫苗怎么注射）">动物疫苗接种方法及注意事项视频教学（动物疫苗怎么注射）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-free-ssr-node.htm" title="「11月18日」2024年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接">「11月18日」2024年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-19069.htm" title="上海宠物医院在线咨询电话（上海宠物医院在线咨询电话号码）">上海宠物医院在线咨询电话（上海宠物医院在线咨询电话号码）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-free-node-subscribe.htm" title="「12月27日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享">「12月27日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-19983.htm" title="狗粮在哪里进货（狗粮在哪里进货渠道）">狗粮在哪里进货（狗粮在哪里进货渠道）</a></li>
+                        <li class="py-2"><a href="/news/article-45253.htm" title="宠物粮食生产厂家电话地址 宠物粮食生产厂家电话地址查询">宠物粮食生产厂家电话地址 宠物粮食生产厂家电话地址查询</a></li>
+                        <li class="py-2"><a href="/news/article-48193.htm" title="层次聚类分析及代码实现">层次聚类分析及代码实现</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">33</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
