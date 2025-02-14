@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-55595.htm" />
+    <meta charset="utf-8">
+    <title>SQL常用日期查询语句及显示格式设置_MsSql_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="1.查询当前年、月、周相关时间 1.1.查询当前年份  SELECT TO_CHAR(SYSDATE,'YYYY') AS YEAR FROM DUAL--查询当前年份  SELECT TO_CHAR" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-55595.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="SQL常用日期查询语句及显示格式设置_MsSql_" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/78b5a19441b44f3518eadaad06a6e912.webp" />
+        <meta property="og:release_date" content="2025-02-13T03:08:02" />
+    <meta property="og:updated_time" content="2025-02-13T03:08:02" />
+        <meta property="og:description" content="1.查询当前年、月、周相关时间 1.1.查询当前年份  SELECT TO_CHAR(SYSDATE,'YYYY') AS YEAR FROM DUAL--查询当前年份  SELECT TO_CHAR" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SQL常用日期查询语句及显示格式设置_MsSql_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">SQL常用日期查询语句及显示格式设置_MsSql_</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2>1.查询当前年、月、周相关时间</h2> <h3>1.1.查询当前年份</h3> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'YYYY') AS YEAR FROM DUAL--查询当前年份  SELECT TO_CHAR(SYSDATE,'YYY') AS YEAR FROM DUAL--查询当前年份后两位  SELECT TO_CHAR(SYSDATE,'YY') AS YEAR FROM DUAL--查询当前年份最后两位  SELECT TO_CHAR(SYSDATE,'Y') AS YEAR FROM DUAL--查询当前年份最后一位</pre> </div> <h3>1.2.查询当前年份第几天</h3> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'DDD') AS DAYS FROM DUAL</pre> </div> <h3>1.3.查询当前月份第几天</h3> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'DD') AS DAYS FROM DUAL</pre> </div> <h3>1.4.查询当前周的星期几</h3> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'dy') AS WEEK FROM DUAL  SELECT TO_CHAR(SYSDATE,'day') AS WEEK FROM DUAL</pre> </div> <h3>1.5.查询当前年的第几天：</h3> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'DDD') AS DAYS FROM DUAL</pre> </div> <h2>2.查询当前第几季度</h2> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'Q') AS JD FROM DUAL</pre> </div> <h2>3.查询当前在一年内是第几周</h2> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'IW') AS WEEKNUM FROM DUAL  SELECT TO_CHAR(SYSDATE,'WW') AS WEEKNUM FROM DUAL  SELECT TO_CHAR(SYSDATE,'W') AS WEEKNUM FROM DUAL</pre> </div> <h2>4.查询当前某年某月有多少天</h2> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(last_day(to_date('2019/02/01','YYYY/MM/DD')),'DD') AS MONTH_DAYS_NUMBER FROM DUAL</pre> </div> <h2>5.查询当前的日期格式</h2> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE,'YYYY/MM/DD') AS MONTH FROM DUAL--获取当前日期的'YYYY/MM/DD'格式：2020/01/02  SELECT TO_CHAR(SYSDATE,'YYYYMMDD') AS MONTH FROM DUAL--获取当前日期的'YYYYMMDD'格式：20200102  SELECT TO_CHAR(SYSDATE,'YYYYMMDD HH:MI:SS') AS now FROM DUAL--获取当前时间，精确到秒的12小时制格式：20200102 03:18:25  SELECT TO_CHAR(SYSDATE,'YYYYMMDD HH24:MI:SS') AS now FROM DUAL--获取当前时间，精确到秒24小时制的格式：20200102 15:18:13  SELECT TO_CHAR(SYSDATE,'YYYY/MM/DD HH24:MI:SS:PM:DY') AS now FROM DUAL--获取当前时间的格式，显示上、下午和星期几：2020/01/02 15:17:59:下午：星期四</pre> </div> <h2>6.查询距离当前时间一段时间间隔的时间，当前时间之前用“-”当前时间之后用“+”</h2> <div class="ay1code"> <pre class="brush:sql;">SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7' second,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7秒前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7' minute,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7分钟前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7'hour ,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7小时前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7'day ,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7天前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7'month ,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7月前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - INTERVAL '7'year ,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间的7年前时间  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS NOW,TO_CHAR(SYSDATE - 8*INTERVAL '7'hour ,'YYYY/MM/DD HH24:MI:SS') AS PAST FROM DUAL --查询当前时间参数年、月、日、时、分、秒乘以一个数字倍数之前的时间</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-55047.htm">vue项目中package.json中的版本号</a></p>
+                                        <p>下一个：<a href="/news/article-55596.htm">被猫抓伤破皮要打针吗超过24小时（被猫抓伤几小时内打针有效）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-53409.htm" title="vue-cli4.5.13按需引入vant，解决vant样式失效问题">vue-cli4.5.13按需引入vant，解决vant样式失效问题</a></li>
+                        <li class="py-2"><a href="/news/article-51283.htm" title="延吉安泰动物医院怎么样呀好吗（延吉延农动物医院好吗）">延吉安泰动物医院怎么样呀好吗（延吉延农动物医院好吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-node-share-links.htm" title="「2月14日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「2月14日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-26-free-clash-subscribe.htm" title="「12月26日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接地址分享">「12月26日」2024年最新高速Clash/Shadowrocket/V2ray/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-free-ssr-node.htm" title="「11月14日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接">「11月14日」2024年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-21-free-clash.htm" title="「12月21日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「12月21日」2024年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-25500.htm" title="猫三联一针价格（猫三联一针价格是多少）">猫三联一针价格（猫三联一针价格是多少）</a></li>
+                        <li class="py-2"><a href="/news/article-52335.htm" title="广州宠物领养中心具体地址电话号码（广州市宠物领养中心）">广州宠物领养中心具体地址电话号码（广州市宠物领养中心）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-26-free-ssr-node.htm" title="「1月26日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「1月26日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-42277.htm" title="动物疫苗排名前十的有哪些品种 动物疫苗排名前十的有哪些品种图片">动物疫苗排名前十的有哪些品种 动物疫苗排名前十的有哪些品种图片</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">42</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
