@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-58396.htm" />
+    <meta charset="utf-8">
+    <title>K8S 将 pod 调度到指定 nodes 上运行</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="K8S将pod调度到指定nodes上运行 两种方式 方式1：强制固定 编写yaml，添加参数（node节点名） vim text.yaml nodeName: worker01  #添加节点名参数 具" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-58396.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="K8S 将 pod 调度到指定 nodes 上运行" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/8d28f64b82ec9b1e89f4054b8b9c2779.webp" />
+        <meta property="og:release_date" content="2025-02-18T00:32:31" />
+    <meta property="og:updated_time" content="2025-02-18T00:32:31" />
+        <meta property="og:description" content="K8S将pod调度到指定nodes上运行 两种方式 方式1：强制固定 编写yaml，添加参数（node节点名） vim text.yaml nodeName: worker01  #添加节点名参数 具" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="K8S 将 pod 调度到指定 nodes 上运行">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">K8S 将 pod 调度到指定 nodes 上运行</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h3><a id="K8Spodnodes_0" rel="nofollow"></a>K8S将pod调度到指定nodes上运行</h3> <h4><a id="_1" rel="nofollow"></a>两种方式</h4> <h4><a id="1_2" rel="nofollow"></a>方式1：强制固定</h4> <h5><a id="yamlnode_3" rel="nofollow"></a>编写yaml，添加参数（node节点名）</h5> <pre><code class="prism language-groovy">vim text<span class="token punctuation">.</span>yaml nodeName<span class="token punctuation">:</span> worker01  #添加节点名参数</code></pre> <h5><a id="yaml_9" rel="nofollow"></a>具体yaml</h5> <pre><code class="prism language-groovy">apiVersion<span class="token punctuation">:</span> v1 kind<span class="token punctuation">:</span> Pod metadata<span class="token punctuation">:</span>   name<span class="token punctuation">:</span> text   namespace<span class="token punctuation">:</span> text spec<span class="token punctuation">:</span>   nodeName<span class="token punctuation">:</span> worker01   #添加节点名参数   containers<span class="token punctuation">:</span><span class="token operator">-</span> name<span class="token punctuation">:</span> hello     image<span class="token punctuation">:</span> centos<span class="token punctuation">:</span><span class="token number">7</span>     imagePullPolicy<span class="token punctuation">:</span> IfNotPresent     command<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"bash"</span><span class="token punctuation">,</span><span class="token string">"-c"</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">]</span>     args<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"while true; do sleep 3;done;"</span><span class="token punctuation">]</span></code></pre> <h5><a id="pod_26" rel="nofollow"></a>创建该pod</h5> <pre><code class="prism language-groovy">kubectl create<span class="token operator">-</span>f text<span class="token punctuation">.</span>yaml</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/9f182b815089fd6815e6384a1c07ae24.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="pod_31" rel="nofollow"></a>查看pod，运行成功</h5> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/26e3347311f977855527a0d0af773b45.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="worker01_33" rel="nofollow"></a>查看是否在worker01上运行</h5> <pre><code class="prism language-groovy">kubectl describe pod text<span class="token operator">-</span>n text</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/2358c4fee1050aee19e95fd01d210f12.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h4><a id="2labelselector_38" rel="nofollow"></a>方式2：使用标签选择器（label-selector）</h4> <h5><a id="_39" rel="nofollow"></a>给节点添加标签</h5> <pre><code class="prism language-groovy">kubectl label nodes worker03 type<span class="token operator">=</span>node_type</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/fa731fccea59b10503963b63f57cd549.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="_44" rel="nofollow"></a>查看标签是否添加成功</h5> <pre><code class="prism language-groovy">kubectl get node<span class="token operator">--</span>show<span class="token operator">-</span>labels   #获取所有节点的标签，得到worker03设置的标签</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/7e112fba5fba9ed4a7572103f43caf86.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="yamlpod_50" rel="nofollow"></a>编写yaml创建pod，添加标签选择器参数</h5> <pre><code class="prism language-groovy">vim text1<span class="token punctuation">.</span>yaml</code></pre> <h5><a id="_54" rel="nofollow"></a>内容如下</h5> <pre><code class="prism language-groovy">apiVersion<span class="token punctuation">:</span> v1 kind<span class="token punctuation">:</span> Pod metadata<span class="token punctuation">:</span>   name<span class="token punctuation">:</span> text1   namespace<span class="token punctuation">:</span> text spec<span class="token punctuation">:</span>   nodeSelector<span class="token punctuation">:</span>    #标签选择器参数     type<span class="token punctuation">:</span> node_type #刚刚添加的类型   containers<span class="token punctuation">:</span><span class="token operator">-</span> name<span class="token punctuation">:</span> hello1     image<span class="token punctuation">:</span> centos<span class="token punctuation">:</span><span class="token number">7</span>     imagePullPolicy<span class="token punctuation">:</span> IfNotPresent     command<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"bash"</span><span class="token punctuation">,</span><span class="token string">"-c"</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">]</span>     args<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"while true; do sleep 3;done;"</span><span class="token punctuation">]</span></code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/203677eae70ddc98e2b3c459a365ac49.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="_72" rel="nofollow"></a>查看是否运行</h5> <pre><code class="prism language-groovy">kubectl get pod<span class="token operator">-</span>n text</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/56cdd192ad91e2608853357b055a98c4.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"></p> <h5><a id="worker03_78" rel="nofollow"></a>查看是否成功在worker03上运行</h5> <pre><code class="prism language-groovy">kubectl describe pod text1<span class="token operator">-</span>n text</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/6a9c47da052fcd7e812a1e769940a2f4.jpg" alt="K8S 将 pod 调度到指定 nodes 上运行"><br /> 原文链接：http://www.hainiubl.com/topics/75623</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-57847.htm">动物打一针疫苗多少钱啊图片大全（小动物打疫苗多少钱一只）</a></p>
+                                        <p>下一个：<a href="/news/article-58397.htm">2021年国考公务员报名条件（国考公务员2021年考试报名条件）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-54492.htm" title="Python：数组添加数据和删除数据">Python：数组添加数据和删除数据</a></li>
+                        <li class="py-2"><a href="/news/article-32545.htm" title="幼猫首次驱虫对身体有什么要求吗（幼猫第一次驱虫是体内还是体外）">幼猫首次驱虫对身体有什么要求吗（幼猫第一次驱虫是体内还是体外）</a></li>
+                        <li class="py-2"><a href="/news/article-35858.htm" title="海拉鲁大陆对面（海拉鲁大陆的边缘是什么）">海拉鲁大陆对面（海拉鲁大陆的边缘是什么）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-clash-v2ray-ss-ssr.htm" title="「2月18日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「2月18日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-v2ray-subscribe.htm" title="「12月1日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接">「12月1日」2024年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-high-speed-nodes.htm" title="「2月19日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享">「2月19日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-34455.htm" title="宠物粮食排名榜前十名图片（宠物粮知识）">宠物粮食排名榜前十名图片（宠物粮知识）</a></li>
+                        <li class="py-2"><a href="/news/article-55046.htm" title="Python轻松入门-13 函数返回值">Python轻松入门-13 函数返回值</a></li>
+                        <li class="py-2"><a href="/news/article-57846.htm" title="Redis详解&#8212;Redis持久化_在线工具">Redis详解&#8212;Redis持久化_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-free-shadowrocket-node.htm" title="「12月3日」2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接">「12月3日」2024年最新高速V2ray/SSR/Clash/Shadowrocket免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">60</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
