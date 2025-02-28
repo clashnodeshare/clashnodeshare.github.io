@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-64318.htm" />
+    <meta charset="utf-8">
+    <title>通过反射获取Class对象的四种方式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="反射：通过反射我们可以获取任意一个类的所有属性和方法，还可以调用这些方法和属性。  优点：可以让代码更加灵活、为各种框架提供开箱即用的功能提供了便利缺点：让我们在运行时有了分析操作类的能力，这同样也增" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-64318.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="通过反射获取Class对象的四种方式" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/a145e2c6e0a948ee4a5373ab4090cc21.webp" />
+        <meta property="og:release_date" content="2025-02-28T06:55:28" />
+    <meta property="og:updated_time" content="2025-02-28T06:55:28" />
+        <meta property="og:description" content="反射：通过反射我们可以获取任意一个类的所有属性和方法，还可以调用这些方法和属性。  优点：可以让代码更加灵活、为各种框架提供开箱即用的功能提供了便利缺点：让我们在运行时有了分析操作类的能力，这同样也增" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="通过反射获取Class对象的四种方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">通过反射获取Class对象的四种方式</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>反射：通过反射我们可以获取任意一个类的所有属性和方法，还可以调用这些方法和属性。</p> </h1> <p><span style="color:#fe2c24;"><strong><span style="background-color:#ffd900;">优点</span></strong><span style="background-color:#ffd900;">：可以让代码更加灵活、为各种框架提供开箱即用的功能提供了便利</span><br /><strong><span style="background-color:#ffd900;">缺点</span></strong><span style="background-color:#ffd900;">：让我们在运行时有了分析操作类的能力，这同样也增加了安全问题。</span><br /><span style="background-color:#ffd900;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 比如可以无视泛型参数的安全检查（泛型参数的安全检查发生在编译时）。</span><br /><span style="background-color:#ffd900;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;另外，反射的性能也要稍差点，不过，对于框架来说实际是影响不大的。</span></span></p> <p>如果我们动态获取到这些信息，我们需要依靠 Class 对象。Class 类对象将一个类的方法、变量等信息告诉运行的程序。</p> </h1> <ul> <li> <p><span style="color:#fe2c24;"><strong><span style="background-color:#ffd900;">通过</span><code><span style="background-color:#ffd900;">Class.forName()</span></code><span style="background-color:#ffd900;">传入类的全路径获取</span></strong></span></p> </li> <li> <p><span style="color:#fe2c24;"><strong><span style="background-color:#ffd900;">通过对象实例instance.getClass()获取</span></strong></span></p> </li> <li> <p><span style="color:#fe2c24;"><strong><span style="background-color:#ffd900;">通过类加载器ClassLoader.loadClass()根据类的全路径获取</span></strong></span></p> </li> <li> <p><span style="color:#fe2c24;"><strong><span style="background-color:#ffd900;">通过具体的实例对象获取</span></strong></span></p> </li> </ul> </h1> <pre><code class="language-java">	/** 	 * 通过反射获取Class对象的4中方式 	 */ 	@Test 	public void reflectGetMethod_Test() { 		try { 			String classPath = "com.hl.magic.items.day20.reflection.ReflectiveDemo"; 			Class&lt;?&gt; forName = Class.forName(classPath); 			LOGGER.debug("[1]根据类全路径获取当前类的路径： {}", forName.getName());  			String name = ReflectiveDemo.class.getName(); 			LOGGER.debug("[2]-根据类对象来获取当前类的路径： {}", name);  			ReflectiveDemo reflectiveDemo = new ReflectiveDemo(); 			Class&lt;? extends ReflectiveDemo&gt; aClass = reflectiveDemo.getClass(); 			LOGGER.debug("[3]根据对象实例获取当前类的路径： {}", aClass.getName());  			Class&lt;?&gt; aClass1 = ClassLoader.getSystemClassLoader().loadClass(classPath); 			LOGGER.debug("[4]根据类加载器获取当前类的路径： {}", aClass1.getName());  			// 根据类的path获取对应的属性 			ReflectiveDemo reflectiveDemo1 = (ReflectiveDemo) forName.newInstance(); 			String userName = reflectiveDemo1.getUserName(); 			LOGGER.debug("获取反射对象的属性 : [{}]", userName); 		} catch ( ClassNotFoundException | InstantiationException | IllegalAccessException e) { 			e.printStackTrace(); 		} 	}</code></pre> <p><strong>输出：</strong></p> <pre><code>[main] DEBUG com.hl.magic.items.day20.reflection.ReflectiveDemo - [1]根据类全路径获取当前类的路径： com.hl.magic.items.day20.reflection.ReflectiveDemo [main] DEBUG com.hl.magic.items.day20.reflection.ReflectiveDemo - [2]-根据类对象来获取当前类的路径： com.hl.magic.items.day20.reflection.ReflectiveDemo [main] DEBUG com.hl.magic.items.day20.reflection.ReflectiveDemo - [3]根据对象实例获取当前类的路径： com.hl.magic.items.day20.reflection.ReflectiveDemo [main] DEBUG com.hl.magic.items.day20.reflection.ReflectiveDemo - [4]根据类加载器获取当前类的路径： com.hl.magic.items.day20.reflection.ReflectiveDemo [main] DEBUG com.hl.magic.items.day20.reflection.ReflectiveDemo - 获取反射对象的属性 : [小明]</code></pre> <p>通过类加载器获取 Class 对象不会进行初始化，意味着不进行包括初始化等一系列步骤，静态代码块和静态对象不会得到执行。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-63726.htm">动物打疫苗后抓了人是否还要打疫苗呢图片（动物打了疫苗的,抓伤了人怎么办）</a></p>
+                                        <p>下一个：<a href="/news/article-64319.htm">流浪猫蹭人腿,绕来绕去的（流浪猫蹭人腿,绕来绕去的尾巴竖直）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-47225.htm" title="动物疫苗的作用有哪些呢视频 动物疫苗的作用有哪些呢视频讲解">动物疫苗的作用有哪些呢视频 动物疫苗的作用有哪些呢视频讲解</a></li>
+                        <li class="py-2"><a href="/news/article-23184.htm" title="猫狗动物医院 猫狗动物医院ns">猫狗动物医院 猫狗动物医院ns</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-23-free-v2ray-subscribe.htm" title="「2月23日」2025年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接地址分享">「2月23日」2025年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-free-v2ray.htm" title="「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享">「1月7日」2025年最新高速Shadowrocket/Clash/V2ray/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-24584.htm" title="宠物食品一手货源网（宠物一手货源厂家）">宠物食品一手货源网（宠物一手货源厂家）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-free-clash.htm" title="「11月10日」2024年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接">「11月10日」2024年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-63112.htm" title="动物疫苗可以带上高铁吗（动物疫苗能放冰箱吗）">动物疫苗可以带上高铁吗（动物疫苗能放冰箱吗）</a></li>
+                        <li class="py-2"><a href="/news/article-64319.htm" title="流浪猫蹭人腿,绕来绕去的（流浪猫蹭人腿,绕来绕去的尾巴竖直）">流浪猫蹭人腿,绕来绕去的（流浪猫蹭人腿,绕来绕去的尾巴竖直）</a></li>
+                        <li class="py-2"><a href="/news/article-36851.htm" title="java8日期常用API，日期详解">java8日期常用API，日期详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-4-free-shadowrocket-node.htm" title="「1月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「1月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">92</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">93</span>
+                <h4><a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">30</span>
+                <h4><a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
