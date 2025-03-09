@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-69362.htm" />
+    <meta charset="utf-8">
+    <title>Spring Profiles的几个小知识</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="1、我们在项目中的 application.properties 文件里直接进行配置即可 spring.profiles.active=dev  2、通过硬编码实现 WebApplicationIni" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-69362.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="Spring Profiles的几个小知识" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/a009147fee2c2c3cc6a220a04e8a0c88.webp" />
+        <meta property="og:release_date" content="2025-03-08T05:04:41" />
+    <meta property="og:updated_time" content="2025-03-08T05:04:41" />
+        <meta property="og:description" content="1、我们在项目中的 application.properties 文件里直接进行配置即可 spring.profiles.active=dev  2、通过硬编码实现 WebApplicationIni" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spring Profiles的几个小知识">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">Spring Profiles的几个小知识</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>1、我们在项目中的 application.properties 文件里直接进行配置即可</p> <pre><code>spring.profiles.active=dev </code></pre> <p>2、通过硬编码实现 WebApplicationInitializer 接口，配置 ServletContext 来激活配置</p> <pre><code>@Configuration public class MyWebApplicationInitializer    implements WebApplicationInitializer {      @Override     public void onStartup(ServletContext servletContext) throws ServletException {           servletContext.setInitParameter(           "spring.profiles.active", "dev");     } } </code></pre> <p>3、直接在 ConfigurableEnvironment 中实现设置，使用 spring boot 的朋友应该都知道，系统所有的配置项都是来自于 ConfigurableEnvironment 。</p> <pre><code>@Autowired private ConfigurableEnvironment env; ... env.setActiveProfiles("dev"); </code></pre> <p>4、命令行JVM启动参数</p> <pre><code>-Dspring.profiles.active=dev </code></pre> <p>5、通过 export 环境变量来实现</p> <pre><code>export spring_profiles_active=dev </code></pre> <p>嗯， 学会了这几种方法，你已经可以在绝大部分场景下，游刃有余地使用 profile 了。</p> <p>还有个问题，既然这样配置的话，那我项目里有多个profile， 万一我手抖，没有用你说的这几种配置好呢？那会怎么样？</p> <p>这个你放心，spring boot 有兜底方法，你想啊，你在一些项目没有用到 profile 的时候，spring boot 是怎么启动的呢？spring boot 项目会自动使用默认配置</p> <pre><code>spring.profiles.default=none </code></pre> <p>也就是说，spring boot 启动了，但是没有加载任何被@Profile 等标记的配置类。只会加载没有被标记的配置类。</p> <p>我们项目里，有很多类似 @Profile("db") @Profile("mysql") 之类的，那像这种多个的怎么使用的？</p> <p>我们项目中，不同的模块都分开配置了， 我给你举个例子怎么使用的。</p> <pre><code>-Dspring.profiles.active=dev,db,mysql </code></pre> <p>就像这样，直接逗号分割，拼接上去就行了。</p> <p>那这样好像比较麻烦啊，万一搞漏掉了就给自己挖坑了。</p> <p>这就是要仔细了，以前一直要靠自己的。现在就不会有这个问题了，spring boot 团队也意识到这个问题了，在 Spring boot 2.4 开始已经支持分组了。</p> <pre><code>spring.profiles.group.production[0]=proddb spring.profiles.group.production[1]=prodmq </code></pre> <p>我们平时启动的时候只要指定 spring.profiles.active=production 就行了， prodb 和 prodmq 同样就能成功配置进来。Spring Profiles 的相关内容差不多都讲完了，你还有什么疑问吗？</p> </h1> <p>本文讲述了 Spring Profiles 的配置使用，和如果在启动的时候，选择特定的 profile 。也讲述了一些使用过程中的一些小技巧，希望对你有帮助。</p> <h2></h2> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-68716.htm">开宠物店成本多少钱（开宠物店要多少成本）</a></p>
+                                        <p>下一个：<a href="/news/article-69363.htm">宠物粮食品牌大全排行榜前十名 宠物粮食品牌大全排行榜前十名有哪些</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-50745.htm" title="PostgreSQL执行计划：Bitmap scan VS index only scan">PostgreSQL执行计划：Bitmap scan VS index only scan</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-node-share-links.htm" title="「2月14日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「2月14日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-64319.htm" title="流浪猫蹭人腿,绕来绕去的（流浪猫蹭人腿,绕来绕去的尾巴竖直）">流浪猫蹭人腿,绕来绕去的（流浪猫蹭人腿,绕来绕去的尾巴竖直）</a></li>
+                        <li class="py-2"><a href="/news/article-36852.htm" title="宠物粮在哪里批发的便宜又好吃（宠物粮批发进货渠道）">宠物粮在哪里批发的便宜又好吃（宠物粮批发进货渠道）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-10-node-share-links.htm" title="「2月10日」2025年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接地址分享">「2月10日」2025年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-69363.htm" title="宠物粮食品牌大全排行榜前十名 宠物粮食品牌大全排行榜前十名有哪些">宠物粮食品牌大全排行榜前十名 宠物粮食品牌大全排行榜前十名有哪些</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-ssr-node.htm" title="「2月16日」2025年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享">「2月16日」2025年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-47224.htm" title="springboot的依赖管理和自动配置">springboot的依赖管理和自动配置</a></li>
+                        <li class="py-2"><a href="/news/article-45752.htm" title="动物打疫苗 人还打吗现在 动物打疫苗 人还打吗现在还能打吗">动物打疫苗 人还打吗现在 动物打疫苗 人还打吗现在还能打吗</a></li>
+                        <li class="py-2"><a href="/news/article-41774.htm" title="在我的城市里有一家宠物医院英语作文（在我的城市里有一家宠物医院用英语怎么说?）">在我的城市里有一家宠物医院英语作文（在我的城市里有一家宠物医院用英语怎么说?）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">27</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
