@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-71986.htm" />
+    <meta charset="utf-8">
+    <title>linux执行rm -rf /*命令后的效果原来是这样</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="如果你接触过linux，肯定没少听过rm -rf的故事，这个恐怖的命令执行后到底会产生什么样的效果呢？接下来就带大家在虚拟机中演示一下。 注意：：：一定不能在生产环境中执行此命令，否则没有后悔药可买的" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-71986.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="linux执行rm -rf /*命令后的效果原来是这样" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/7630d66e2ca14e8453461c0c170fdb18.webp" />
+        <meta property="og:release_date" content="2025-03-12T06:06:42" />
+    <meta property="og:updated_time" content="2025-03-12T06:06:42" />
+        <meta property="og:description" content="如果你接触过linux，肯定没少听过rm -rf的故事，这个恐怖的命令执行后到底会产生什么样的效果呢？接下来就带大家在虚拟机中演示一下。 注意：：：一定不能在生产环境中执行此命令，否则没有后悔药可买的" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="linux执行rm -rf /*命令后的效果原来是这样">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">linux执行rm -rf /*命令后的效果原来是这样</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>如果你接触过linux，肯定没少听过rm -rf的故事，这个恐怖的命令执行后到底会产生什么样的效果呢？接下来就带大家在虚拟机中演示一下。</p> <p>注意：：：一定不能在生产环境中执行此命令，否则没有后悔药可买的！</p> <p>【演示环境】</p> <p>虚拟机：vmware</p> <p>系统：centos</p> <p>用户：root</p> <p>1、执行删除命令前，系统运行良好，且操作正常，如下图所示：</p> <p>&nbsp;</p> <p><img decoding="async" alt="linux free df" class="has" src="http://img.555519.xyz/uploads/20230206/c4078bca37d6540a8bc5b335e3edb81f.jpg"></p> <p>&nbsp;</p> <p>2、执行“rm -rf /*”命令，期间会报如下图所示的错误。容易看出，并不是所有的文件都能被删除，有些系统保护的文件删除会报错。</p> <p>&nbsp;</p> <p><img decoding="async" alt="删除后命令报错" class="has" src="http://img.555519.xyz/uploads/20230206/f6896cce4cdcb18791bb40ba1b95ab60.jpg"></p> <p>&nbsp;</p> <p>3、删除完毕后，我们试着执行了几个命令，如top、free、ls、shutdown等都已经无法执行了，只有cd可以。由此可见执行rm -rf /*命令的影响程度有多大。</p> <p>&nbsp;</p> <p><img decoding="async" alt="rm -rf报权限错误" class="has" src="http://img.555519.xyz/uploads/20230206/f347aaadc3d7202628f6c13cf00a59b5.jpg"></p> <p>&nbsp;</p> <p>4、强制关机后，重新启动系统，如下图所示已经报异常了，无法正常进入系统，此时只有进行重装系统了。</p> <p>&nbsp;</p> <p><img decoding="async" alt="linux启动异常" class="has" src="http://img.555519.xyz/uploads/20230206/568ed48007b294bcd85a006d601c65e5.jpg"></p> <p>&nbsp;</p> <p><strong>总结：</strong></p> <p>有点遗憾删除结束后没法再使用df、ls这些命令，所以没办法看出还剩哪些文件。不过从上面的结果来看，连基础命令都执行不了，所以用户数据（如安装的软件、部署的网站、数据库等）肯定也都全删没了。</p> <p>&nbsp;</p> <p>因此平时操作的过程中要养成良好的习惯，尽量不要用rm命令，可以用mv命令来代替。比如要删掉a.txt，可以执行mv a.txt /mytemp ，然后再写个脚本定时清除/mytemp目录下的文件，这样会安全很多。</p> <p>&nbsp;</p> <p>文章出自：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.daixiaorui.com/read/265.html"  rel="nofollow">https://www.daixiaorui.com/read/265.html</a>&nbsp;本站所有文章，除注明出处外皆为原创，转载请注明本文地址，版权所有。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-71320.htm">厦门猫领养中心在哪里啊（厦门猫领养中心在哪里啊电话）</a></p>
+                                        <p>下一个：<a href="/news/article-71987.htm">Java线程池深入浅出</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-35857.htm" title="猫咪疫苗要打几针才算完成（猫咪疫苗打几针疫苗时间间隔）">猫咪疫苗要打几针才算完成（猫咪疫苗打几针疫苗时间间隔）</a></li>
+                        <li class="py-2"><a href="/news/article-71986.htm" title="linux执行rm -rf /*命令后的效果原来是这样">linux执行rm -rf /*命令后的效果原来是这样</a></li>
+                        <li class="py-2"><a href="/news/article-53947.htm" title="springboot整合XXL-JOB实行动态定时任务">springboot整合XXL-JOB实行动态定时任务</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-8-free-ssr-node.htm" title="「1月8日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「1月8日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-62511.htm" title="动物疫苗厂家查询（动物疫苗厂家查询官网）">动物疫苗厂家查询（动物疫苗厂家查询官网）</a></li>
+                        <li class="py-2"><a href="/news/article-60140.htm" title="宠物店开业活动策划（宠物店开业活动策划促销）">宠物店开业活动策划（宠物店开业活动策划促销）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-27-free-node-subscribe.htm" title="「2月27日」2025年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接地址分享">「2月27日」2025年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-ssr-node.htm" title="「3月7日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享">「3月7日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-55047.htm" title="vue项目中package.json中的版本号">vue项目中package.json中的版本号</a></li>
+                        <li class="py-2"><a href="/news/article-64946.htm" title="狗粮招商加盟（狗粮加盟代理）">狗粮招商加盟（狗粮加盟代理）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">36</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-70665.htm" />
+    <meta charset="utf-8">
+    <title>通过拆分属性将数组转换为对象-JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="我们有一个字符串文字数组，其中每个元素都有一个破折号(-)，属性键位于破折号的左侧，其值位于右侧。一个样本输入数组看起来像这样- const&nbsp;arr&nbsp;=&nbsp;["player" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-70665.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="通过拆分属性将数组转换为对象-JavaScript" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/8a4c911b2b87ed6333aa41b14f82559a.webp" />
+        <meta property="og:release_date" content="2025-03-10T04:35:10" />
+    <meta property="og:updated_time" content="2025-03-10T04:35:10" />
+        <meta property="og:description" content="我们有一个字符串文字数组，其中每个元素都有一个破折号(-)，属性键位于破折号的左侧，其值位于右侧。一个样本输入数组看起来像这样- const&nbsp;arr&nbsp;=&nbsp;["player" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="通过拆分属性将数组转换为对象-JavaScript">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">通过拆分属性将数组转换为对象-JavaScript</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>我们有一个字符串文字数组，其中每个元素都有一个破折号(-)，属性键位于破折号的左侧，其值位于右侧。一个样本输入数组看起来像这样-</p> <pre>const&nbsp;arr&nbsp;=&nbsp;["playerName-Kai&nbsp;Havertz",&nbsp;"age-21",&nbsp;"nationality-German",&nbsp;"postion-CAM",&nbsp;"languages-German,English,Spanish",&nbsp;"club-Chelsea"];</pre> <p>我们需要编写一个函数来拆分这些字符串，并从该数组中形成一个对象。</p> <p>让我们编写代码，它将遍历数组，拆分每个字符串并将其馈送到新对象中。</p> <h2>示例</h2> <p>以下是代码-</p> <pre>const&nbsp;arr&nbsp;=&nbsp;["playerName-Kai&nbsp;Havertz",&nbsp;"age-21",&nbsp;"nationality-German", "postion-CAM",&nbsp;"languages-German,English,Spanish",&nbsp;"club-Chelsea"]; const&nbsp;arrayToObject&nbsp;=&nbsp;arr&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;const&nbsp;obj&nbsp;=&nbsp;{}; &nbsp;&nbsp;&nbsp;arr.forEach(string&nbsp;=&gt;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;[key,&nbsp;value]&nbsp;=&nbsp;string.split("-"); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj[key]&nbsp;=&nbsp;value; &nbsp;&nbsp;&nbsp;}); &nbsp;&nbsp;&nbsp;return&nbsp;obj; }; console.log(arrayToObject(arr));</pre> <p>输出结果</p> <p>这将在控制台中产生以下输出-</p> <pre>{ &nbsp;&nbsp;&nbsp;playerName:&nbsp;'Kai&nbsp;Havertz', &nbsp;&nbsp;&nbsp;age:&nbsp;'21', &nbsp;&nbsp;&nbsp;nationality:&nbsp;'German', &nbsp;&nbsp;&nbsp;postion:&nbsp;'CAM', &nbsp;&nbsp;&nbsp;languages:&nbsp;'German,English,Spanish', &nbsp;&nbsp;&nbsp;club:&nbsp;'Chelsea' }</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-70002.htm">宠物粮食品牌大全（宠物粮品牌排行）</a></p>
+                                        <p>下一个：<a href="/news/article-70666.htm">动物医院管理制度清单（动物医院管理制度清单表）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-49724.htm" title="天宠宠物托运电话（天宠宠物托运怎么样）">天宠宠物托运电话（天宠宠物托运怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-14-free-high-speed-nodes.htm" title="「1月14日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享">「1月14日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-46246.htm" title="Web支持可暂停的超大文件上传">Web支持可暂停的超大文件上传</a></li>
+                        <li class="py-2"><a href="/news/article-49725.htm" title="宠物粮食生产厂家一年能盈利多少吨 宠物粮食生产厂家一年能盈利多少吨饲料">宠物粮食生产厂家一年能盈利多少吨 宠物粮食生产厂家一年能盈利多少吨饲料</a></li>
+                        <li class="py-2"><a href="/news/article-55046.htm" title="Python轻松入门-13 函数返回值">Python轻松入门-13 函数返回值</a></li>
+                        <li class="py-2"><a href="/news/article-39301.htm" title="人和动物打的狂犬疫苗一样吗 人和动物打的狂犬疫苗一样吗多少钱">人和动物打的狂犬疫苗一样吗 人和动物打的狂犬疫苗一样吗多少钱</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-25-free-high-speed-nodes.htm" title="「1月25日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「1月25日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-free-shadowrocket-node.htm" title="「2月1日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「2月1日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-41281.htm" title="动物疫苗生产厂家有哪些（生产动物疫苗的上市公司有哪些）">动物疫苗生产厂家有哪些（生产动物疫苗的上市公司有哪些）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-15-free-clash-subscribe.htm" title="「2月15日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享">「2月15日」2025年最新高速Clash/SSR/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">36</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
