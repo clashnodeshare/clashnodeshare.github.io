@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-73304.htm" />
+    <meta charset="utf-8">
+    <title>如何获得基于多列的排序输出？</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="我们可以在ORDER BY子句中指定多个列，以基于这些多个列获取排序的输出。以下是使这个概念更清楚的示例- mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;St" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-73304.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="如何获得基于多列的排序输出？" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/efd56bd38476045cc12a123cffeb6c48.webp" />
+        <meta property="og:release_date" content="2025-03-14T07:04:16" />
+    <meta property="og:updated_time" content="2025-03-14T07:04:16" />
+        <meta property="og:description" content="我们可以在ORDER BY子句中指定多个列，以基于这些多个列获取排序的输出。以下是使这个概念更清楚的示例- mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;St" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如何获得基于多列的排序输出？">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">如何获得基于多列的排序输出？</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>我们可以在ORDER BY子句中指定多个列，以基于这些多个列获取排序的输出。以下是使这个概念更清楚的示例-</p> <pre>mysql&gt;&nbsp;Select&nbsp;*&nbsp;from&nbsp;Student&nbsp;ORDER&nbsp;BY&nbsp;Name,&nbsp;Address;  +------+---------+---------+-----------+ |&nbsp;Id&nbsp;&nbsp;&nbsp;|&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Address&nbsp;|&nbsp;Subject&nbsp;&nbsp;&nbsp;| +------+---------+---------+-----------+ |&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Aarav&nbsp;&nbsp;&nbsp;|&nbsp;Mumbai&nbsp;&nbsp;|&nbsp;History&nbsp;&nbsp;&nbsp;| |&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;Gaurav&nbsp;&nbsp;|&nbsp;Delhi&nbsp;&nbsp;&nbsp;|&nbsp;Computers&nbsp;| |&nbsp;15&nbsp;&nbsp;&nbsp;|&nbsp;Harshit&nbsp;|&nbsp;Delhi&nbsp;&nbsp;&nbsp;|&nbsp;Commerce&nbsp;&nbsp;| |&nbsp;17&nbsp;&nbsp;&nbsp;|&nbsp;Raman&nbsp;&nbsp;&nbsp;|&nbsp;Shimla&nbsp;&nbsp;|&nbsp;Computers&nbsp;| +------+---------+---------+-----------+  4&nbsp;rows&nbsp;in&nbsp;set&nbsp;(0.12&nbsp;sec)</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-72641.htm">宠物领养协议有坑吗（宠物领养协议书范本）</a></p>
+                                        <p>下一个：<a href="/news/article-73305.htm">南京哪里有领养猫的（南京可以领养猫的地方）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-57278.htm" title="领养宠物要签合同吗现在（领养宠物要签合同吗现在怎么办）">领养宠物要签合同吗现在（领养宠物要签合同吗现在怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-62511.htm" title="动物疫苗厂家查询（动物疫苗厂家查询官网）">动物疫苗厂家查询（动物疫苗厂家查询官网）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-ssr-node.htm" title="「3月12日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「3月12日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-54493.htm" title="宠物粮食价格走势图（宠物粮食价格走势图片）">宠物粮食价格走势图（宠物粮食价格走势图片）</a></li>
+                        <li class="py-2"><a href="/news/article-48701.htm" title="嵌入式Linux开发-根文件系统NFS网络挂载">嵌入式Linux开发-根文件系统NFS网络挂载</a></li>
+                        <li class="py-2"><a href="/news/article-35857.htm" title="猫咪疫苗要打几针才算完成（猫咪疫苗打几针疫苗时间间隔）">猫咪疫苗要打几针才算完成（猫咪疫苗打几针疫苗时间间隔）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-clash-v2ray-ss-ssr.htm" title="「3月5日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享">「3月5日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-44758.htm" title="如何从JavaScript对象中删除属性">如何从JavaScript对象中删除属性</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-free-node-subscribe.htm" title="「3月11日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「3月11日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-ssr-node.htm" title="「2月16日」2025年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享">「2月16日」2025年最新高速V2ray/SSR/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">45</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
