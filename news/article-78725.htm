@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-78725.htm" />
+    <meta charset="utf-8">
+    <title>嵌入式开发：执行最坏情况堆栈分析的3种方法</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="　　弄清楚如何为嵌入式应用程序和其中的任务确定堆栈的大小可能具有挑战性。在许多情况下，开发人员会选择一个他们认为应该足够的值，这些估计有时有点短，大部分时间是粗略估计，很少出现。虽然嵌入式开发人员在整" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-78725.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="嵌入式开发：执行最坏情况堆栈分析的3种方法" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/a009147fee2c2c3cc6a220a04e8a0c88.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:45:28" />
+    <meta property="og:updated_time" content="2025-03-22T08:45:28" />
+        <meta property="og:description" content="　　弄清楚如何为嵌入式应用程序和其中的任务确定堆栈的大小可能具有挑战性。在许多情况下，开发人员会选择一个他们认为应该足够的值，这些估计有时有点短，大部分时间是粗略估计，很少出现。虽然嵌入式开发人员在整" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="嵌入式开发：执行最坏情况堆栈分析的3种方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">嵌入式开发：执行最坏情况堆栈分析的3种方法</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>　　弄清楚如何为嵌入式应用程序和其中的任务确定堆栈的大小可能具有挑战性。在许多情况下，开发人员会选择一个他们认为应该足够的值，这些估计有时有点短，大部分时间是粗略估计，很少出现。虽然嵌入式开发人员在整个开发周期中应该监控他们的堆栈使用情况，但有时开发人员应该执行最坏情况的堆栈分析，例如：</p> <p>　　它们在 RAM 上运行得非常危险</p> <p>　　需要提交新的代码版本</p> <p>　　他们正在最终确定用于生产的固件</p> <p>　　在这篇文章中，我将讨论开发人员可以执行最坏情况堆栈分析的三种不同方式。</p> <p>　　技巧 1 – 手工计算</p> <p>　　在过去，嵌入式软件开发人员过去不得不手动计算他们的堆栈使用情况，这可能是一项棘手的工作。为了手动计算堆栈使用量，开发人员需要知道：</p> <p>　　他们要进行多少次函数调用</p> <p>　　在每个函数中将存储在堆栈中的局部变量</p> <p>　　将存储在堆栈中的返回地址的大小</p> <p>　　将存储在堆栈中的局部变量的大小</p> <p>　　如果在执行期间发生中断，中断帧将有多大</p> <p>　　可能发生的嵌套中断数</p> <p>　　正如你可以想象的那样，找到所有这些值并在进行更改时继续跟踪它们可能非常耗时且容易出错，这就是为什么不再推荐这种方法的原因，但嵌入式开发人员尝试一次以更深入地了解其他技术正在做什么仍然很有用。</p> <p class="img-center"><img fetchpriority="high" decoding="async" alt="" height="331" src="http://img.555519.xyz/uploads3/20220610/addd0da098fa4e1b4f83d50a8c582574.jpg"></p> <p>　　技巧 2 – 使用静态代码分析器</p> <p>　　许多静态代码分析器可用于估计最坏情况下的堆栈使用情况。在代码分析期间，该工具将确定函数深度以及我们之前列出的许多项目。使用静态分析器的好处在于它不仅执行堆栈分析，而且还检查代码的潜在问题。它在几秒钟内运行，这使开发人员无需手动计算堆栈使用情况。</p> <p>　　虽然使用静态代码分析器来获取最坏情况下的堆栈使用情况是一个不错的方法，但开发人员需要注意几个潜在问题。这些包括：</p> <p>　　取消引用函数指针不计为函数调用</p> <p>　　不考虑中断帧</p> <p>　　了解你的工具如何处理这些项目非常重要。为了获得准确的结果，在静态代码分析期间，必须经常使用宏或编译器符号有条件地将函数指针编译成函数调用。然后，你还必须添加你认为的中断堆栈使用情况。小问题，但在任何分析中都需要理解。</p> <p>　　技术#3 – 测试和测量</p> <p>　　对于最坏情况堆栈分析，嵌入式开发人员经常提倡的技术是测试和测量系统。许多开发环境现在都有执行OS-Aware调试的工具，这些工具将密切监视RTOS性能，包括应用程序运行时的最大堆栈使用量。下图中可以看到一个很好的示例，该示例来自使用ThreadX的Renesas Synergy平台的e2 Studio。</p> <p class="img-center"><img decoding="async" alt="" height="84" src="http://img.555519.xyz/uploads3/20220610/331af34729048ef68fadcfb1df9142c5.jpg"></p> <p>　　如你所见，每个线程(任务)都与内存位置、堆栈指针和最大堆栈使用量一起列出。我们甚至可以看到堆栈分配了多少内存。这不仅为开发人员提供了一种很好的方式来密切关注他们的堆栈使用情况，而且还可以确定他们的最大堆栈使用量是多少。</p> <p>　　开发人员确实需要小心呈现给他们的最大值。重要的是，在他们的系统处于最大压力下时进行读数。对于基于RTOS的应用程序，中断帧通常存储在系统堆栈中，因此我们无需考虑调整每个线程的大小以有足够的内存来应对中断风暴。</p> <p>　　结论</p> <p>　　无论你使用哪种技术来确定你的堆栈使用情况，稍微加大堆栈大小仍然是一个好习惯。有可能在测试期间从未实现过最坏的情况，这可能会在系统在现场时将系统设置为堆栈溢出。</p> <p>　　在本文中，我们研究了几种可用于计算最坏情况堆栈使用情况的技术。开发人员还可以使用其他几种方法，正如我们所看到的，使用现代工具在整个开发周期中监控堆栈使用情况非常容易。建议嵌入式开发人员在编写软件时，相应地监控和调整堆栈大小，以实现最高效的系统。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78723.htm">一文看懂HBase倒序分页查询（实现分页跳转）</a></p>
+                                        <p>下一个：<a href="/news/article-79419.htm">【linux】nohup运行jar包出现nohup: redirecting stderr to stdout解决办法</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-73304.htm" title="如何获得基于多列的排序输出？">如何获得基于多列的排序输出？</a></li>
+                        <li class="py-2"><a href="/news/article-46739.htm" title="树的同构 Java">树的同构 Java</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-clash.htm" title="「3月6日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享">「3月6日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-6-clash-node-daily-updates.htm" title="「2月6日」2025年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接地址分享">「2月6日」2025年最新高速SSR/Clash/Shadowrocket/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-61915.htm" title="分布式缓存&#8211;缓存与数据库强一致场景下的方案">分布式缓存&#8211;缓存与数据库强一致场景下的方案</a></li>
+                        <li class="py-2"><a href="/news/article-71986.htm" title="linux执行rm -rf /*命令后的效果原来是这样">linux执行rm -rf /*命令后的效果原来是这样</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-20-free-clash-subscribe.htm" title="「1月20日」2025年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接地址分享">「1月20日」2025年最新高速SSR/Clash/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-73305.htm" title="南京哪里有领养猫的（南京可以领养猫的地方）">南京哪里有领养猫的（南京可以领养猫的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-65531.htm" title="开一个宠物寄养店怎么样（开一家宠物寄养店）">开一个宠物寄养店怎么样（开一家宠物寄养店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-shadowrocket-node.htm" title="「3月21日」2025年最新高速Shadowrocket/SSR/V2ray/Clash免费节点订阅链接地址分享">「3月21日」2025年最新高速Shadowrocket/SSR/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">71</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

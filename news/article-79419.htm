@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-79419.htm" />
+    <meta charset="utf-8">
+    <title>【linux】nohup运行jar包出现nohup: redirecting stderr to stdout解决办法</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="如果要让 jar 包在后台一直运行（即使断开连接） 要使用到两个命令，第一个是nohup 输出日志文件 &nbsp; &amp; 后台继续运行 我的命令是 nohup&gt;nohupGps java" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-79419.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="【linux】nohup运行jar包出现nohup: redirecting stderr to stdout解决办法" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/a145e2c6e0a948ee4a5373ab4090cc21.webp" />
+        <meta property="og:release_date" content="2025-03-23T08:20:50" />
+    <meta property="og:updated_time" content="2025-03-23T08:20:50" />
+        <meta property="og:description" content="如果要让 jar 包在后台一直运行（即使断开连接） 要使用到两个命令，第一个是nohup 输出日志文件 &nbsp; &amp; 后台继续运行 我的命令是 nohup&gt;nohupGps java" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="【linux】nohup运行jar包出现nohup: redirecting stderr to stdout解决办法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">【linux】nohup运行jar包出现nohup: redirecting stderr to stdout解决办法</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>如果要让 jar 包在后台一直运行（即使断开连接）</p> <p>要使用到两个命令，第一个是nohup 输出日志文件 &nbsp; &amp; 后台继续运行</p> <p>我的命令是 nohup&gt;nohupGps java -jar consumerGps.jar &amp;</p> <p>nohup&gt;nohupGps &nbsp;重定向到 nohupGps 这个文件中</p> <p>然后出现了 &nbsp;nohup: redirecting stderr to stdou</p> <p>解决办法：使用新命令： nohup&gt;nohupGps java -jar consumerGps_product.jar 2&gt;&amp;1 &amp;</p> <p><span style="white-space:pre"></span>回车后，会自动输出这个jar包运行的pid（应该是，反正可以根据这个数据kill它）</p> <p>2&gt; 表示把标准错误重定向</p> <p>&amp;1<span style="white-space:pre"></span>表示标准输出</p> <p>&amp;2<span style="white-space:pre"></span>表示标准错误</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78725.htm">嵌入式开发：执行最坏情况堆栈分析的3种方法</a></p>
+                                        <p>下一个：<a href="/news/article-79420.htm">宠物美容师有前景吗女生（宠物美容师好不好做）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-v2ray.htm" title="「2月21日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「2月21日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-68071.htm" title="宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听">宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听</a></li>
+                        <li class="py-2"><a href="/news/article-73305.htm" title="南京哪里有领养猫的（南京可以领养猫的地方）">南京哪里有领养猫的（南京可以领养猫的地方）</a></li>
+                        <li class="py-2"><a href="/news/article-52863.htm" title="SpringBoot + SpringSecurity + Mybatis-Plus + JWT实现分布式系统认证和授权">SpringBoot + SpringSecurity + Mybatis-Plus + JWT实现分布式系统认证和授权</a></li>
+                        <li class="py-2"><a href="/news/article-47224.htm" title="springboot的依赖管理和自动配置">springboot的依赖管理和自动配置</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-v2ray-subscribe.htm" title="「3月20日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「3月20日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-subscribe-node.htm" title="「2月9日」2025年最新高速Shadowrocket/V2ray/SSR/Clash免费节点订阅链接地址分享">「2月9日」2025年最新高速Shadowrocket/V2ray/SSR/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-free-subscribe-node.htm" title="「2月2日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「2月2日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-70001.htm" title="猫咪疫苗可以自己打嘛（猫咪疫苗针可以自己打吗）">猫咪疫苗可以自己打嘛（猫咪疫苗针可以自己打吗）</a></li>
+                        <li class="py-2"><a href="/news/article-43762.htm" title="Serverless时代的微服务开发指南：华为云提出七大实践新标准">Serverless时代的微服务开发指南：华为云提出七大实践新标准</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">71</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
