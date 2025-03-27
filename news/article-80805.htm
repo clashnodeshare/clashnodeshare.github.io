@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-80805.htm" />
+    <meta charset="utf-8">
+    <title>数据库事务的四大特性和四个隔离级别</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="一、数据库事务的四大特性 事物是指作为一个单元的一组有序的数据库操作，单元是不可分割的，如果一组数据的所有操作都执行成功，事物完成，进行事物提交(commit)，其修改作用于所有数据库进程。有一个操作" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-80805.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="数据库事务的四大特性和四个隔离级别" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/715266a0ab036125ad76b195325a60fb.webp" />
+        <meta property="og:release_date" content="2025-03-25T08:16:28" />
+    <meta property="og:updated_time" content="2025-03-25T08:16:28" />
+        <meta property="og:description" content="一、数据库事务的四大特性 事物是指作为一个单元的一组有序的数据库操作，单元是不可分割的，如果一组数据的所有操作都执行成功，事物完成，进行事物提交(commit)，其修改作用于所有数据库进程。有一个操作" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="数据库事务的四大特性和四个隔离级别">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">数据库事务的四大特性和四个隔离级别</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2><a id="_0" rel="nofollow"></a>一、数据库事务的四大特性</h2> <p>事物是指作为一个单元的一组有序的数据库操作，单元是不可分割的，如果一组数据的所有操作都执行成功，事物完成，进行事物提交(commit)，其修改作用于所有数据库进程。有一个操作执行失败，事务执行失败进行回滚（rollback)，该事务所有操作的影响被取消；</p> <h3><a id="Atomicity_2" rel="nofollow"></a>原子性（Atomicity）</h3> <p>事物的操作要么全部执行成功提交，要么全部失败进行事物回滚，执行成功，对数据的改变将作用于其它数据库，执行失败，将不对其它数据库产生影响；</p> <h3><a id="Consistency_4" rel="nofollow"></a>一致性（Consistency）</h3> <p>事务的执行使数据库从一个状态到另一个状态，状态必须保持一致性，比如两个人进行转账，两个的总金额是1000，不过他们进行了多少次转账（事务），两个人的总额1000是不变的，这就是一致性状态；</p> <h3><a id="Osolation_6" rel="nofollow"></a>持久性（Osolation）</h3> <p>事务执行成功，对数据库数据的修改是永久性的，即使服务器宕机，也不会丢失已提交事务的操作；</p> <h3><a id="durability_8" rel="nofollow"></a>隔离性（durability）</h3> <p>多个线程并行对表执行事务，每个事务对其它事务都是隔离互不影响的，比如有两个线程A和B对同一数据S进行事务执行，线程A在获取数据S时，线程B的事务要么已经提交结束，要么还未执行</p> <h2><a id="_11" rel="nofollow"></a>二、事务四个隔离级别</h2> <p>数据库隔离的四个级别分别是：1、读取未提交；2、读取已提交；3、可重读；4、可串行化。隔离级别采取不同的锁类型来实现，若读取的是同一个数据可能发生脏读、幻读等问题</p> <h3><a id="Read_Uncommitted_13" rel="nofollow"></a>读未提交（Read Uncommitted）</h3> <p>在该隔离级别，所有事物都可以看到其它事务未提交的执行结果，事务可读取其它事务未提交的数据；也就是“脏读”</p> <h3><a id="Read_Committed_15" rel="nofollow"></a>读已提交（Read Committed）</h3> <p>事务只能看见其它事务已经提交的结果数据，在执行查询操作期间，同一事务的其它操作可能在这一操作期间进行了commit，到查询的结果集和上次查询的结果集不一样，也就是“不可重复读”</p> <h3><a id="_repeatable_Read_18" rel="nofollow"></a>可重复读 （repeatable Read）</h3> <p>MySql的默认隔离级别，保证同一事务的不同操作在并发读取的行数据是一样的。在事务读取某一范围的数据期间，不保证其它事务对该范围写入新行，造成事务下次查询的时候，多了新的数据行，也就是所谓的**“幻读”**，Innodb通过版本控制解决了这一问题。</p> <h3><a id="Serializable_20" rel="nofollow"></a>序列化（Serializable）</h3> <p>隔离的最高级别，通过强制让事务有序执行，解决幻读等问题。事务执行期间，对每个数据行加了共享锁，可能会引起其它事务查询超时等现象;</p> <h2><a id="_23" rel="nofollow"></a>三、脏读、幻读、不可重复读</h2> <h3><a id="Drity_Read__24" rel="nofollow"></a>脏读（Drity Read ）</h3> <p>事务读取了其它事务执行未提交的数据行</p> <h3><a id="Phantom_Read_27" rel="nofollow"></a>幻读（Phantom Read）</h3> <p>事务在检索期间，其它事物是数据执行了更新操作，导致前后两次检索的数据不一样</p> <h3><a id="_Nonrepeatable_Read_30" rel="nofollow"></a>不可重复度 （Nonrepeatable Read）</h3> <p>事物在检索期间，同一事物的不同操作（实例）对数据行修改后进行了commit，导致前后检索的数据行不一致</p> <h3><a id="_34" rel="nofollow"></a>与隔离级别的关系</h3> <table> <thead> <tr> <th>隔离级别</th> <th>脏读</th> <th>不可重复读</th> <th>幻读</th> </tr> </thead> <tbody> <tr> <td>读未提交</td> <td>+</td> <td>+</td> <td>+</td> </tr> <tr> <td>读已提交</td> <td>x</td> <td>+</td> <td>+</td> </tr> <tr> <td>可重复读</td> <td>x</td> <td>x</td> <td>+</td> </tr> <tr> <td>可序列化</td> <td>x</td> <td>x</td> <td>x</td> </tr> </tbody> </table> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-80099.htm">兽医站给猫打疫苗多少钱啊（兽医站能打猫三联吗）</a></p>
+                                        <p>下一个：<a href="/news/article-80806.htm">被猫抓了如果没***发病时间是多久（被猫抓没***多久会发病）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-free-v2ray.htm" title="「2月24日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享">「2月24日」2025年最新高速V2ray/Shadowrocket/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-41774.htm" title="在我的城市里有一家宠物医院英语作文（在我的城市里有一家宠物医院用英语怎么说?）">在我的城市里有一家宠物医院英语作文（在我的城市里有一家宠物医院用英语怎么说?）</a></li>
+                        <li class="py-2"><a href="/news/article-51804.htm" title="畜牧站卖疫苗吗（畜牧站可以打狂犬疫苗吗）">畜牧站卖疫苗吗（畜牧站可以打狂犬疫苗吗）</a></li>
+                        <li class="py-2"><a href="/news/article-82185.htm" title="动物疫苗销售许可证如何办理 动物疫苗销售许可证如何办理流程">动物疫苗销售许可证如何办理 动物疫苗销售许可证如何办理流程</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-clash-windows.htm" title="「1月18日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享">「1月18日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-39301.htm" title="人和动物打的狂犬疫苗一样吗 人和动物打的狂犬疫苗一样吗多少钱">人和动物打的狂犬疫苗一样吗 人和动物打的狂犬疫苗一样吗多少钱</a></li>
+                        <li class="py-2"><a href="/news/article-46246.htm" title="Web支持可暂停的超大文件上传">Web支持可暂停的超大文件上传</a></li>
+                        <li class="py-2"><a href="/news/article-50234.htm" title="java面向对象是什么意思_java什么是面向对象">java面向对象是什么意思_java什么是面向对象</a></li>
+                        <li class="py-2"><a href="/news/article-56713.htm" title="如何才能成为兽医（如何才能成为兽医护士）">如何才能成为兽医（如何才能成为兽医护士）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-4-free-shadowrocket-node.htm" title="「1月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「1月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">80</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">84</span>
+                <h4><a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
