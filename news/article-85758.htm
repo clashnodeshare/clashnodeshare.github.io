@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-85758.htm" />
+    <meta charset="utf-8">
+    <title>Python置换操作浅析(a, b=b, a)【Python】</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="在C/C++中，交换两个数的常规方法有以下两种：  借助临时变量 tmp = a a = b b = tmp   加法操作 a = a + b b = a - b a = a - b    但是在Py" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-85758.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="Python置换操作浅析(a, b=b, a)【Python】" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/4cc21651b57a075415e7b1ea2b5aeccd.webp" />
+        <meta property="og:release_date" content="2025-04-01T09:46:01" />
+    <meta property="og:updated_time" content="2025-04-01T09:46:01" />
+        <meta property="og:description" content="在C/C++中，交换两个数的常规方法有以下两种：  借助临时变量 tmp = a a = b b = tmp   加法操作 a = a + b b = a - b a = a - b    但是在Py" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Python置换操作浅析(a, b=b, a)【Python】">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">Python置换操作浅析(a, b=b, a)【Python】</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>在C/C++中，交换两个数的常规方法有以下两种：</p> <ol> <li>借助临时变量 <pre><code class="prism language-python">tmp <span class="token operator">=</span> a a <span class="token operator">=</span> b b <span class="token operator">=</span> tmp </code></pre> </li> <li>加法操作 <pre><code class="prism language-python">a <span class="token operator">=</span> a <span class="token operator">+</span> b b <span class="token operator">=</span> a <span class="token operator">-</span> b a <span class="token operator">=</span> a <span class="token operator">-</span> b </code></pre> </li> </ol> <p>但是在Python中，还有一种更简便的方法：</p> <pre><code class="prism language-python">a<span class="token punctuation">,</span> b <span class="token operator">=</span> b<span class="token punctuation">,</span> a <span class="token comment"># 或 b, a = a, b</span> </code></pre> <p>这种方法在一般情况下可以很容易的完成变量交换，甚至在数组中一般情况也是成立的。但是这两天在刷Leetcode时， 题目：缺失的第一个正数，碰到了一个问题，在对数组中的两个值进行交换的时候，即将<code>nums[i]</code>和<code>nums[nums[i]-1]</code>交换时，下面的两个语句，只有第二个语句是正确的：</p> <pre><code class="prism language-python">nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> </code></pre> <p></p> <p><strong>究其原因，明白了置换操作的原理就可以很容易理解。</strong></p> <p>我们通过查看置换前后变量<code>a</code>,<code>b</code>的地址去理解，看下面的例子：</p> <pre><code class="prism language-python">a<span class="token punctuation">,</span>b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"-----置换前------"</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"a的地址:"</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"b的地址:"</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span> a<span class="token punctuation">,</span>b <span class="token operator">=</span> b<span class="token punctuation">,</span>a <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"-----置换后------"</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"a的地址:"</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"b的地址:"</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <p>输出结果是</p> <pre><code class="prism language-python"><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>置换前<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span> <span class="token number">1</span> <span class="token number">2</span> a的地址<span class="token punctuation">:</span> <span class="token number">4444362368</span> b的地址<span class="token punctuation">:</span> <span class="token number">4444362400</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>置换后<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span> <span class="token number">2</span> <span class="token number">1</span> a的地址<span class="token punctuation">:</span> <span class="token number">4444362400</span> b的地址<span class="token punctuation">:</span> <span class="token number">4444362368</span> </code></pre> <p>可以看到，python中对变量的赋值是改变变量的指向，将变量指向目标值的地址。</p> <p>所以，对于置换操作<code>a, b = b, a</code>，操作顺序是先计算得到等号右边的所有数值，再将值<strong>依次</strong>赋给等号的左边。</p> <p>再回到上面出问题的例子<br /> 错误的：</p> <pre><code class="prism language-python">nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> </code></pre> <p>正确的：</p> <pre><code class="prism language-python">nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> </code></pre> <p>问题就出在计算得到等式右边后，将值「依次」赋给等号的左边。可以看到<code>nums[nums[i] - 1]</code>引用了<code>nums[i]</code>。具体来说，对于错误的，由于<code>nums[nums[i] - 1]</code>引用了<code>nums[i]</code>，而这时的<code>nums[i]</code>已经重新赋值完毕，所以不正确。</p> <p> 总结一下，对于置换操作<code>a, b = b, a</code>，原理是计算得到等式右边后，将值「依次」赋给等号的左边。然后如果<code>a</code>和<code>b</code>存在引用关系，特别是在数组中，特别注意后者不能引用前者。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-85047.htm">开一家动物医院都需要办什么证件（开动物医院什么资质）</a></p>
+                                        <p>下一个：<a href="/news/article-85759.htm">猫养小猫要多长时间（小猫养多久才能生小猫）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-77352.htm" title="动物疫苗周期多久一次 动物疫苗周期多久一次打">动物疫苗周期多久一次 动物疫苗周期多久一次打</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-clash.htm" title="「3月18日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「3月18日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-68071.htm" title="宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听">宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听</a></li>
+                        <li class="py-2"><a href="/news/article-72640.htm" title="打疫苗的时候又被动物抓伤了怎么办?（被打了疫苗的动物咬了）">打疫苗的时候又被动物抓伤了怎么办?（被打了疫苗的动物咬了）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-node-share.htm" title="「3月24日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「3月24日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-65532.htm" title="济南在哪领养猫的地方（济南在哪可以领养猫）">济南在哪领养猫的地方（济南在哪可以领养猫）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-clash.htm" title="「3月8日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享">「3月8日」2025年最新高速SSR/V2ray/Shadowrocket/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-70665.htm" title="通过拆分属性将数组转换为对象-JavaScript">通过拆分属性将数组转换为对象-JavaScript</a></li>
+                        <li class="py-2"><a href="/news/article-74645.htm" title="义乌宠物寄养价目表（义乌狗狗寄养推荐）">义乌宠物寄养价目表（义乌狗狗寄养推荐）</a></li>
+                        <li class="py-2"><a href="/news/article-78039.htm" title="养多久的猫可以自己回家（养猫多久可以散养）">养多久的猫可以自己回家（养猫多久可以散养）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">7</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
