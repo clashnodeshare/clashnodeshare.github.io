@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-93079.htm" />
+    <meta charset="utf-8">
+    <title>docker system全新命令集</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="docker system docker system --help 查看帮助 docker system df 提供Docker整体磁盘使用率的概况，包括镜像、容器和（本地）volume。所以我们现" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-93079.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="docker system全新命令集" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/90108fd242055d5c641d66930e9882b9.webp" />
+        <meta property="og:release_date" content="2025-04-11T08:56:08" />
+    <meta property="og:updated_time" content="2025-04-11T08:56:08" />
+        <meta property="og:description" content="docker system docker system --help 查看帮助 docker system df 提供Docker整体磁盘使用率的概况，包括镜像、容器和（本地）volume。所以我们现" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="docker system全新命令集">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">docker system全新命令集</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>docker system</strong></p> <p>docker system --help 查看帮助<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230203/2fca7e7e6c6fd77733788ab42c1f49a5.jpg" alt="docker system全新命令集"></p> <p><strong>docker system df</strong><br /> 提供Docker整体磁盘使用率的概况，包括镜像、容器和（本地）volume。所以我们现在随时都可以查看Docker使用了多少资源。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230203/487af90abebd909beed70d9829de5849.jpg" alt="docker system全新命令集"><br /> TYPE 类型<br /> TOTAL 总数<br /> ACTIVE 正在运行<br /> SIZE 暂用磁盘大小<br /> RECLAIMABLE 可回收的（未被使用的）</p> <p>查看容器使用卷的情况和大小</p> <pre><code>docker system df -v </code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230203/7de7135ef11bad5b1db68629d945e735.jpg" alt="docker system全新命令集"></p> <p><strong>docker system info（就等同于 docker info）</strong><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230203/b3606a17a83a5f38391093ce0851661b.jpg" alt="docker system全新命令集"></p> <p><strong>docker system events（就等同于docker events）</strong><br /> 获取docker系统实时事件，不包括容器内的</p> <p>截止（日期时间）之前的操作</p> <pre><code>docker system events --until 时间 </code></pre> <p>从（日期时间）之后的操作</p> <pre><code>docker system events --since 时间 </code></pre> <p><strong>docker system prune</strong><br /> 修剪一切<br /> docker system prune 命令是修剪镜像、容器和网络的快捷方式，在Docker 17.06.1之后要清理卷的话需要加上 --volumes</p> <pre><code>docker system prune --volumes		#使用-f 强制删除 </code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230203/558f2875dbd47b14fcc51210d78afb2a.jpg" alt="docker system全新命令集"></p> <p>详细的解释<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230203/d540a781dc16a4a9276e68b0f255d75b.jpg" alt="docker system全新命令集"></p> <p>参考：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/qq_36274515/article/details/87910694?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.opensearchhbase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.opensearchhbase"  rel="nofollow">docker-system-—— 一个全新的命令集合</a><br /> 单独删除某一个类型参考：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://editor.csdn.net/md/?articleId=127773048"  rel="nofollow">docker快速清理已停止的容器</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-93076.htm">C语言中的零长度数组使用说明</a></p>
+                                        <p>下一个：<a href="/news/article-93813.htm">实际业务处理 Kafka 消息丢失、重复消费和顺序消费的问题</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-93076.htm" title="C语言中的零长度数组使用说明">C语言中的零长度数组使用说明</a></li>
+                        <li class="py-2"><a href="/news/article-80098.htm" title="专门卖宠物的软件（售卖宠物的软件）">专门卖宠物的软件（售卖宠物的软件）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-9-clash-node-daily-updates.htm" title="「4月9日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「4月9日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-free-ssr-node.htm" title="「4月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享">「4月4日」2025年最新高速Clash/SSR/V2ray/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-74645.htm" title="义乌宠物寄养价目表（义乌狗狗寄养推荐）">义乌宠物寄养价目表（义乌狗狗寄养推荐）</a></li>
+                        <li class="py-2"><a href="/news/article-88643.htm" title="宠物粮食加工厂挣钱吗知乎文章 宠物粮食加工厂挣钱吗知乎文章">宠物粮食加工厂挣钱吗知乎文章 宠物粮食加工厂挣钱吗知乎文章</a></li>
+                        <li class="py-2"><a href="/news/article-78040.htm" title="宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）">宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）</a></li>
+                        <li class="py-2"><a href="/news/article-90094.htm" title="延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊">延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊</a></li>
+                        <li class="py-2"><a href="/news/article-85046.htm" title="JavaScript查找数组中的第一个冗余元素方法详解">JavaScript查找数组中的第一个冗余元素方法详解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-26-free-ssr-node.htm" title="「3月26日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「3月26日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">33</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

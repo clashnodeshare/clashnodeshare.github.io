@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-93076.htm" />
+    <meta charset="utf-8">
+    <title>C语言中的零长度数组使用说明</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="C语言中的零长度数组用法详解  &nbsp;&nbsp;&nbsp; 在C语言中允许在结构体和联合体中定义零长度的数组，写法可以是以下两种：  char p[]或者char p[0]，这个数组定义在结" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-93076.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="C语言中的零长度数组使用说明" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/00261964f407e7c6f29112cfbb5948e1.webp" />
+        <meta property="og:release_date" content="2025-04-11T08:56:08" />
+    <meta property="og:updated_time" content="2025-04-11T08:56:08" />
+        <meta property="og:description" content="C语言中的零长度数组用法详解  &nbsp;&nbsp;&nbsp; 在C语言中允许在结构体和联合体中定义零长度的数组，写法可以是以下两种：  char p[]或者char p[0]，这个数组定义在结" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C语言中的零长度数组使用说明">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">C语言中的零长度数组使用说明</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views">                     C语言中的零长度数组用法详解<br /> <br /> &nbsp;&nbsp;&nbsp; 在C语言中允许在结构体和联合体中定义零长度的数组，写法可以是以下两种：<br /> <br /> char p[]或者char p[0]，这个数组定义在结构体或者联合体中，不占用空间大小。<br /> <br /> 这是个广泛使用的常见技巧，常用来构成缓冲区。比起指针，用空数组有这样的优势： &nbsp;<br /> <br /> 1.不需要初始化，数组名直接就是所在的偏移； &nbsp;<br /> <br /> 2.不占任何空间，指针需要占用int长度空间，空数组不占任何空间。 &nbsp;<br /> <br /> &nbsp;&nbsp;&nbsp;&nbsp; “这个数组不占用任何内存”，意味着这样的结构节省空间；“该数组的内存地址就和他后面的元素的地址相同”，意味着无需初始化，数组名就是后面元素的地址，直接就能当做指针使用。<br /> <br /> 这样的写法最适合制作动态buffer。因为可以这样分配空间： &nbsp;<br /> <br /> malloc（sizeof(struct&nbsp; XXX）＋&nbsp; buff_len）； &nbsp;<br /> <br /> 看出来好处没有？直接就把buffer的结构体和缓冲区一块分配了。用起来也非常方便，因为现在kongsuzu其实变成了buff_len长度的数组了。 &nbsp;<br /> <br /> 这样的好处有两点： &nbsp;<br /> <br /> &nbsp;&nbsp;&nbsp; 一次分配解决问题，省了不少麻烦。大家知道为了防止内存泄漏，如果是分两次分配（结构体和缓冲区），那么要是第二次malloc失败了，必须回滚释放第一个分配的结构体。这样带来了编码麻烦。其次，分配了第二个缓冲区以后，如果结构里面用的是指针，还要为这个指针赋值。同样，在free这个buffer的时候，用指针也要两次free。如果用空数组，所有问题一次解决。<br /> <br /> &nbsp;&nbsp;&nbsp; 其次，大家知道小内存的管理是非常困难的，如果用指针，这个malloc分配出来的空间中的struct部分就是小内存了，在系统内存在多了势必严重影响内存管理的性能。要是用空数组把struct和实际数据缓冲区一次分配大块问题，就没有这个问题。 &nbsp;</p> <p> 即使零长度数组的优点如此之多，但是使用的时候也是要倍加小心：<br /> <br /> 1.零长度数组不是所有的c标准都支持，gnu c支持，ANSI C不支持，C++不支持。<br /> <br /> 2.如果某种情况下出现了这个结构体中只有零长度数组一个元素，这个可能会就会导致错误降临。<br /> <br /> 3.零长度数组需要放于结构体的结尾处。                 </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92341.htm">兰州哪里有宠物市场最大最出名的宠物市场啊（兰州宠物交易市场）</a></p>
+                                        <p>下一个：<a href="/news/article-93079.htm">docker system全新命令集</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-69362.htm" title="Spring Profiles的几个小知识">Spring Profiles的几个小知识</a></li>
+                        <li class="py-2"><a href="/news/article-68070.htm" title="Azure DevOps通过Azure Devops部署一个.NET Core WebAPI">Azure DevOps通过Azure Devops部署一个.NET Core WebAPI</a></li>
+                        <li class="py-2"><a href="/news/article-78723.htm" title="一文看懂HBase倒序分页查询（实现分页跳转）">一文看懂HBase倒序分页查询（实现分页跳转）</a></li>
+                        <li class="py-2"><a href="/news/article-90094.htm" title="延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊">延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊</a></li>
+                        <li class="py-2"><a href="/news/article-87918.htm" title="宠物美容师真实现状（宠物美容师的发展前景怎么样）">宠物美容师真实现状（宠物美容师的发展前景怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-82900.htm" title="养鱼专家怎么养鱼在线咨询电话（养鱼问题咨询）">养鱼专家怎么养鱼在线咨询电话（养鱼问题咨询）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-ssr-node.htm" title="「3月7日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享">「3月7日」2025年最新高速Shadowrocket/Clash/SSR/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-66810.htm" title="建议穷人养的10种便宜宠物（12种适合懒人养的宠物）">建议穷人养的10种便宜宠物（12种适合懒人养的宠物）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-3-node-share.htm" title="「3月3日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享">「3月3日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-92341.htm" title="兰州哪里有宠物市场最大最出名的宠物市场啊（兰州宠物交易市场）">兰州哪里有宠物市场最大最出名的宠物市场啊（兰州宠物交易市场）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">33</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
