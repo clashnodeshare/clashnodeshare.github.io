@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-97554.htm" />
+    <meta charset="utf-8">
+    <title>vue实现可以快进后退的跑马灯组件_vue.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="本文实例为大家分享了vue开发实现跑马灯效果组件的具体代码，供大家参考，具体内容如下 用vue编写一个可以快进后退的跑马灯组件 由于业务需求，要实现一个会可以控制速度的跑马灯，初开始用js的setin" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-97554.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="vue实现可以快进后退的跑马灯组件_vue.js" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/f8cd5ed11fba738a80ff325541995d8f.webp" />
+        <meta property="og:release_date" content="2025-04-17T08:59:31" />
+    <meta property="og:updated_time" content="2025-04-17T08:59:31" />
+        <meta property="og:description" content="本文实例为大家分享了vue开发实现跑马灯效果组件的具体代码，供大家参考，具体内容如下 用vue编写一个可以快进后退的跑马灯组件 由于业务需求，要实现一个会可以控制速度的跑马灯，初开始用js的setin" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue实现可以快进后退的跑马灯组件_vue.js">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">vue实现可以快进后退的跑马灯组件_vue.js</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>本文实例为大家分享了vue开发实现跑马灯效果组件的具体代码，供大家参考，具体内容如下</p> <p><strong>用vue编写一个可以快进后退的跑马灯组件</strong></p> <p>由于业务需求，要实现一个会可以控制速度的跑马灯，初开始用js的setinterval每隔几毫秒来减取一个字符拼接到后面，效果不理想就放弃了。后查询用js的animate这个api改造大功告成！</p> <p>效果图</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220424/df6ffc8cb8ca166453225e5475f7fc71.jpg"></p> <p><strong>组件代码</strong></p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;    &lt;div class="marquee" @mouseover="pause(true)" @mouseleave="pause()"&gt;      &lt;i        class="marquee-btn btn-left el-icon-d-arrow-left"        @mousedown="speedUp(true)"        @mouseup="speedStop()"      &gt;&lt;/i&gt;      &lt;div ref="marqueeText" class="marquee-text"&gt;        &lt;div v-if="itemClick"&gt;          &lt;span            v-for="item in text.split(splitSymbol)"            :key="item"            @click="$emit('itemClickEvent', item)"          &gt;{{item + ' 、'}}&lt;/span&gt;        &lt;/div&gt;        &lt;div v-else&gt;{{text}}&lt;/div&gt;      &lt;/div&gt;      &lt;i        class="marquee-btn btn-right el-icon-d-arrow-right"        @mousedown="speedUp()"        @mouseup="speedStop()"      &gt;&lt;/i&gt;    &lt;/div&gt;  &lt;/template&gt;    &lt;script&gt;  export default {    name: "marquee",    props: {      text: {        type: String,        required: true      },      speed: {        type: Number,        required: false,        default: 110      },      // 是否每个都可以点击触发事件      itemClick: {        type: Boolean,        required: false,        default: false      },      // 每个触发事件元素的分割符号      splitSymbol: {        type: String,        required: false,        default: ''      }    },    data() {      return {        aniInstance: null,        speedTimer: null      };    },    methods: {      setAnimate() {        const contentWidth = this.$refs.marqueeText.scrollWidth;        const keyframes = [          { transform: "translateX(100%)" },          { transform: `translateX(-${contentWidth}px)` }        ];        const animateOptions = {          duration: (contentWidth / this.speed) * 1000,          iterations: Infinity,          easing: "linear"        };        this.aniInstance = document.querySelector(".marquee-text").animate(keyframes, animateOptions);      },      /**       * 快进       * @param { Boolean } isLeft 是否为左方向       */      speedUp(isLeft = false) {        const set = () =&gt; {          if (this.aniInstance.currentTime &gt; 0) {            this.aniInstance.currentTime = this.aniInstance.currentTime + (isLeft ? 2000 : -2000);            this.aniInstance.currentTime &lt;= 0 &amp;&amp; (this.aniInstance.currentTime = 0);          }        }        // 鼠标单击        set();        // 鼠标长按        this.speedTimer = setInterval(() =&gt; {          set()        }, 100);      },      // 快进停止      speedStop() {        clearInterval(this.speedTimer);        this.speedTimer = null;      },      /**       * 暂停、播放       * @param { Boolean } isPause 是否暂停       */      pause(isPause = false) {        this.aniInstance[["play", "pause"][Number(isPause)]]();      }    },    mounted() {      this.$nextTick(() =&gt; {        this.setAnimate();      });    }  };  &lt;/script&gt;    &lt;style lang="less" scoped&gt;  .marquee {    position: relative;    padding: 10px 0;    overflow: hidden;    width: 100%;    font-size: 16px;    color: #fff;    background-image: linear-gradient(      to left,      #b9565e,      #cb655a,      #da7655,      #e58a50,      #eb9f4b    );    &amp;:hover .marquee-btn {      opacity: 1;    }  }  .marquee-btn {    position: absolute;    top: 50%;    transform: translateY(-50%);    padding: 15px;    color: #fff;    background: rgba(1, 1, 1, 0.4);    z-index: 999;    cursor: pointer;    opacity: 0;    transition: all 0.2s linear;  }  .btn-left {    left: 0;  }  .btn-right {    right: 0;  }  .marquee-text {    white-space: nowrap;    span {      &amp;:hover {        cursor: pointer;        color: #2c3e50;      }    }  }  &lt;/style&gt;</pre> </div> <p><strong>父组件代码</strong></p> <div class="ay1code"> <pre class="brush:js;">&lt;Marquee    :text="overdueInfo.content"    :itemClick="true"    :speed="120"    splitSymbol="、"    @itemClickEvent="marqueeSearch"    class="marquee-box__container"  &gt;&lt;/Marquee&gt;</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-96845.htm">深圳宠物领养中心免费领养猫咪的地方（深圳宠物领养中心 免费）</a></p>
+                                        <p>下一个：<a href="/news/article-97555.htm">动物疫苗价格查询表最新版图片 动物疫苗价格查询表最新版图片大全</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-98996.htm" title="被猫抓伤出一丝丝血要打几针狂犬（被猫抓出血丝了要打狂犬疫苗吗）">被猫抓伤出一丝丝血要打几针狂犬（被猫抓出血丝了要打狂犬疫苗吗）</a></li>
+                        <li class="py-2"><a href="/news/article-94613.htm" title="高端猫粮品牌（最高端猫粮）">高端猫粮品牌（最高端猫粮）</a></li>
+                        <li class="py-2"><a href="/news/article-91611.htm" title="猫咪打疫苗一共几针?多少钱啊图片大全（猫咪打疫苗一共打几针）">猫咪打疫苗一共几针?多少钱啊图片大全（猫咪打疫苗一共打几针）</a></li>
+                        <li class="py-2"><a href="/news/article-68715.htm" title="动物疫苗预防控制中心官网电话（动物疫苗厂家电话）">动物疫苗预防控制中心官网电话（动物疫苗厂家电话）</a></li>
+                        <li class="py-2"><a href="/news/article-67435.htm" title="动物疫苗价格表图片大全大图高清下载（动物疫苗价格表图片大全大图高清下载软件）">动物疫苗价格表图片大全大图高清下载（动物疫苗价格表图片大全大图高清下载软件）</a></li>
+                        <li class="py-2"><a href="/news/article-78040.htm" title="宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）">宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）</a></li>
+                        <li class="py-2"><a href="/news/article-75323.htm" title="成都兽医站（成都兽医站招聘）">成都兽医站（成都兽医站招聘）</a></li>
+                        <li class="py-2"><a href="/news/article-75325.htm" title="养猫的人得病多吗为什么（养猫的人容易得癌症吗）">养猫的人得病多吗为什么（养猫的人容易得癌症吗）</a></li>
+                        <li class="py-2"><a href="/news/article-76670.htm" title="Spring Boot &#8211; RestTemplate在URL中转义字符问题">Spring Boot &#8211; RestTemplate在URL中转义字符问题</a></li>
+                        <li class="py-2"><a href="/news/article-99774.htm" title="成都宠物托运一般多少钱一个月（成都宠物托运哪个最好）">成都宠物托运一般多少钱一个月（成都宠物托运哪个最好）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">53</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
