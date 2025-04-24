@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-101182.htm" />
+    <meta charset="utf-8">
+    <title>sparksql 操作hive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="写在前面:hive的版本是1.2.1spark的版本是1.6.x http://spark.apache.org/docs/1.6.1/sql-programming-guide.html#hive-" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-101182.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="sparksql 操作hive" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/5e588fa31e26d7de8b92bfa523053d43.webp" />
+        <meta property="og:release_date" content="2025-04-22T08:20:41" />
+    <meta property="og:updated_time" content="2025-04-22T08:20:41" />
+        <meta property="og:description" content="写在前面:hive的版本是1.2.1spark的版本是1.6.x http://spark.apache.org/docs/1.6.1/sql-programming-guide.html#hive-" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="sparksql 操作hive">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">sparksql 操作hive</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="htmledit_views"> <div id="cnblogs_post_body" class="blogpost-body"> <p>写在前面:hive的版本是1.2.1spark的版本是1.6.x</p> <p>http://spark.apache.org/docs/1.6.1/sql-programming-guide.html#hive-tables 查看hive和spark版本对应情况</p> <p>SparkSQL操作Hive中的表数据<br />spark可以通过读取hive的元数据来兼容hive，读取hive的表数据，然后在spark引擎中进行sql统计分析，从而，通过sparksql与hive结合实现数据分析将成为一种最佳实践。详细实现步骤如下：</p> <p>1、启动hive的元数据服务<br />hive可以通过服务的形式对外提供元数据读写操作，通过简单的配置即可<br /><strong>编辑 $HIVE_HOME/conf/hive-site.xml,增加如下内容</strong>:<br />&lt;property&gt;<br />&lt;name&gt;hive.metastore.uris&lt;/name&gt;<br />&lt;value&gt;thrift:// hdp-node-01:9083&lt;/value&gt;<br />&lt;/property&gt;</p> <p><strong>启动hive metastore</strong><br />[hadoop@hdp-node-01 ~]${HIVE_HOME}/bin/hive --service metastore&nbsp; 1&gt;/dev/null&nbsp; 2&gt;&amp;1&nbsp; &amp;</p> <p>&nbsp;&nbsp; &nbsp;查看 metastore:<br />[hadoop@hdp-node-01 ~] jobs<br />[1]+ Running hive --service metastore &amp;</p> <p>2、spark配置<br />&nbsp;&nbsp; &nbsp;将hive的配置文件拷贝给spark<br /><strong>将 $HIVE_HOME/conf/hive-site.xml copy $SPARK_HOME/conf/</strong></p> <p><strong>将mysql的jdbc驱动包拷贝给spark</strong><br />将 $HIVE_HOME/lib/mysql-connector-java-5.1.12.jar copy或者软链到$SPARK_HOME/lib/</p> <p>3、启动spark-sql的shell交互界面<br />spark-sql已经集成在spark-shell中，因此，只要启动spark-shell，就可以使用spakr-sql的shell交互接口：<br />[hadoop@hdp-node-01 spark] bin/spark-shell --master spark://hdp-node-01:7077</p> <div><img decoding="async" src="http://img.555519.xyz/uploads3/20220820/a8588550bf2af70e2ed1f80d6794e3f1.jpg" alt="sparksql 操作hive"></div> <p>或者，可以启动spark-sql界面，使用起来更方便<br />[hadoop@hdp-node-01 spark] bin/spark-sql --master spark://hdp-node-01:7077</p> <p>就可以使用hivesql了<br />由于在console中会打印很多info级别日志,所以可以改变spark的日志级别</p> <p>4、在交互界面输入sql进行查询<br />注：以下所用到的库和表，都是已经在hive中存在的库和表</p> <p>&nbsp;&nbsp; &nbsp;如果在spark-shell中执行sql查询，使用sqlContext对象调用sql()方法<br />scala&gt; sqlContext.sql("select remote_addr from dw_weblog.t_ods_detail group by remote_addr").collect.foreach(println)</p> <p>&nbsp;&nbsp; &nbsp;如果是在spark-sql中执行sql查询，则可以直接输入sql语句<br />scala&gt; show databases<br />scala&gt; use dw_weblog<br />scala&gt; select remote_addr from dw_weblog.t_ods_detail group by remote_addr</p> <p>5、在IDEA中编写代码使用hive-sql<br />如下所示：<br />val hiveContext = new HiveContext(sc)<br />&nbsp;&nbsp;&nbsp; import hiveContext.implicits._<br />&nbsp;&nbsp;&nbsp; import hiveContext.sql<br />&nbsp;&nbsp;&nbsp; //指定库<br />sql("use dw_weblog")<br />//执行标准sql语句<br />sql("create table sparksql as select remote_addr,count(*) from t_ods_detail group by remote_addr")<br />……<br />综上所述，sparksql类似于hive，可以支持sql语法来对海量数据进行分析查询，跟hive不同的是，hive执行sql任务的底层运算引擎采用mapreduce运算框架，而sparksql执行sql任务的运算引擎是spark core，从而充分利用spark内存计算及DAG模型的优势，大幅提升海量数据的分析查询速度<br />源码</p> <p>&nbsp;最后:</p> <p>sparksql 如果连接报错可能的原因是hive元数据库的编码不是utf8的,</p> <p>alter database hive character set latin1;<br />ALTER TABLE hive.* DEFAULT CHARACTER SET latin1;</p> <p>sparksql 执行创建表的时候报错</p> <p>org.apache.spark.sql.execution.QueryExecutionException: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.DDLTask. MetaException(message:file:/user/hive/warehouse/student2 is not a directory or unable to create one)</p> <p>可能是没有启动hive元数据服务</p> </div> <p>转载于:https://www.cnblogs.com/rocky-AGE-24/p/7345417.html</p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-100564.htm">动物疫苗厂家有哪些名字 动物疫苗厂家有哪些名字呢</a></p>
+                                        <p>下一个：<a href="/news/article-101183.htm">宠物园的宠物（宠物园宠物园）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-v2ray-subscribe.htm" title="「3月15日」2025年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接地址分享">「3月15日」2025年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-clash-node-daily-updates.htm" title="「4月8日」2025年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接地址分享">「4月8日」2025年最新高速SSR/Shadowrocket/Clash/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe-links.htm" title="「4月13日」2025年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接地址分享">「4月13日」2025年最新高速V2ray/Shadowrocket/SSR/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-75323.htm" title="成都兽医站（成都兽医站招聘）">成都兽医站（成都兽医站招聘）</a></li>
+                        <li class="py-2"><a href="/news/article-69363.htm" title="宠物粮食品牌大全排行榜前十名 宠物粮食品牌大全排行榜前十名有哪些">宠物粮食品牌大全排行榜前十名 宠物粮食品牌大全排行榜前十名有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-76006.htm" title="猫咪去宠物店驱虫一次多少钱（猫咪去宠物店驱虫要多少钱）">猫咪去宠物店驱虫一次多少钱（猫咪去宠物店驱虫要多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-102769.htm" title="Hibernate框架的使用(二)">Hibernate框架的使用(二)</a></li>
+                        <li class="py-2"><a href="/news/article-98307.htm" title="新疆宠物救助 新疆宠物救助中心电话">新疆宠物救助 新疆宠物救助中心电话</a></li>
+                        <li class="py-2"><a href="/news/article-77352.htm" title="动物疫苗周期多久一次 动物疫苗周期多久一次打">动物疫苗周期多久一次 动物疫苗周期多久一次打</a></li>
+                        <li class="py-2"><a href="/news/article-101183.htm" title="宠物园的宠物（宠物园宠物园）">宠物园的宠物（宠物园宠物园）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">63</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

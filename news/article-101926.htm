@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-101926.htm" />
+    <meta charset="utf-8">
+    <title>Java中自定义注解的使用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="一、注解的概念 1.注解的概念 注解是一种元数据形式。即注解是属于java的一种数据类型，和类、接口、数组、枚举类似。 注解用来修饰，类、方法、变量、参数、包。 注解不会对所修饰的代码产生直接的影响。" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-101926.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="Java中自定义注解的使用" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/4e171b690bc5840ab70dbb28859db3d8.webp" />
+        <meta property="og:release_date" content="2025-04-23T08:41:06" />
+    <meta property="og:updated_time" content="2025-04-23T08:41:06" />
+        <meta property="og:description" content="一、注解的概念 1.注解的概念 注解是一种元数据形式。即注解是属于java的一种数据类型，和类、接口、数组、枚举类似。 注解用来修饰，类、方法、变量、参数、包。 注解不会对所修饰的代码产生直接的影响。" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java中自定义注解的使用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">Java中自定义注解的使用</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail">
+                      				  				  				<div id="content_views" class="htmledit_views"> <h2>一、注解的概念<br /> 1.注解的概念<br /> 注解是一种元数据形式。即注解是属于java的一种数据类型，和类、接口、数组、枚举类似。<br /> 注解用来修饰，<span style="color:#fe2c24;">类、方法、变量、参数、包。</span><br /> 注解不会对所修饰的代码产生直接的影响。<br /> 2.注解的使用范围<br /> 注解又许多用法，其中有：为编译器提供信息 - 注解能被编译器检测到错误或抑制警告。编译时和部署时的处理 - 软件工具能处理注解信息从而生成代码，XML文件等等。运行时的处理 - 有些注解在运行时能被检测到。 &nbsp;</h2> <h2>二、如何自定义注解<br /> 注解其实就是一种标记，可以在程序代码中的关键节点（类、方法、变量、参数、包）上打上这些标记，然后程序在编译时或运行时可以检测到这些标记从而执行一些特殊操作。因此可以得出自定义注解使用的基本流程：</h2> <p>第一步，定义注解——相当于定义标记；<br /> 第二步，配置注解——把标记打在需要用到的程序代码中；<br /> 第三步，解析注解——在编译期或运行时检测到标记，并进行特殊操作。</p> <h2>1.注解的基本语法<br /> 注解类型的声明部分：</h2> <p>注解在Java中，与类、接口、枚举类似，因此其声明语法基本一致，只是所使用的关键字有所不同，注解使用@interface关键字来声明。在底层实现上，所有定义的注解都会自动继承java.lang.annotation.Annotation接口。</p> <pre><code class="language-java">public @interface Information { }</code></pre> <p> 注解类型的实现部分：</p> <p>根据我们日常定义类或接口的经验，在类中无非是要定义构造方法、属性或一般方法。但是，在自定义注解中，其实现部分只能定义一个东西：注解类型元素（annotation type element）。基本语法如下：</p> <pre><code class="language-java">public @interface Information { &nbsp; &nbsp; String name(); &nbsp; &nbsp; &nbsp; int age(); &nbsp; &nbsp; &nbsp; String[] hobbies(); &nbsp; &nbsp; &nbsp; String address(); }</code></pre> <p> &nbsp; 根据上面定义的属性，我们可以发现这种定义的内容类似抽象方法，实际上这是一种规定的注解类型元素。</p> <p>&nbsp; 注解类型元素允许我们设置默认值，如果不设置则在后续使用注解时候，必须填写对应的属性值。</p> <pre><code class="language-java">public @interface Information { &nbsp; &nbsp; String name(); &nbsp; &nbsp; &nbsp; int age(); &nbsp; &nbsp; &nbsp; String[] hobbies(); &nbsp; &nbsp; &nbsp; String address() default "中国"; }</code></pre> <blockquote> <p> 定义注解类型元素时需要注意如下几点：<br /> 1.访问修饰符必须为public，不写默认为public；</p> <p>2.该元素的类型只能是基本数据类型、String、Class、枚举类型、注解类型（体现了注解的嵌套效果）以及上述类型的一位数组；</p> <p>3.该元素的名称一般定义为名词，如果注解中只有一个元素，请把名字起为value（后面使用会带来便利操作）；</p> <p>4.()不是定义方法参数的地方，也不能在括号中定义任何参数，仅仅只是一个特殊的语法；</p> <p>5.default代表默认值，值必须和第2点定义的类型一致；</p> <p>6.如果没有默认值，代表后续使用注解时必须给该类型元素赋值。</p> </blockquote> <p>可以看出，注解类型元素的语法非常奇怪，即又有属性的特征（可以赋值）,又有方法的特征（打上了一对括号）。但是这么设计是有道理的，在后续的代码示例中我们可以看到：注解在定义好了以后，使用的时候操作元素类型像在操作属性，解析的时候操作元素类型像在操作方法。<br /> &nbsp;</p> <p>2.元注解<br /> 一个最基本的注解定义就只包括了上面的两部分内容：1、注解的名字；2、注解包含的类型元素。但是，我们在使用JDK自带注解的时候发现，有些注解只能写在方法上面（比如@Override）；有些却可以写在类的上面（比如@Deprecated）。当然除此以外还有很多细节性的定义，那么这些定义该如何做呢？这些限定就是通过元注解来实现的。<br /> 元注解：专门修饰注解的注解。它们都是为了更好的设计自定义注解的细节而专门设计的。</p> <h2>（1）@Target<br /> @Target注解，是专门用来限定某个自定义注解能够被应用在哪些Java元素上面的。它使用一个枚举类型定义如下：</h2> <pre><code class="language-java">public enum ElementType { &nbsp; &nbsp; /** Class, interface (including annotation type), or enum declaration */ &nbsp; &nbsp; TYPE, &nbsp; &nbsp; &nbsp; /** Field declaration (includes enum constants) */ &nbsp; &nbsp; FIELD, &nbsp; &nbsp; &nbsp; /** Method declaration */ &nbsp; &nbsp; METHOD, &nbsp; &nbsp; &nbsp; /** Formal parameter declaration */ &nbsp; &nbsp; PARAMETER, &nbsp; &nbsp; &nbsp; /** Constructor declaration */ &nbsp; &nbsp; CONSTRUCTOR, &nbsp; &nbsp; &nbsp; /** Local variable declaration */ &nbsp; &nbsp; LOCAL_VARIABLE, &nbsp; &nbsp; &nbsp; /** Annotation type declaration */ &nbsp; &nbsp; ANNOTATION_TYPE, &nbsp; &nbsp; &nbsp; /** Package declaration */ &nbsp; &nbsp; PACKAGE, &nbsp; &nbsp; &nbsp; /** &nbsp; &nbsp; &nbsp;* Type parameter declaration &nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp;* @since 1.8 &nbsp; &nbsp; &nbsp;*/ &nbsp; &nbsp; TYPE_PARAMETER, &nbsp; &nbsp; &nbsp; /** &nbsp; &nbsp; &nbsp;* Use of a type &nbsp; &nbsp; &nbsp;* &nbsp; &nbsp; &nbsp;* @since 1.8 &nbsp; &nbsp; &nbsp;*/ &nbsp; &nbsp; TYPE_USE } //限定@Information注解只能使用在类、接口或方法上面。 @Target({ElementType.TYPE,ElementType.METHOD}) public @interface Information { &nbsp; &nbsp; String name(); &nbsp; &nbsp; &nbsp; int age(); &nbsp; &nbsp; &nbsp; String[] hobbies(); &nbsp; &nbsp; &nbsp; String address() default "中国"; }</code></pre> <h2> <br /> （2）@Retention<br /> @Retention注解，翻译为持久力、保持力。即用来修饰自定义注解的生命力。<br /> 注解的生命周期有三个阶段：</h2> <p><span style="color:#fe2c24;"><strong>Java源文件阶段。<br /> 编译到class文件阶段。<br /> 运行期阶段。</strong></span><br /> 注：只有注解信息在运行时保留，我们才能在运行时通过反射操作获取到注解信息。</p> <p>同样使用了RetentionPolicy枚举类型定义了三个阶段：</p> <pre><code class="language-java">public enum RetentionPolicy { &nbsp; &nbsp; /** &nbsp; &nbsp; &nbsp;* Annotations are to be discarded by the compiler. &nbsp; &nbsp; &nbsp;* （注解将被编译器忽略掉） &nbsp; &nbsp; &nbsp;*/ &nbsp; &nbsp; SOURCE, &nbsp; &nbsp; &nbsp; /** &nbsp; &nbsp; &nbsp;* Annotations are to be recorded in the class file by the compiler &nbsp; &nbsp; &nbsp;* but need not be retained by the VM at run time. &nbsp;This is the default &nbsp; &nbsp; &nbsp;* behavior. &nbsp; &nbsp; &nbsp;* （注解将被编译器记录在class文件中，但在运行时不会被虚拟机保留，这是一个默认的行为） &nbsp; &nbsp; &nbsp;*/ &nbsp; &nbsp; CLASS, &nbsp; &nbsp; &nbsp; /** &nbsp; &nbsp; &nbsp;* Annotations are to be recorded in the class file by the compiler and &nbsp; &nbsp; &nbsp;* retained by the VM at run time, so they may be read reflectively. &nbsp; &nbsp; &nbsp;* （注解将被编译器记录在class文件中，而且在运行时会被虚拟机保留，因此它们能通过反射被读取到） &nbsp; &nbsp; &nbsp;* @see java.lang.reflect.AnnotatedElement &nbsp; &nbsp; &nbsp;*/ &nbsp; &nbsp; RUNTIME }</code></pre> <h2> <br /> 我们再详解一下四种Retention的配置：</h2> <blockquote> <p>1.如果一个注解被定义为RetentionPolicy.SOURCE，则它将被限定在Java源文件中，那么这个注解即不会参与编译也不会在运行期起任何作用，这个注解就和一个注释是一样的效果，只能被阅读Java文件的人看到；</p> <p> 2.如果一个注解被定义为RetentionPolicy.CLASS，则它将被编译到Class文件中，那么编译器可以在编译时根据注解做一些处理动作，但是运行时JVM（Java虚拟机）会忽略它，我们在运行期也不能读取到；</p> <p> 3.如果一个注解被定义为RetentionPolicy.RUNTIME，那么这个注解可以在运行期的加载阶段被加载到Class对象中。那么在程序运行阶段，我们可以通过反射得到这个注解，并通过判断是否有这个注解或这个注解中属性的值，从而执行不同的程序代码段。</p> <p><span style="color:#fe2c24;"><strong>我们实际开发中的自定义注解几乎都是使用的RetentionPolicy.RUNTIME；</strong></span><br /> 4.在默认的情况下，自定义注解是使用的RetentionPolicy.CLASS。<br /> &nbsp;</p> </blockquote> <p><span style="color:#fe2c24;"><strong>（3）@Documented</strong></span><br /> @Documented注解，是被用来指定自定义注解是否能随着被定义的java文件生成到JavaDoc文档当中。</p> <p><strong>（4）@Inherited</strong><br /> @Inherited注解，是指定某个自定义注解如果写在了父类的声明部分，那么子类的声明部分也能自动拥有该注解，类似继承。@Inherited注解只对那些@Target被定义为ElementType.TYPE的自定义注解起作用。</p> <p><span style="color:#fe2c24;">注：类并不从它所实现的接口继承annotation，方法并不从它所重载的方法继承annotation。</span></p> <h2>三、自定义注解的特殊语法<br /> 1.特殊语法一：<br /> 如果注解本身没有注解类型元素，那么在使用注解的时候可以省略()，直接写为：@注解名，它和标准语法@注解名()等效！</h2> <pre><code class="language-java">@Retention(RetentionPolicy.RUNTIME) @Target(value = {ElementType.TYPE}) @Documented public @interface FirstAnnotation { } //等效于@FirstAnnotation() @FirstAnnotation public class DemoClass{ &nbsp;&nbsp; &nbsp;//省略实现部分 }</code></pre> <h2> <br /> 2. 特殊语法二：<br /> 如果注解本本身只有一个注解类型元素，而且命名为value，那么在使用注解的时候可以直接使用：@注解名(注解值)，其等效于：@注解名(value = 注解值)。</h2> <pre><code class="language-java">@Retention(RetentionPolicy.RUNTIME) @Target(value = {ElementType.TYPE}) @Documented public @interface SecondAnnotation { &nbsp;&nbsp; &nbsp;String value(); } //等效于@ SecondAnnotation(value = "this is second annotation") @SecondAnnotation("this is annotation") public class DemoClass{ &nbsp;&nbsp; &nbsp;//省略实现部分 }</code></pre> <h2> <br /> 特殊用法三：<br /> 如果注解中的某个注解类型元素是一个数组类型，在使用时又出现只需要填入一个值的情况，那么在使用注解时可以直接写为：@注解名(类型名 = 类型值)，它和标准写法：@注解名(类型名 = {类型值})等效！</h2> <pre><code class="language-java">@Retention(RetentionPolicy.RUNTIME) @Target(value = {ElementType.TYPE}) @Documented public @interface ThirdAnnotation { &nbsp;&nbsp; &nbsp;String[] name(); } //等效于@ ThirdAnnotation(name = {"this is third annotation"}) @ ThirdAnnotation(name = "this is third annotation") public class DemoClass{ &nbsp;&nbsp; &nbsp;//省略实现部分 }</code></pre> <h2> <br /> 特殊用法四：<br /> 如果一个注解的@Target是定义为Element.PACKAGE，那么这个注解是配置在package-info.java中的，而不能直接在某个类的package代码上面配置。</h2> <h2>&nbsp;<br /> 四、使用和操作注解<br /> 先说下需求：定义一个自定义注解，在注解上配置相关信息，用该注解标记一个方法，然后在测试类中，检测当前方法是否标记了我们自定义的注解，如果标记了，打印标记的注解内配置信息，如果没有标记，打印"该方法没有使用xxx注解"。</h2> <p>明确我们的需求后，前面我们说过，只有将注解的生命周期配置成运行时，即在Runntime时保留,才能获取注解中的相关信息。</p> <p>操作和使用注解 要用到Java中的核心技术——反射。</p> <p>废话少说，下面直接上代码。</p> <pre><code class="language-java">/** &nbsp;* @ClassName Information &nbsp;* @Description 信息注解 &nbsp;* @Author EvanWang &nbsp;* @Version 1.0.0 &nbsp;* @Date 2019/11/6 14:49 &nbsp;*/ @Target(ElementType.METHOD) @Retention(RetentionPolicy.RUNTIME) public @interface Information { &nbsp; &nbsp; String name(); &nbsp; &nbsp; &nbsp; int age(); &nbsp; &nbsp; &nbsp; String[] hobbies(); &nbsp; &nbsp; &nbsp; String address() default "中国"; }</code></pre> <p> &nbsp;</p> <pre><code class="language-java">/** &nbsp;* @ClassName Person &nbsp;* @Description Person Pojo &nbsp;* @Author EvanWang &nbsp;* @Version 1.0.0 &nbsp;* @Date 2019/11/6 17:06 &nbsp;*/ public class Person { &nbsp; &nbsp; String name; &nbsp; &nbsp; &nbsp; int age; &nbsp; &nbsp; &nbsp; String hobbies; &nbsp; &nbsp; &nbsp; String address; &nbsp; &nbsp; &nbsp; public String getName() { &nbsp; &nbsp; &nbsp; &nbsp; return name; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public void setName(String name) { &nbsp; &nbsp; &nbsp; &nbsp; this.name = name; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public int getAge() { &nbsp; &nbsp; &nbsp; &nbsp; return age; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public void setAge(int age) { &nbsp; &nbsp; &nbsp; &nbsp; this.age = age; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public String getHobbies() { &nbsp; &nbsp; &nbsp; &nbsp; return hobbies; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public void setHobbies(String hobbies) { &nbsp; &nbsp; &nbsp; &nbsp; this.hobbies = hobbies; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public String getAddress() { &nbsp; &nbsp; &nbsp; &nbsp; return address; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; public void setAddress(String address) { &nbsp; &nbsp; &nbsp; &nbsp; this.address = address; &nbsp; &nbsp; } }</code></pre> <pre><code class="language-java">/** &nbsp;* @ClassName PersonService &nbsp;* @Description&nbsp; &nbsp;* @Author EvanWang &nbsp;* @Version 1.0.0 &nbsp;* @Date 2019/11/6 16:55 &nbsp;*/ public class PersonService { &nbsp; &nbsp; @Information(name = "Evan", age = 18, hobbies = {"编程", "看电影", "踢足球"}) &nbsp; &nbsp; public void outputPersonInfo(Person person) { &nbsp; &nbsp; &nbsp; &nbsp; String outputStr = String.format("我是%s,我来自%s,今年%s岁，我的爱好是%s。", &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; person.getName(), &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; person.getAddress(), &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; person.getAge(), &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; person.getHobbies()); &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(outputStr); &nbsp; &nbsp; } }</code></pre> <p> &nbsp;</p> <pre><code class="language-java">/** &nbsp;* @ClassName AnnotationTest &nbsp;* @Description 自定义注解测试类 &nbsp;* @Author EvanWang &nbsp;* @Version 1.0.0 &nbsp;* @Date 2019/11/6 16:18 &nbsp;*/ public class AnnotationTest { &nbsp; &nbsp; public static void main(String[] args) throws Exception { &nbsp; &nbsp; &nbsp; &nbsp; Class&lt;?&gt; clazz = PersonService.class; &nbsp; &nbsp; &nbsp; &nbsp; Method method = clazz.getMethod("outputPersonInfo", Person.class); &nbsp; &nbsp; &nbsp; &nbsp; if (!method.isAnnotationPresent(Information.class)){ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(method.getName()+"方法没有标注@Information注解！"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return; &nbsp; &nbsp; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; &nbsp; Person person = new Person(); &nbsp; &nbsp; &nbsp; &nbsp; Information information = method.getAnnotation(Information.class); &nbsp; &nbsp; &nbsp; &nbsp; person.setName(information.name()); &nbsp; &nbsp; &nbsp; &nbsp; person.setAddress(information.address()); &nbsp; &nbsp; &nbsp; &nbsp; person.setAge(information.age()); &nbsp; &nbsp; &nbsp; &nbsp; person.setHobbies(Arrays.asList(information.hobbies()).toString()); &nbsp; &nbsp; &nbsp; &nbsp; PersonService personService=new PersonService(); &nbsp; &nbsp; &nbsp; &nbsp; method.invoke(personService,person); &nbsp; &nbsp; } } 运行结果： 标注注解： 我是Evan,我来自中国,今年18岁，我的爱好是[编程, 看电影, 踢足球]。 &nbsp; &nbsp; 未标注注解： outputPersonInfo方法没有标注@Information注解！</code></pre> <p> 原文链接：https://blog.csdn.net/qq_41378597/article/details/102934784</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-101183.htm">宠物园的宠物（宠物园宠物园）</a></p>
+                                        <p>下一个：<a href="/news/article-101927.htm">动物疫苗的生产原料有哪些种类（动物疫苗生产工艺）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-92340.htm" title="厦门有没有宠物领养中心（厦门宠物救助领养中心地址）">厦门有没有宠物领养中心（厦门宠物救助领养中心地址）</a></li>
+                        <li class="py-2"><a href="/news/article-87194.htm" title="宠物粮什么牌子好（宠物粮食品牌排行榜）">宠物粮什么牌子好（宠物粮食品牌排行榜）</a></li>
+                        <li class="py-2"><a href="/news/article-100564.htm" title="动物疫苗厂家有哪些名字 动物疫苗厂家有哪些名字呢">动物疫苗厂家有哪些名字 动物疫苗厂家有哪些名字呢</a></li>
+                        <li class="py-2"><a href="/news/article-89375.htm" title="宠物猫多少钱一个只（宠物猫多少钱一个只猫）">宠物猫多少钱一个只（宠物猫多少钱一个只猫）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-free-v2ray.htm" title="「3月14日」2025年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接地址分享">「3月14日」2025年最新高速V2ray/Clash/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-101183.htm" title="宠物园的宠物（宠物园宠物园）">宠物园的宠物（宠物园宠物园）</a></li>
+                        <li class="py-2"><a href="/news/article-85047.htm" title="开一家动物医院都需要办什么证件（开动物医院什么资质）">开一家动物医院都需要办什么证件（开动物医院什么资质）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-clash-node-daily-updates.htm" title="「3月27日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享">「3月27日」2025年最新高速Shadowrocket/V2ray/Clash/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-91611.htm" title="猫咪打疫苗一共几针?多少钱啊图片大全（猫咪打疫苗一共打几针）">猫咪打疫苗一共几针?多少钱啊图片大全（猫咪打疫苗一共打几针）</a></li>
+                        <li class="py-2"><a href="/news/article-65531.htm" title="开一个宠物寄养店怎么样（开一家宠物寄养店）">开一个宠物寄养店怎么样（开一家宠物寄养店）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">63</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
