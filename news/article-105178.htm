@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-105178.htm" />
+    <meta charset="utf-8">
+    <title>Kafka 单机（集群）安装部署（自带zookeeper）</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="背景： kafka官网：http://kafka.apache.org/ kafka下载页面：http://kafka.apache.org/downloads kafka配置快速入门：http://" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-105178.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="Kafka 单机（集群）安装部署（自带zookeeper）" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/7630d66e2ca14e8453461c0c170fdb18.webp" />
+        <meta property="og:release_date" content="2025-04-27T08:24:18" />
+    <meta property="og:updated_time" content="2025-04-27T08:24:18" />
+        <meta property="og:description" content="背景： kafka官网：http://kafka.apache.org/ kafka下载页面：http://kafka.apache.org/downloads kafka配置快速入门：http://" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kafka 单机（集群）安装部署（自带zookeeper）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="/assets/website/img/clashnodeshare/logo.png" alt="Clash Node Share logo" /></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">Kafka 单机（集群）安装部署（自带zookeeper）</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>背景：<br /> kafka官网：http://kafka.apache.org/<br /> kafka下载页面：http://kafka.apache.org/downloads<br /> kafka配置快速入门：http://kafka.apache.org/quickstart<br /> 新版本的kafka自带有zookeeper，本篇文章记录使用自带zookeeper搭建kafka集群。</p> <p>消息队列术语：</p> <p>•Kafka将消息以topic为单位进行归纳。<br /> •将向Kafka topic发布消息的程序成为producers.<br /> •将预订topics并消费消息的程序成为consumer.<br /> •Kafka以集群的方式运行，可以由一个或多个服务组成，每个服务叫做一个broker.<br /> producers通过网络将消息发送到Kafka集群，集群向消费者提供消息，如下图所示：</p> <p class="img-center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220823/0f2f20abdf5c57c71cbede2b256e3d89.jpg"></p> <p>客户端和服务端通过TCP协议通信。Kafka提供了Java客户端，并且对多种语言都提供了支持。</p> <p>3.1.0 稳定版本下载地址：</p> <p>https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz</p> <p>1、操作命令：</p> <p>cd /usr/local/</p> <p>tar -zxvf kafka_2.11-2.0.0.tgz&nbsp; //解压 tar 包</p> <p>rm -rf LICENSE NOTICE site-docs&nbsp; //删除 LICENSE、NOTICE 、site-docs</p> <p> 2、启动zookeeper</p> <p>cd bin/</p> <p>nohup ./zookeeper-server-start.sh ../config/zookeeper.properties&nbsp;&nbsp;&gt;&gt;/var/tmp/kafka/zk.log 2&gt;&amp;1 &amp;</p> <p>jps&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;//查看启动成功</p> <p><img fetchpriority="high" decoding="async" alt="" height="129" src="http://img.555519.xyz/uploads3/20220823/598fab12b456ab3debff5e1cc3eaeaf9.jpg"></p> <p>3、启动Kafka</p> <p>nohup ./kafka-server-start.sh ../config/server.properties &gt;&gt;/var/tmp/kafka/kafka.log 2&gt;&amp;1 &amp;</p> <p><img decoding="async" alt="" height="140" src="http://img.555519.xyz/uploads3/20220823/0da49a0ab34e71974c2522540fe6cf2e.jpg"></p> <p>&nbsp;4、停止Kafka 、zookeeper</p> <p>./kafka-server-stop.sh&nbsp; &nbsp;//先停kafka server</p> <p>./zookeeper-server-stop.sh&nbsp; //再停zookeeper</p> <p>5、Kafka 使用</p> <p>1）创建topic&nbsp; &nbsp;pushu</p> <p>./kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic pushu</p> <p><img decoding="async" alt="" height="204" src="http://img.555519.xyz/uploads3/20220823/3fadd7e0640ecff4bc8dcbab6a7999e4.jpg"></p> <p>2) 查询topic 是否OK</p> <p>./kafka-topics.sh --list --bootstrap-server localhost:9092</p> <p><img loading="lazy" decoding="async" alt="" height="54" src="http://img.555519.xyz/uploads3/20220823/9708d7dd9cc3773347afc8a859ea4dec.jpg"></p> <p>&nbsp;3）生产者</p> <p>&nbsp;./kafka-console-producer.sh --broker-list &nbsp;localhost:9092 &nbsp;--topic pushu</p> <p><img loading="lazy" decoding="async" alt="" height="231" src="http://img.555519.xyz/uploads3/20220823/65b878778a34f316bba2e0af8a2cf3dd.jpg"></p> <p>4）消费者</p> <p>./kafka-console-consumer.sh --bootstrap-server localhost:9092 &nbsp;--topic pushu</p> <p><img loading="lazy" decoding="async" alt="" height="266" src="http://img.555519.xyz/uploads3/20220823/6710c4fd00b5fdec4e03803b4a473643.jpg"></p> <p>&nbsp;单机方式已验证OK，可以大胆的通过Python，Java，等Client方式对接使用。</p> <p>6、集群方式</p> <p>1）其他机器 安装Kafka</p> <p>分别往192.168.10.66、192.168.10.88、192.168.10.99这三台虚拟机上安装kafka</p> <p>2）配置server.properties</p> <p>cd&nbsp;&nbsp;/data/software/kafka_2.13-3.1.0/config</p> <p>配置&nbsp;broker.id 每个机器独立的ID</p> <p><img loading="lazy" decoding="async" alt="" height="567" src="http://img.555519.xyz/uploads3/20220823/9dac185087c3244f970deb81dd676da0.jpg"></p> <p>配置zookeeper集群端口</p> <p><img loading="lazy" decoding="async" alt="" height="260" src="http://img.555519.xyz/uploads3/20220823/1c1d63c6af58e2798b7eef6ec6a84bff.jpg"></p> <p>&nbsp;&nbsp;3）集群配置完成，非常完美！</p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104380.htm">哈尔滨王福军宠物医院电话号码（哈尔滨王福山）</a></p>
+                                        <p>下一个：<a href="/news/article-105179.htm">快递寄宠物怎么寄猫咪（如何快递宠物猫）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-69362.htm" title="Spring Profiles的几个小知识">Spring Profiles的几个小知识</a></li>
+                        <li class="py-2"><a href="/news/article-65532.htm" title="济南在哪领养猫的地方（济南在哪可以领养猫）">济南在哪领养猫的地方（济南在哪可以领养猫）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-20-node-share-links.htm" title="「4月20日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「4月20日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-78040.htm" title="宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）">宠物领养中心领养要钱吗现在还有吗（宠物领养中心领养要钱吗现在还有吗知乎）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-subscribe-node.htm" title="「3月31日」2025年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接地址分享">「3月31日」2025年最新高速Shadowrocket/SSR/Clash/V2ray免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-high-speed-nodes.htm" title="「3月25日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享">「3月25日」2025年最新高速Clash/V2ray/Shadowrocket/SSR免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-68716.htm" title="开宠物店成本多少钱（开宠物店要多少成本）">开宠物店成本多少钱（开宠物店要多少成本）</a></li>
+                        <li class="py-2"><a href="/news/article-68071.htm" title="宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听">宠物粮食店铺名字怎么起 宠物粮食店铺名字怎么起好听</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-23-free-v2ray.htm" title="「4月23日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享">「4月23日」2025年最新高速SSR/Shadowrocket/V2ray/Clash免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-92341.htm" title="兰州哪里有宠物市场最大最出名的宠物市场啊（兰州宠物交易市场）">兰州哪里有宠物市场最大最出名的宠物市场啊（兰州宠物交易市场）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">74</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">89</span>
+                <h4><a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
