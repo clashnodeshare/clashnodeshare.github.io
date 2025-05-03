@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-109360.htm" />
+    <meta charset="utf-8">
+    <title>利用JavaScript实现秒表功能</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt;     &lt;meta charset="UTF-8"&gt;     &lt;m" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-109360.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="利用JavaScript实现秒表功能" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/7630d66e2ca14e8453461c0c170fdb18.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:21:57" />
+    <meta property="og:updated_time" content="2025-05-02T09:21:57" />
+        <meta property="og:description" content="&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt;     &lt;meta charset="UTF-8"&gt;     &lt;m" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="利用JavaScript实现秒表功能">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                                                <a class="navbar-brand" href="/">Clash Node Share</a>
+                                            </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">利用JavaScript实现秒表功能</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code>&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt;     &lt;meta charset="UTF-8"&gt;     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;     &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;00:00:00:00&lt;/div&gt;     &lt;button &gt;开始&lt;/button&gt;     &lt;button disabled&gt;暂停&lt;/button&gt;     &lt;button disabled&gt;继续&lt;/button&gt;     &lt;button disabled&gt;重置&lt;/button&gt;     &lt;script&gt;         // 秒表功能分析         // 核心思路:         //   定义一个变量,根据定时器,每秒执行一次,每次执行++自增操作         //               变量存储的数值,就会每秒+1         //   现在需要的记录效果,是每0.01秒,也就是10毫秒执行一次         //   根据累计的数值,执行进位 ms 如果达到 100,就是1秒         //   如果 秒 达到 60 就是 1分钟         //   如果 分钟 达到 60 就是 1小时           // 获取按钮的标签对象         var oBtnStart = document.querySelectorAll('button')[0];         var oBtnPause = document.querySelectorAll('button')[1];         var oBtnContinue = document.querySelectorAll('button')[2];         var oBtnReset = document.querySelectorAll('button')[3];         var hour = minutes = seconds = millisecond = 0;          // 定义存储 时 分 秒 毫秒 字符串的变量         // 如果直接在 millisecond seconds minutes hour 变量上进行 拼接操作,会影响 ++操作的执行         // 单独的建立变量,来存储累加时间的执行结果         var ms = '';         var s = '';         var m = '';         var h = '';          // 因为定时器,是定义在函数内部,         // 必须定义一个全局变量,来存储定时器         // 在函数外部可以调用,终止定时器         var time = 0;                  // 获取div标签对象         var oDiv = document.querySelector('div');           //  开始按钮         oBtnStart.onclick = function(){             // 点击开始按钮,执行函数,执行秒表计时             timer();             oBtnStart.disabled = true;             oBtnPause.disabled = false;             oBtnContinue.disabled = true;             oBtnReset.disabled = true;         }         //  暂停按钮         oBtnPause.onclick = function(){             // 点击暂停按钮,清除定时器,终止秒表执行             clearInterval(time);             oBtnStart.disabled = true;             oBtnPause.disabled = true;             oBtnContinue.disabled = false;             oBtnReset.disabled = false;         }         //  继续按钮         oBtnContinue.onclick = function(){             // 点击继续按钮,继续执行定时器             timer();             oBtnStart.disabled = true;             oBtnPause.disabled = false;             oBtnContinue.disabled = true;             oBtnReset.disabled = true;          }         //  重置按钮         oBtnReset.onclick = function(){             // 点击重置按钮,将所有的数据,都恢复到0的状态             // 所有变量存储的数据都是 0 , div中的内容,也恢复到0             hour = minutes = seconds = millisecond = 0;             oDiv.innerHTML = '00:00:00:00'             oBtnStart.disabled = false;             oBtnPause.disabled = true;             oBtnContinue.disabled = true;             oBtnReset.disabled = true;         }          //  计时函数         function timer(){             // 赋值操作,将定时器,存储在全局作用域变量中             time = setInterval(function(){                 millisecond++;                 if( millisecond == 100){                     seconds++;                     millisecond = 0;                 }                 if( seconds == 60 ){                     minutes++;                     seconds = 0;                 }                 if( minutes == 60 ){                     hour++;                     minutes = 0;                 }              //  补零操作             // 如果记录的时间小于0,要做补零操作                 if( millisecond &lt; 10 ){                     ms = '0' + millisecond;                  }else{                     ms = millisecond;                  }                 if( seconds &lt; 10 ){                     s = '0' + seconds;                  }else{                     s = seconds;                  }                 if( minutes &lt; 10 ){                     m = '0' + minutes;                  }else{                     m = minutes;                  }                 if( hour &lt; 10 ){                     h = '0' + hour;                  }else{                     h = hour;                  }                 // 每次执行,返回一个记录时间的字符串                 // 将这个字符串,写入到div中                 oDiv.innerHTML = ` ${h}:${m}:${s}:${ms} `             },10);         }      &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; </code></pre> <p>实现效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221229/748a4c5e411798ad5bbee69bad8026a7.jpg" alt="利用JavaScript实现秒表功能"><br /> 当点击开始时：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221229/ab006f85a97e54707f98a31d7fa0f26b.jpg" alt="利用JavaScript实现秒表功能"><br /> 当点击暂停时：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221229/206ae2518f5adb2a3a12b18778454caa.jpg" alt="利用JavaScript实现秒表功能"><br /> 当点击继续时：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20221229/9dd0170bfd5904d40b2d5a6e22ebb198.jpg" alt="利用JavaScript实现秒表功能"></p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108516.htm">宠物粮食加工厂加盟条件及费用标准 宠物粮食加工厂加盟条件及费用标准表</a></p>
+                                        <p>下一个：<a href="/news/article-109361.htm">宠物饲料销售员（宠物饲料公司招聘）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-88643.htm" title="宠物粮食加工厂挣钱吗知乎文章 宠物粮食加工厂挣钱吗知乎文章">宠物粮食加工厂挣钱吗知乎文章 宠物粮食加工厂挣钱吗知乎文章</a></li>
+                        <li class="py-2"><a href="/news/article-86480.htm" title="非泼罗尼和阿维菌素哪一个驱虫好用（阿维菌素透皮溶液和非泼罗尼滴剂哪个更合适泰迪幼崽）">非泼罗尼和阿维菌素哪一个驱虫好用（阿维菌素透皮溶液和非泼罗尼滴剂哪个更合适泰迪幼崽）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-27-clash-windows.htm" title="「4月27日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享">「4月27日」2025年最新高速Clash/V2ray/SSR/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-110200.htm" title="领养宠物原主人有权要回吗没有什么手续的情况下 领养宠物要给前主人礼物吗">领养宠物原主人有权要回吗没有什么手续的情况下 领养宠物要给前主人礼物吗</a></li>
+                        <li class="py-2"><a href="/news/article-90094.htm" title="延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊">延吉延农宠物医院怎么样 延吉延农宠物医院怎么样啊</a></li>
+                        <li class="py-2"><a href="/news/article-104380.htm" title="哈尔滨王福军宠物医院电话号码（哈尔滨王福山）">哈尔滨王福军宠物医院电话号码（哈尔滨王福山）</a></li>
+                        <li class="py-2"><a href="/news/article-101182.htm" title="sparksql 操作hive">sparksql 操作hive</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-20-node-share-links.htm" title="「4月20日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享">「4月20日」2025年最新高速SSR/V2ray/Clash/Shadowrocket免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/news/article-98995.htm" title="python sum+=i+1_1.Pydef sum(n,p=2):result">python sum+=i+1_1.Pydef sum(n,p=2):result</a></li>
+                        <li class="py-2"><a href="/news/article-108515.htm" title="pandas读取csv文件失败">pandas读取csv文件失败</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">9</span>
+                <h4><a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">80</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
