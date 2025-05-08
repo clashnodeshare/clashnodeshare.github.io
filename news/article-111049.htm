@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashnodeshare.github.io/news/article-111049.htm" />
+    <meta charset="utf-8">
+    <title>spring boot不使用内置tomcat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/assets/website/img/clashnodeshare/favicon.ico" type="image/x-icon"/>
+        <meta name="description" content="修改pom.xml: &lt;packaging&gt;war&lt;/packaging&gt;  &lt;dependency&gt; 		&lt;groupId&gt;org.springfra" />
+    
+    <meta name="author" content="ClashNodeShare官方节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashnodeshare.github.io/news/article-111049.htm" />
+    <meta property="og:site_name" content="ClashNodeShare官方节点分享站" />
+    <meta property="og:title" content="spring boot不使用内置tomcat" />
+    <meta property="og:image" content="https://clashnodeshare.github.io/uploads/20240302/90108fd242055d5c641d66930e9882b9.webp" />
+        <meta property="og:release_date" content="2025-05-04T09:26:55" />
+    <meta property="og:updated_time" content="2025-05-04T09:26:55" />
+        <meta property="og:description" content="修改pom.xml: &lt;packaging&gt;war&lt;/packaging&gt;  &lt;dependency&gt; 		&lt;groupId&gt;org.springfra" />
+        
+    <!-- css -->
+    <link href="/assets/website/css/clashnodeshare/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/assets/website/css/clashnodeshare/flexslider.css" rel="stylesheet" />
+    <link href="/assets/website/css/clashnodeshare/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="spring boot不使用内置tomcat">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFE91ZBBP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JFE91ZBBP3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div id="wrapper">
+                <!-- start header -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                                                <a class="navbar-brand" href="/">Clash Node Share</a>
+                                            </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="pageTitle" style="word-break: break-all;">spring boot不使用内置tomcat</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/news/">新闻资讯</a></li>
+                        <li class="active"> 正文 </li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="about-logo">
+                                                <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>修改pom.xml:</strong></p> <pre><code>&lt;packaging&gt;war&lt;/packaging&gt;</code></pre> <hr/> <pre><code>&lt;dependency&gt; 		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; 		&lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt; 		&lt;scope&gt;provided&lt;/scope&gt; &lt;/dependency&gt;</code></pre> <hr/> <p><strong>修改启动类：</strong></p> <p>继承<code>SpringbootServletInitializer</code>,并实现<code>configure</code>方法。</p> <pre><code>@SpringBootApplication public class MyblogApplication extends SpringBootServletInitializer {  	public static void main(String[] args) { 		SpringApplication.run(MyblogApplication.class, args); 	}  //	外置tomcat需要添加 	@Override 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) { 		return builder.sources(MyblogApplication.class); 	} }</code></pre> <blockquote> <p>如果使用了websocket，注释websocket配置<code>ServerEndpointExporter</code>。</p> </blockquote> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-110200.htm">领养宠物原主人有权要回吗没有什么手续的情况下 领养宠物要给前主人礼物吗</a></p>
+                                        <p>下一个：<a href="/news/article-111050.htm">动物疫苗经营范围有哪些要求（动物疫苗经营许可）</a></p>
+                                    </div>
+                                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">热门文章</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-109361.htm" title="宠物饲料销售员（宠物饲料公司招聘）">宠物饲料销售员（宠物饲料公司招聘）</a></li>
+                        <li class="py-2"><a href="/news/article-106804.htm" title="tensorflow中变量和张量连接起来">tensorflow中变量和张量连接起来</a></li>
+                        <li class="py-2"><a href="/news/article-100562.htm" title="动物医生叫什么医生（医动物的医生叫什么）">动物医生叫什么医生（医动物的医生叫什么）</a></li>
+                        <li class="py-2"><a href="/news/article-98307.htm" title="新疆宠物救助 新疆宠物救助中心电话">新疆宠物救助 新疆宠物救助中心电话</a></li>
+                        <li class="py-2"><a href="/news/article-108515.htm" title="pandas读取csv文件失败">pandas读取csv文件失败</a></li>
+                        <li class="py-2"><a href="/news/article-111050.htm" title="动物疫苗经营范围有哪些要求（动物疫苗经营许可）">动物疫苗经营范围有哪些要求（动物疫苗经营许可）</a></li>
+                        <li class="py-2"><a href="/news/article-110200.htm" title="领养宠物原主人有权要回吗没有什么手续的情况下 领养宠物要给前主人礼物吗">领养宠物原主人有权要回吗没有什么手续的情况下 领养宠物要给前主人礼物吗</a></li>
+                        <li class="py-2"><a href="/news/article-89375.htm" title="宠物猫多少钱一个只（宠物猫多少钱一个只猫）">宠物猫多少钱一个只（宠物猫多少钱一个只猫）</a></li>
+                        <li class="py-2"><a href="/news/article-105178.htm" title="Kafka 单机（集群）安装部署（自带zookeeper）">Kafka 单机（集群）安装部署（自带zookeeper）</a></li>
+                        <li class="py-2"><a href="/news/article-86479.htm" title="闲鱼无货源模式第一步怎么做（闲鱼无货源模式怎么操作_就认准zyz4549）">闲鱼无货源模式第一步怎么做（闲鱼无货源模式怎么操作_就认准zyz4549）</a></li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">归纳</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <span class="badge" style="float: right;">16</span>
+                <h4><a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <span class="badge" style="float: right;">80</span>
+                <h4><a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer>
+            <div class="container">
+                <div class="row">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>ClashNodeShare官方节点分享站 版权所有</p>
+                    <p>Powered by WordPress</p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.easing.1.3.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox.pack.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.fancybox-media.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.flexslider.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/website/js/frontend/clashnodeshare/modernizr.custom.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.isotope.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/jquery.magnific-popup.min.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/animate.js"></script>
+    <script src="/assets/website/js/frontend/clashnodeshare/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
