@@ -376,34 +376,29 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 与 Clash 有什么区别？</h5></div>
     <div class="panel-body">
-        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
-    <div class="panel-body">
-        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据安全？</h5></div>
-    <div class="panel-body">
-        AEAD 加密防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下，保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
-    <div class="panel-body">
-        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何实现智能分流？</h5></div>
-    <div class="panel-body">
-        Clash 通过结合规则文件和策略组，可以对不同网站或应用进行智能分流。例如将国内流量直连，海外流量通过代理节点，提高访问速度和稳定性，同时减少不必要的节点占用。<hr />    </div>
+        V2Ray 是一款代理核心工具，提供底层网络传输和加密支持；而 Clash 是一个多协议客户端，可以整合 V2Ray、Trojan、Shadowsocks 等多种协议。简而言之，V2Ray 负责“传输”，Clash 负责“管理与分流”。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 在路由器上使用 TUN 模式会有什么影响？</h5></div>
     <div class="panel-body">
         启用 TUN 模式会拦截并转发路由器上全部或选定流量，这会增加路由器 CPU 与内存负担，可能影响路由器其他服务表现。建议在性能足够的设备上启用，或仅对特定设备/端口进行分流。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的多策略组设置能提高访问效率吗？</h5></div>
+    <div class="panel-body">
+        多策略组可以将节点按用途、延迟或地域分类，结合规则文件自动分流不同流量。这样可以确保游戏、视频或网页流量走最优节点，提高整体访问效率和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
+    <div class="panel-body">
+        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Quantumult X 的分流规则如何设置？</h5></div>
+    <div class="panel-body">
+        Quantumult X 通过规则分组来控制流量走向。用户可自定义策略组，将特定网站流量指向不同节点。编辑规则文件时，可利用 GEOIP、DOMAIN-SUFFIX 等指令精确管理网络行为。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何使用分流策略实现广告屏蔽？</h5></div>
@@ -416,14 +411,19 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
         确认订阅 URL 是否有效并检查网络通畅。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，可确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的多策略组设置能提高访问效率吗？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密如何确保数据安全？</h5></div>
     <div class="panel-body">
-        多策略组可以将节点按用途、延迟或地域分类，结合规则文件自动分流不同流量。这样可以确保游戏、视频或网页流量走最优节点，提高整体访问效率和稳定性。<hr />    </div>
+        AEAD 加密防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下，保证节点可用，提升数据安全和连接稳定性，降低被检测风险，确保长期安全访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 与 Clash 有什么区别？</h5></div>
+    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
     <div class="panel-body">
-        V2Ray 是一款代理核心工具，提供底层网络传输和加密支持；而 Clash 是一个多协议客户端，可以整合 V2Ray、Trojan、Shadowsocks 等多种协议。简而言之，V2Ray 负责“传输”，Clash 负责“管理与分流”。    </div>
+        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何实现智能分流？</h5></div>
+    <div class="panel-body">
+        Clash 通过结合规则文件和策略组，可以对不同网站或应用进行智能分流。例如将国内流量直连，海外流量通过代理节点，提高访问速度和稳定性，同时减少不必要的节点占用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -453,16 +453,16 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-free-v2ray-subscribe.htm" title="「10月12日」2025年最新高速Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅链接地址分享">「10月12日」2025年最新高速Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-10-free-clash.htm" title="「10月10日」2025年最新高速Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅链接地址分享">「10月10日」2025年最新高速Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-free-node-subscribe.htm" title="「11月2日」2025年最新高速Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点免费节点订阅链接地址分享">「11月2日」2025年最新高速Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Clash节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-node-subscribe.htm" title="「10月8日」2025年最新高速V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点订阅链接地址分享">「10月8日」2025年最新高速V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-free-shadowrocket-node.htm" title="「10月21日」2025年最新高速SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅链接地址分享">「10月21日」2025年最新高速SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-24-shadowrocket-node.htm" title="「10月24日」2025年最新高速Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点订阅链接地址分享">「10月24日」2025年最新高速Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-node-share-links.htm" title="「10月14日」2025年最新高速V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享">「10月14日」2025年最新高速V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-13-clash-v2ray-ss-ssr.htm" title="「10月13日」2025年最新高速Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点订阅链接地址分享">「10月13日」2025年最新高速Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-high-speed-nodes.htm" title="「12月2日」2025年最新高速V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅链接地址分享">「12月2日」2025年最新高速V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-free-shadowrocket-node.htm" title="「12月1日」2025年最新高速Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点免费节点订阅链接地址分享">「12月1日」2025年最新高速Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点免费节点订阅链接地址分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-10-free-high-speed-nodes.htm" title="「11月10日」2025年最新高速Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点免费节点订阅链接地址分享">「11月10日」2025年最新高速Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Singbox节点免费节点订阅链接地址分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-node-share.htm" title="「11月17日」2025年最新高速Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点免费节点订阅链接地址分享">「11月17日」2025年最新高速Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-30-node-share.htm" title="「11月30日」2025年最新高速Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享">「11月30日」2025年最新高速Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-node-subscribe.htm" title="「11月7日」2025年最新高速Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅链接地址分享">「11月7日」2025年最新高速Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="「11月14日」2025年最新高速SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅链接地址分享">「11月14日」2025年最新高速SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-node-share-links.htm" title="「11月8日」2025年最新高速Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点订阅链接地址分享">「11月8日」2025年最新高速Shadowrocket节点/V2ray节点/SSR节点/Singbox节点/Clash节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-22-free-node-subscribe.htm" title="「11月22日」2025年最新高速Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅链接地址分享">「11月22日」2025年最新高速Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-shadowrocket-node.htm" title="「11月11日」2025年最新高速Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅链接地址分享">「11月11日」2025年最新高速Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点免费节点订阅链接地址分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-5-free-high-speed-nodes.htm" title="「11月5日」2025年最新高速V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点免费节点订阅链接地址分享">「11月5日」2025年最新高速V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点免费节点订阅链接地址分享</a></li>
                     </ul>
     </div>
 </div>
@@ -475,12 +475,12 @@ A：理论上可以，但同时运行可能会造成冲突，建议仅启用一�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <span class="badge" style="float: right;">16</span>
-                <h4><a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <span class="badge" style="float: right;">4</span>
+                <h4><a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <span class="badge" style="float: right;">26</span>
-                <h4><a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <span class="badge" style="float: right;">23</span>
+                <h4><a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
