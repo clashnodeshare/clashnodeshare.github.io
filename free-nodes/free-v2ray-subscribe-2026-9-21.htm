@@ -325,19 +325,9 @@ clash -d ~/.config/clash &amp;
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 如何提升网速？</h5></div>
+    <div class="panel-heading"><h5>Nekoray 的配置文件在哪里保存？</h5></div>
     <div class="panel-body">
-        Hysteria2 利用 QUIC 协议的低延迟特性，并通过自适应拥塞控制算法在高丢包网络下维持高速连接。配置合适的带宽参数与 TLS 证书，可显著提升跨境访问速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何手动设置某应用直连？</h5></div>
-    <div class="panel-body">
-        在 Clash 的规则文件中添加 PROCESS-NAME 规则，如 `PROCESS-NAME,chrome.exe,DIRECT`。保存并重启后，该应用的流量将绕过代理直连。适用于游戏或内网程序等特殊场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 策略组如何优化视频和游戏流量？</h5></div>
-    <div class="panel-body">
-        Sing-box 可根据策略组和规则文件，将不同应用的流量分配到最佳节点。视频和游戏流量可选择低延迟、高带宽节点，保证流畅播放和操作响应，提高整体网络体验。<hr />    </div>
+        Nekoray 的配置文件默认保存在程序目录下的 `config.json` 中。用户可手动备份此文件以迁移配置，也可使用导入导出功能在不同设备间同步节点数据。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 协议是如何伪装流量的？</h5></div>
@@ -350,19 +340,19 @@ clash -d ~/.config/clash &amp;
         部分兼容。Sing-box 支持从 Clash 订阅转换工具导入节点，但配置语法略有不同。建议使用第三方订阅转换器，如 sub-converter，将 Clash 格式转换为 Sing-box JSON 格式使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 如何提升网速？</h5></div>
+    <div class="panel-body">
+        Hysteria2 利用 QUIC 协议的低延迟特性，并通过自适应拥塞控制算法在高丢包网络下维持高速连接。配置合适的带宽参数与 TLS 证书，可显著提升跨境访问速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何管理用户流量配额？</h5></div>
+    <div class="panel-body">
+        管理员可以为每个用户设置上传和下载带宽以及总流量上限。超出限制可自动降速或阻止访问，保证服务器资源合理分配，提高整体网络公平性和用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 节点手动切换有什么优势？</h5></div>
     <div class="panel-body">
         手动切换节点可以让用户根据网络延迟和用途选择最合适的节点，适合在节点不稳定或特殊访问需求下使用。虽然不自动，但可以灵活调整，提高访问效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 的配置文件在哪里保存？</h5></div>
-    <div class="panel-body">
-        Nekoray 的配置文件默认保存在程序目录下的 `config.json` 中。用户可手动备份此文件以迁移配置，也可使用导入导出功能在不同设备间同步节点数据。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 与 Clash 的核心区别是什么？</h5></div>
-    <div class="panel-body">
-        Mellow 采用基于透明代理的架构，适合路由或系统级流量重定向，而 Clash 更偏向规则式应用代理。Mellow 的灵活性更高，但配置复杂；Clash 则兼顾易用性与功能扩展性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 支持测速功能吗？</h5></div>
@@ -370,9 +360,19 @@ clash -d ~/.config/clash &amp;
         支持。WinXray 提供节点延迟测速功能，可检测每个节点的响应时间与可用性。测速结果能帮助用户选择最快线路，也能排除无效或不稳定的节点，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何管理用户流量配额？</h5></div>
+    <div class="panel-heading"><h5>Clash 如何手动设置某应用直连？</h5></div>
     <div class="panel-body">
-        管理员可以为每个用户设置上传和下载带宽以及总流量上限。超出限制可自动降速或阻止访问，保证服务器资源合理分配，提高整体网络公平性和用户体验。    </div>
+        在 Clash 的规则文件中添加 PROCESS-NAME 规则，如 `PROCESS-NAME,chrome.exe,DIRECT`。保存并重启后，该应用的流量将绕过代理直连。适用于游戏或内网程序等特殊场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 策略组如何优化视频和游戏流量？</h5></div>
+    <div class="panel-body">
+        Sing-box 可根据策略组和规则文件，将不同应用的流量分配到最佳节点。视频和游戏流量可选择低延迟、高带宽节点，保证流畅播放和操作响应，提高整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 与 Clash 的核心区别是什么？</h5></div>
+    <div class="panel-body">
+        Mellow 采用基于透明代理的架构，适合路由或系统级流量重定向，而 Clash 更偏向规则式应用代理。Mellow 的灵活性更高，但配置复杂；Clash 则兼顾易用性与功能扩展性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -421,16 +421,16 @@ clash -d ~/.config/clash &amp;
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-9-15.htm" title="「9月15日」2025年最新高速Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点订阅链接地址分享">「9月15日」2025年最新高速Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-free-v2ray.htm" title="「8月24日」2025年最新高速Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点免费节点订阅链接地址分享">「8月24日」2025年最新高速Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-25.htm" title="「9月25日」2025年最新高速Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅链接地址分享">「9月25日」2025年最新高速Clash节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-8-13.htm" title="「8月13日」2025年最新高速Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅链接地址分享">「8月13日」2025年最新高速Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-21.htm" title="「9月21日」2025年最新高速Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点订阅链接地址分享">「9月21日」2025年最新高速Clash节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-ssr-subscribe.htm" title="「8月6日」2025年最新高速Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅链接地址分享">「8月6日」2025年最新高速Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-free-v2ray.htm" title="「9月20日」2025年最新高速V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅链接地址分享">「9月20日」2025年最新高速V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点免费节点订阅链接地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-22-free-ssr-subscribe.htm" title="「9月22日」2025年最新高速SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅链接地址分享">「9月22日」2025年最新高速SSR节点/Singbox节点/Clash节点/V2ray节点/Trojan节点/Shadowrocket节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-27.htm" title="「8月27日」2025年最新高速Clash节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点订阅链接地址分享">「8月27日」2025年最新高速Clash节点/SSR节点/Singbox节点/Shadowrocket节点/Trojan节点/V2ray节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-free-shadowrocket-node.htm" title="「9月14日」2025年最新高速Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点订阅链接地址分享">「9月14日」2025年最新高速Clash节点/V2ray节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-clash-v2ray-ss-ssr.htm" title="「8月12日」2025年最新高速Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅链接地址分享">「8月12日」2025年最新高速Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-8-9.htm" title="「8月9日」2025年最新高速SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点免费节点订阅链接地址分享">「8月9日」2025年最新高速SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-8-25.htm" title="「8月25日」2025年最新高速Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅链接地址分享">「8月25日」2025年最新高速Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-8-17.htm" title="「8月17日」2025年最新高速V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享">「8月17日」2025年最新高速V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点/Clash节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-5.htm" title="「9月5日」2025年最新高速Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点免费节点订阅链接地址分享">「9月5日」2025年最新高速Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-6-free-ssr-subscribe.htm" title="「9月6日」2025年最新高速Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点订阅链接地址分享">「9月6日」2025年最新高速Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点订阅链接地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-16-clash-node.htm" title="「9月16日」2025年最新高速Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅链接地址分享">「9月16日」2025年最新高速Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-clash.htm" title="「8月18日」2025年最新高速Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点订阅链接地址分享">「8月18日」2025年最新高速Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点免费节点订阅链接地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-19.htm" title="「9月19日」2025年最新高速Clash节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点免费节点订阅链接地址分享">「9月19日」2025年最新高速Clash节点/SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点免费节点订阅链接地址分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -442,7 +442,7 @@ clash -d ~/.config/clash &amp;
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
